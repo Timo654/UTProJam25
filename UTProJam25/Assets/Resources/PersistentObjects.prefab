@@ -43,6 +43,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3018922507952514279}
+  - component: {fileID: 3246206263026022306}
   m_Layer: 0
   m_Name: SaveManager
   m_TagString: Untagged
@@ -65,6 +66,28 @@ Transform:
   m_Children: []
   m_Father: {fileID: 7586421410011054786}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3246206263026022306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6536932752523815567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdea1647f0b426e47a4fcadd210000dd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  systemData:
+    MasterVolume: 100
+    SFXVolume: 50
+    UIVolume: 40
+    MusicVolume: 20
+  gameData:
+    version: 2
+    money: 0
+  runtimeData:
+    previousSceneName: 
 --- !u!1 &6858655836324257970
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,13 +153,13 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
-  <CreditsTheme>k__BackingField:
+  <BPMTest>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1471142566
+      Data2: 1268921823
+      Data3: -1157629819
+      Data4: -408156635
+    Path: event:/BPMTest
 --- !u!1 &8747778835950529223
 GameObject:
   m_ObjectHideFlags: 0

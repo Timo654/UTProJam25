@@ -11,7 +11,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference ButtonClick { get; private set; }
 
     [field: Header("Music")]
-    [field: SerializeField] public EventReference CreditsTheme { get; private set; }
+    [field: SerializeField] public EventReference BPMTest { get; private set; }
     public static FMODEvents Instance { get; private set; }
 
     private void Awake()

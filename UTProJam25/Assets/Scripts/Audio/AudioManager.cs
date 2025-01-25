@@ -48,11 +48,11 @@ public class AudioManager : MonoSingleton<AudioManager>
     private static void InitializeInstance(AudioManager instance)
     {
         Instance.eventInstances = new List<EventInstance>();
-        return; // TODO - uncomment when ready to impl sound
+         // TODO - uncomment when ready to impl sound
         Instance.masterBus = RuntimeManager.GetBus("bus:/");
         Instance.musicBus = RuntimeManager.GetBus("bus:/Music");
-        Instance.sfxBus = RuntimeManager.GetBus("bus:/SFX");
-        Instance.uiBus = RuntimeManager.GetBus("bus:/UI");
+        //Instance.sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        //Instance.uiBus = RuntimeManager.GetBus("bus:/UI");
         Instance.MasterVolume = SaveManager.Instance.systemData.MasterVolume / 100f;
         Instance.SFXVolume = SaveManager.Instance.systemData.SFXVolume / 100f;
         Instance.MusicVolume = SaveManager.Instance.systemData.MusicVolume / 100f;
@@ -166,6 +166,19 @@ public class AudioManager : MonoSingleton<AudioManager>
     {
         musicEventInstance.getTimelinePosition(out int position);
         return position;
+    }
+
+    public int GetSampleRate()
+    {
+        RuntimeManager.CoreSystem.getSoftwareFormat(out int sampleRate, out _, out _);
+        return sampleRate;
+    }
+    public int GetMusicPosSamples()
+    {
+        musicEventInstance.getTimelinePosition(out int timelinePosition);
+        RuntimeManager.CoreSystem.getSoftwareFormat(out int sampleRate, out _, out _);
+        int positionInSamples = (timelinePosition * sampleRate / 1000);
+        return positionInSamples;
     }
 
     public void StopSFX()
