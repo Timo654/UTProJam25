@@ -8,12 +8,14 @@ public class BeatManager : MonoBehaviour
     [SerializeField] private float _bpm;
     [SerializeField] private Intervals[] _intervals;
     private float _startOffset;
+    private float _mercyRange;
 
     // startoffset is song start position in milliseconds
-    public void SetBPM(float bpm, int startOffset)
+    public void SetBPM(float bpm, int startOffset, float mercyRange)
     {
         _bpm = bpm;
         _startOffset = (startOffset * AudioManager.Instance.GetSampleRate() / 1000);
+        _mercyRange = mercyRange;
     }
     private void Update()
     {
@@ -28,8 +30,8 @@ public class BeatManager : MonoBehaviour
 
     public bool CheckIfHitClose(int intervalIndex)
     {
-        float sampledTime = (AudioManager.Instance.GetMusicPosSamples() / (AudioManager.Instance.GetSampleRate() * _intervals[intervalIndex].GetBeatLength(_bpm)));
-        return _intervals[intervalIndex].CheckIfCloseEnough(sampledTime);
+        float sampledTime = ((_startOffset - AudioManager.Instance.GetMusicPosSamples()) / (AudioManager.Instance.GetSampleRate() * _intervals[intervalIndex].GetBeatLength(_bpm)));
+        return _intervals[intervalIndex].CheckIfCloseEnough(sampledTime, _mercyRange);
     }
 }
 
@@ -50,24 +52,34 @@ public class Intervals
 
     // TODO - more precise checks, but for now its either all or nothing
 
-    public bool CheckIfCloseEnough(float interval)
+    public bool CheckIfCloseEnough(float interval, float mercyRange)
     {
         float diff = interval - _lastInterval;
-        if (diff <= 0.15f)
+        if (diff <= mercyRange)
         {
             // hit late
-            if (isHitPrevInterval) return false;
+            if (isHitPrevInterval)
+            {
+                Debug.Log("late hit, but hit in prev interval");
+                return false;
+            }
             return true;
         }
-        else if (diff >= 0.85f)
+        else if (diff >= 1f - mercyRange)
         {
             // hit early
-            if (isHitCurrentInterval) return false;
+            if (isHitCurrentInterval)
+            {
+                Debug.Log("early hit, but hit in current interval already");
+                return false;
+            }
+
 
             isHitCurrentInterval = true;
 
             return true;
         }
+        Debug.Log($"MISS: {diff}");
         return false;
     }
 

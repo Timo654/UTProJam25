@@ -9,5 +9,6 @@ public class LevelData : ScriptableObject
     public int songOffset; // offset in milliseconds, in FMOD
     public int levelBPM;
     public int time;
+    public float mercyRange;
     // put any other level specific variables here
 }
