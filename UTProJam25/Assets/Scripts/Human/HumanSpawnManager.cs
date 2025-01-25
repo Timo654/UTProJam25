@@ -10,7 +10,6 @@ public class HumanSpawnManager : MonoBehaviour
     public int numberOfEnemies = 5; // Number of enemies to spawn
     private float spawnCooldown = 2f;
     private readonly float spawnMaxCooldown = 2f;
-    [SerializeField]
     private bool spawnUsingTimer;
 
     [SerializeField] private List<Sprite> playerSprites;
@@ -25,11 +24,18 @@ public class HumanSpawnManager : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnGameEnd += StopSpawner;
+        LevelLoader.OnGameplayLevelLoaded += StartSpawner;
     }
 
     private void OnDisable()
     {
         GameManager.OnGameEnd -= StopSpawner;
+        LevelLoader.OnGameplayLevelLoaded -= StartSpawner;
+    }
+
+    private void StartSpawner(LevelData data)
+    {
+        spawnUsingTimer = true;
     }
 
     private void StopSpawner()

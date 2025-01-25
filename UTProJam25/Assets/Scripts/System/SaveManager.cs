@@ -103,6 +103,7 @@ public class GameData
 public class RuntimeData
 {
     public string previousSceneName;
+    public LevelData currentLevel;
 }
 
 [Serializable]

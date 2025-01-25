@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,15 +11,36 @@ public class GameManager : MonoBehaviour
     private int lastTimeValue;
 
     public static event Action<int> OnGameTimeChanged;
-    private bool gameEnded = false;
+    private bool gameActive = false;
+
+    private void Awake()
+    {
+        sceneController.LoadUI();
+    }
+
     private void Start()
     {
-        currentTime = gameLoopSettings.gameDuration;
+        LevelLoader.Instance.HandleLevelLoad();
+    }
+    private void OnEnable()
+    {
+        LevelLoader.OnGameplayLevelLoaded += SetupParams;
+    }
+    private void OnDisable()
+    {
+        LevelLoader.OnGameplayLevelLoaded -= SetupParams;
+    }
+
+    private void SetupParams(LevelData data)
+    {
+        Debug.Log("loaded !");
+        currentTime = data.time;
+        gameActive = true;
     }
 
     private void Update()
     {
-        if (gameEnded) return;
+        if (!gameActive) return;
         if (currentTime <= 0)
         {
             EndGame();
@@ -37,7 +59,7 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
-        gameEnded = true;
+        gameActive = false;
         //Load AD for bank loot moneyz
         //then Load End game UI? or more adzzz?
         OnGameEnd?.Invoke();

@@ -9,26 +9,38 @@ public class SceneController : ScriptableObject
 {
     public static Action OnSceneLoad;
     private GameObject prevEvS;
-    public void LoadGame()
+    public void LoadGame(bool nextLevel = false)
     {
         SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("Game");
-        LoadUI();
+        //SceneManager.LoadScene("Game");
+        // not nice logic but it's almost 2 am i dont care
+        if (nextLevel && SaveManager.Instance.runtimeData.currentLevel.levelID == 1)
+        {
+            LoadCredits();
+            return;
+        }
+
+        if (nextLevel) SaveManager.Instance.runtimeData.currentLevel = LevelLoader.Instance.GetLevels()[1];
+        else SaveManager.Instance.runtimeData.currentLevel = LevelLoader.Instance.GetLevels()[0];
+        
+        LevelLoader.Instance.FadeToLevel("Game");
+        //LoadUI();
         OnSceneLoad?.Invoke();
     }
-
 
     public void LoadMainMenu()
     {
         SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("MainMenu");
+        //SceneManager.LoadScene("MainMenu");
+        LevelLoader.Instance.FadeToLevel("MainMenu");
         OnSceneLoad?.Invoke();
     }
 
     public void LoadCredits()
     {
         SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene("Credits");
+        //SceneManager.LoadScene("Credits");
+        LevelLoader.Instance.FadeToLevel("Credits");
         OnSceneLoad?.Invoke();
     }
 
@@ -69,7 +81,8 @@ public class SceneController : ScriptableObject
 
     public void ExitGame()
     {
-        Application.Quit();
+        //Application.Quit();
+        LevelLoader.Instance.FadeToDesktop();
     }
 }
 
