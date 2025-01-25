@@ -23,6 +23,12 @@ public class SceneController : ScriptableObject
         OnSceneLoad?.Invoke();
     }
 
+    public void LoadCredits()
+    {
+        SceneManager.LoadScene("Credits");
+        OnSceneLoad?.Invoke();
+    }
+
     public void LoadSettings(bool additive)
     {
         if (additive)
