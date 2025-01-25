@@ -5,9 +5,10 @@ using UnityEngine.UI;
 
 public class HumanHealthSystem : MonoBehaviour
 {
-    [SerializeField]
-    private HealthBarLogic healthBarLogic;
+    [SerializeField] private HealthBarLogic healthBarLogic;
     [SerializeField] private HumanTimer humanTimer;
+    [SerializeField] private HumanController humanController;
+    
     private int maxHealth = 100;
     private int currentHealth = 100;
     private float cooldownTimer = 5f;
@@ -48,6 +49,7 @@ public class HumanHealthSystem : MonoBehaviour
         currentHealth -= 1;
         cooldownTimer += timerIncreaseOnHit;
         healthBarLogic.UpdateHealth(currentHealth, maxHealth);
+        humanController.MoveTowardsWater(maxHealth);
         if (currentHealth <= 0) HandleDeath();
         //Add highscore
     }
