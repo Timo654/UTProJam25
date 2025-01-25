@@ -381,6 +381,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4122908048934443048, guid: e6967617b2ce50e1ba2630371fe3181b, type: 3}
+      propertyPath: volumeType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6064622588542688395, guid: e6967617b2ce50e1ba2630371fe3181b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -887,6 +891,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4122908048934443048, guid: e6967617b2ce50e1ba2630371fe3181b, type: 3}
+      propertyPath: volumeType
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6064622588542688395, guid: e6967617b2ce50e1ba2630371fe3181b, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1032,6 +1040,10 @@ PrefabInstance:
     - target: {fileID: 3549343808451153690, guid: e6967617b2ce50e1ba2630371fe3181b, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4122908048934443048, guid: e6967617b2ce50e1ba2630371fe3181b, type: 3}
+      propertyPath: volumeType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6064622588542688395, guid: e6967617b2ce50e1ba2630371fe3181b, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1208,6 +1220,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e98781c0e18610c394c3004ebbda780, type: 3}
+--- !u!1 &1682555202 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3358939348186541049, guid: 8e98781c0e18610c394c3004ebbda780, type: 3}
+  m_PrefabInstance: {fileID: 1682555201}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1710117762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1314,7 +1331,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5362237794235657752, guid: 1af34080fd37d200a8309c5405137a89, type: 3}
       propertyPath: m_Name
-      value: Checkbox_layout
+      value: fullscreen_toggle
+      objectReference: {fileID: 0}
+    - target: {fileID: 5362237794235657752, guid: 1af34080fd37d200a8309c5405137a89, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6074180983569690599, guid: 1af34080fd37d200a8309c5405137a89, type: 3}
       propertyPath: m_ChildScaleWidth
@@ -1355,6 +1376,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1af34080fd37d200a8309c5405137a89, type: 3}
+--- !u!1 &1710117763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5362237794235657752, guid: 1af34080fd37d200a8309c5405137a89, type: 3}
+  m_PrefabInstance: {fileID: 1710117762}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1777721067
 GameObject:
   m_ObjectHideFlags: 0
@@ -1854,6 +1880,7 @@ GameObject:
   - component: {fileID: 2073467359}
   - component: {fileID: 2073467358}
   - component: {fileID: 2073467364}
+  - component: {fileID: 2073467365}
   m_Layer: 5
   m_Name: ParentCanvas
   m_TagString: Untagged
@@ -2010,6 +2037,20 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &2073467365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073467357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4aea1b21e6116c54488f4a34817c3fce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  resolutionOption: {fileID: 1682555202}
+  fullscreenOption: {fileID: 1710117763}
 --- !u!224 &2101858039 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 5318749842654191858, guid: 1af34080fd37d200a8309c5405137a89, type: 3}

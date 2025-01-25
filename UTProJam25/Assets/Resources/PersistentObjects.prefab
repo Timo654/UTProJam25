@@ -86,6 +86,7 @@ MonoBehaviour:
   gameData:
     version: 2
     money: 0
+    highScore: 0
   runtimeData:
     previousSceneName: 
 --- !u!1 &6858655836324257970
@@ -134,11 +135,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TestSound>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -704548059
+      Data2: 1208494878
+      Data3: -363100011
+      Data4: 37591529
+    Path: event:/SFX/TestSound
   <WrongSound>k__BackingField:
     Guid:
       Data1: 0
