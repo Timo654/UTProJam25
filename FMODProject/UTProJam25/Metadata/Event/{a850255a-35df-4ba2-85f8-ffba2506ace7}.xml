@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{9963c25f-6990-4ca0-8c61-cbaf54e38666}</destination>
+			<destination>{b6ea67f7-2be1-4229-b4e2-d747b392e995}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{4a453c75-b6de-46ed-a40d-c592c5576b2c}</destination>
@@ -70,6 +70,9 @@
 		<relationship name="modules">
 			<destination>{bc8fbf12-4f2d-4bdb-bd08-b263e2778ca9}</destination>
 		</relationship>
+		<relationship name="markers">
+			<destination>{59689f1e-1999-495d-a9dd-2c05f082dc5c}</destination>
+		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{5c049c99-8bb5-4e26-8859-57c89f1777d9}">
 		<relationship name="effectChain">
@@ -92,6 +95,9 @@
 		<property name="length">
 			<value>40.026031746031748</value>
 		</property>
+		<property name="delayType">
+			<value>0</value>
+		</property>
 		<relationship name="audioFile">
 			<destination>{6b2e409a-8c8e-4c9d-81a5-da0b01a3e54a}</destination>
 		</relationship>
@@ -108,6 +114,17 @@
 		</relationship>
 		<relationship name="output">
 			<destination>{5c049c99-8bb5-4e26-8859-57c89f1777d9}</destination>
+		</relationship>
+	</object>
+	<object class="TempoMarker" id="{59689f1e-1999-495d-a9dd-2c05f082dc5c}">
+		<property name="position">
+			<value>0</value>
+		</property>
+		<relationship name="timeline">
+			<destination>{acb42d84-2bf5-4622-a537-f49af269401f}</destination>
+		</relationship>
+		<relationship name="markerTrack">
+			<destination>{c20979be-f9a1-4eb3-a603-9d64e43d8f2a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusEffectChain" id="{ade1b891-cb8f-4e05-9107-c2194aec2113}">
