@@ -11,6 +11,7 @@ public class SceneController : ScriptableObject
     private GameObject prevEvS;
     public void LoadGame()
     {
+        SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Game");
         LoadUI(true);
         OnSceneLoad?.Invoke();
@@ -19,12 +20,14 @@ public class SceneController : ScriptableObject
 
     public void LoadMainMenu()
     {
+        SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("MainMenu");
         OnSceneLoad?.Invoke();
     }
 
     public void LoadCredits()
     {
+        SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Credits");
         OnSceneLoad?.Invoke();
     }
@@ -39,6 +42,7 @@ public class SceneController : ScriptableObject
         }
         else
         {
+            SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene("Settings");
         }
         Time.timeScale = 0f;
