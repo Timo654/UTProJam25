@@ -12,7 +12,7 @@ public class HumanHealthSystem : MonoBehaviour
     private int currentHealth = 100;
     private float cooldownTimer = 5f;
     private float timerIncreaseOnHit = 0.5f;
-    
+    public static event Action<int> AddScoreOnDeath;
 
     public void InitializeHumanStats(int maxHealth, float cooldownTimer, float timerIncreaseOnHit)
     {
@@ -46,16 +46,16 @@ public class HumanHealthSystem : MonoBehaviour
         currentHealth -= 1;
         cooldownTimer += timerIncreaseOnHit;
         healthBarLogic.UpdateHealth(currentHealth, maxHealth);
-        
+        if (currentHealth <= 0) HandleDeath();
         //Add highscore
     }
 
     public void HandleDeath()
     {
         //Add score to highscore
-        
+        AddScoreOnDeath?.Invoke(10); // TODO - adjust score value
         //Add animation
-        
+
         //If stopped animation then Destory.
         Destroy(gameObject);
     }

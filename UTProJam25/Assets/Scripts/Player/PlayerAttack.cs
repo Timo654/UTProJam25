@@ -26,6 +26,7 @@ public class PlayerAttack : MonoBehaviour
 
     private void OnAttack(InputAction.CallbackContext context)
     {
+        if (m_beatManager == null) return;
         bool didHit = m_beatManager.CheckIfHitClose(attackBeatIndex);
         AttackPlayer?.Invoke(didHit);
     }

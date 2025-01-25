@@ -23,12 +23,27 @@ public class PlayerAim : MonoBehaviour
 
     private void HandleAttack(bool onBeat)
     {
-        foreach (var obj in gameobjectsInView)
+        List<HumanHealthSystem> toDamage = new List<HumanHealthSystem>();
+
+        for (int i = 0; i < gameobjectsInView.Count; i++)
         {
+            var obj = gameobjectsInView[i];
             if (obj.TryGetComponent(out SpriteRenderer sr))
             {
                 sr.color = onBeat ? Color.green : Color.red;
             }
+            if (onBeat)
+            {
+                if (obj.TryGetComponent(out HumanHealthSystem hhs))
+                {
+                    toDamage.Add(hhs);
+                }
+            }
+        }
+
+        for (int i = 0; i < toDamage.Count; i++)
+        {
+            toDamage[i].TakeDamage();
         }
     }
 
