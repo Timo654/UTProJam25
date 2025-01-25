@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.02.00">
 	<object class="AudioFile" id="{6b2e409a-8c8e-4c9d-81a5-da0b01a3e54a}">
 		<property name="assetPath">
-			<value>563651__johnnie_holiday__synthwave-120bpm.wav</value>
+			<value>Music/563651__johnnie_holiday__synthwave-120bpm.wav</value>
 		</property>
 		<property name="isStreaming">
 			<value>true</value>
