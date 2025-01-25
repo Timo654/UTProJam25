@@ -22,3 +22,4 @@ MonoBehaviour:
   bgmStage: 3
   songOffset: 300000
   levelBPM: 120
+  time: 64

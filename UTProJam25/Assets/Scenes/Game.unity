@@ -300,12 +300,12 @@ GameObject:
   - component: {fileID: 336743204}
   - component: {fileID: 336743203}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: DebugBeatCircle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &336743203
 MonoBehaviour:
   m_ObjectHideFlags: 0
