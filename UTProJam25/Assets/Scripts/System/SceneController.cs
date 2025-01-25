@@ -13,7 +13,7 @@ public class SceneController : ScriptableObject
     {
         SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene("Game");
-        LoadUI(true);
+        LoadUI();
         OnSceneLoad?.Invoke();
     }
 
@@ -48,11 +48,17 @@ public class SceneController : ScriptableObject
         Time.timeScale = 0f;
     }
 
-    public void LoadUI(bool additive)
+    public void LoadUI()
     {
         SceneManager.LoadScene("UI", LoadSceneMode.Additive);
     }
 
+    public void LoadStatistics()
+    {
+        prevEvS = EventSystem.current.gameObject;
+        prevEvS.SetActive(false);
+        SceneManager.LoadScene("StatisticsScreen", LoadSceneMode.Additive);
+    }
     public void UnloadSettings()
     {
         EventSystem.current.gameObject.SetActive(false);

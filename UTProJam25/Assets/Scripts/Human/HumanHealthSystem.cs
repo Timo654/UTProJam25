@@ -13,6 +13,7 @@ public class HumanHealthSystem : MonoBehaviour
     private float cooldownTimer = 5f;
     private float timerIncreaseOnHit = 0.5f;
     public static event Action<int> AddScoreOnDeath;
+    public static event Action RanAway;
 
     public void InitializeHumanStats(int maxHealth, float cooldownTimer, float timerIncreaseOnHit)
     {
@@ -32,6 +33,7 @@ public class HumanHealthSystem : MonoBehaviour
         UpdateTimer(cooldownTimer);
         if (cooldownTimer <= 0)
         {
+            RanAway?.Invoke();
             Destroy(gameObject);
         }
     }

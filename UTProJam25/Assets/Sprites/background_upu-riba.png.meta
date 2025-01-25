@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      background_upu-riba_0: 7876529355270678329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
