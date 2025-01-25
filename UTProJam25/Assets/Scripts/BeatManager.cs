@@ -42,11 +42,11 @@ public class Intervals
     }
 
     // TODO - more precise checks, but for now its either all or nothing
-    
+
     public bool CheckIfCloseEnough(float interval)
     {
         float diff = interval - _lastInterval;
-        if (diff <= 0.15f) 
+        if (diff <= 0.15f)
         {
             // hit late
             if (isHitPrevInterval) return false;
