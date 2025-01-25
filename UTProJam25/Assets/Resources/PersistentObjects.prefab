@@ -148,18 +148,32 @@ MonoBehaviour:
     Path: 
   <ButtonClick>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -573841937
+      Data2: 1335103727
+      Data3: -137425991
+      Data4: 286328066
+    Path: event:/UI/ButtonClick
+  <ButtonBack>k__BackingField:
+    Guid:
+      Data1: 814275728
+      Data2: 1266807593
+      Data3: -1745014354
+      Data4: 561070957
+    Path: event:/UI/ButtonBack
+  <ButtonSelect>k__BackingField:
+    Guid:
+      Data1: 381067625
+      Data2: 1333615632
+      Data3: -496133742
+      Data4: -1835145484
+    Path: event:/UI/ButtonSelect
   <BPMTest>k__BackingField:
     Guid:
       Data1: -1471142566
       Data2: 1268921823
       Data3: -1157629819
       Data4: -408156635
-    Path: event:/BPMTest
+    Path: event:/Music/BPMTest
 --- !u!1 &8747778835950529223
 GameObject:
   m_ObjectHideFlags: 0

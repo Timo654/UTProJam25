@@ -9,6 +9,8 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("UI")]
     [field: SerializeField] public EventReference ButtonClick { get; private set; }
+    [field: SerializeField] public EventReference ButtonBack { get; private set; }
+    [field: SerializeField] public EventReference ButtonSelect { get; private set; }
 
     [field: Header("Music")]
     [field: SerializeField] public EventReference BPMTest { get; private set; }
