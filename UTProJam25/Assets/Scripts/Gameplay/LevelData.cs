@@ -4,6 +4,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Level", menuName = "Levels/New Level")]
 public class LevelData : ScriptableObject
 {
+    public int levelID;
     public EventReference levelBGM;
     public BGMStage bgmStage;
     public int songOffset; // offset in milliseconds, in FMOD

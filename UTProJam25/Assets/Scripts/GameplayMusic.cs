@@ -1,19 +1,27 @@
 using UnityEngine;
 
-public class BPMTest : MonoBehaviour
+public class GameplayMusic : MonoBehaviour
 {
-    [SerializeField] private LevelData levelData;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Awake()
-    {           
+    private void OnEnable()
+    {
+        LevelLoader.OnGameplayLevelLoaded += InitializeMusic;
+    }
+
+    private void OnDisable()
+    {
+        LevelLoader.OnGameplayLevelLoaded -= InitializeMusic;
+    }
+
+    private void InitializeMusic(LevelData data)
+    {
         var _beatManager = FindAnyObjectByType<BeatManager>();
         if (_beatManager != null)
-            _beatManager.SetBPM(levelData.levelBPM, levelData.songOffset, levelData.mercyRange);
+            _beatManager.SetBPM(data.levelBPM, data.songOffset, data.mercyRange);
         else Debug.LogWarning("how is the beat manager gone ????????");
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
-        if (levelData.bgmStage != BGMStage.None)
-        AudioManager.Instance.SetMusicParameter("MusicSwitch", (int)levelData.bgmStage);
+        if (data.bgmStage != BGMStage.None)
+            AudioManager.Instance.SetMusicParameter("MusicSwitch", (int)data.bgmStage);
     }
 
     private void Start()

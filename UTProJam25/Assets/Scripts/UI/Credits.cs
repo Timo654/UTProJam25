@@ -15,6 +15,7 @@ public class Credits : MonoBehaviour
         // start the song if it's not playing already
         if (AudioManager.Instance.GetMusicPosition() == 0)
             AudioManager.Instance.StartMusic();
+        LevelLoader.Instance.FadeIn();
     }
     public void OnCreditsEnd()
     {
