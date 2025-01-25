@@ -5,11 +5,22 @@ public class StatisticsHandler : MonoBehaviour
 {
     public static event Action<int> OnScoreUpdated;
 
-    private int score = 0;
+    [SerializeField] private StatisticsData statsData;
+
+    private void Awake()
+    {
+        statsData.score = 0;
+        statsData.successfulClicks = 0;
+        statsData.failedClicks = 0;
+        statsData.peopleDrowned = 0;
+        statsData.peopleEscaped = 0;
+    }
     private void OnEnable()
     {
         HumanHealthSystem.AddScoreOnDeath += AddScore;
         GameManager.OnGameEnd += OnGameEnd;
+        HumanHealthSystem.RanAway += AddEscaped;
+        PlayerAttack.AttackPlayer += OnAttack;
         // TODO add more funny stats here
     }
 
@@ -17,19 +28,34 @@ public class StatisticsHandler : MonoBehaviour
     {
         HumanHealthSystem.AddScoreOnDeath -= AddScore;
         GameManager.OnGameEnd -= OnGameEnd;
+        HumanHealthSystem.RanAway -= AddEscaped;
+        PlayerAttack.AttackPlayer -= OnAttack;
+    }
+
+    private void OnAttack(bool success)
+    {
+        if (success) statsData.successfulClicks++;
+        else statsData.failedClicks++;
+    }
+
+    private void AddEscaped()
+    {
+        statsData.peopleEscaped++;
     }
 
     private void AddScore(int toAdd)
     {
-        score += toAdd;
-        OnScoreUpdated?.Invoke(score);
+        statsData.peopleDrowned++;
+        statsData.score += toAdd;
+        OnScoreUpdated?.Invoke(statsData.score);
     }
 
 
     private void OnGameEnd()
     {
-        bool highScore = score > SaveManager.Instance.gameData.highScore;
+        bool highScore = statsData.score > SaveManager.Instance.gameData.highScore;
+        statsData.isHighScore = highScore;
         // TODO - do something if high score
-        SaveManager.Instance.gameData.highScore = score;
+        SaveManager.Instance.gameData.highScore = statsData.score;
     }
 }

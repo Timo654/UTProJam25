@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private int lastTimeValue;
 
     public static event Action<int> OnGameTimeChanged;
-
+    private bool gameEnded = false;
     private void Start()
     {
         currentTime = gameLoopSettings.gameDuration;
@@ -18,6 +18,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        if (gameEnded) return;
         if (currentTime <= 0)
         {
             EndGame();
@@ -36,9 +37,11 @@ public class GameManager : MonoBehaviour
 
     private void EndGame()
     {
+        gameEnded = true;
         //Load AD for bank loot moneyz
         //then Load End game UI? or more adzzz?
         OnGameEnd?.Invoke();
-        sceneController.LoadMainMenu();
+        //sceneController.LoadMainMenu();
+        sceneController.LoadStatistics(); // NOTE - maybe not the best place for this
     }
 }
