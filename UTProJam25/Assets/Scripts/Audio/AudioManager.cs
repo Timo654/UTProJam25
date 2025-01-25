@@ -151,10 +151,6 @@ public class AudioManager : MonoSingleton<AudioManager>
     {
         musicEventInstance.setParameterByName(parameter, value);
     }
-    public void SetMusicParameter(string name, string label)
-    {
-        musicEventInstance.setParameterByNameWithLabel(name, label);
-    }
 
     public void StartMusic()
     {

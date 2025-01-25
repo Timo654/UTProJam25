@@ -12,12 +12,19 @@ public class BPMTest : MonoBehaviour
         else Debug.LogWarning("how is the beat manager gone ????????");
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
+<<<<<<< HEAD
         // if (levelData.bgmStage != BGMStage.None)
         AudioManager.Instance.SetMusicParameter("MusicSwitch", 2);
+=======
+        if (levelData.bgmStage != BGMStage.None)
+        AudioManager.Instance.SetMusicParameter("MusicSwitch", (int)levelData.bgmStage);
+>>>>>>> 537cf781649d4f7b7716e2feebbd1ca15f79fd7e
     }
 
     private void Start()
     {
-        AudioManager.Instance.StartMusic();
+        // start the song if it's not playing already
+        if (AudioManager.Instance.GetMusicPosition() == 0)
+            AudioManager.Instance.StartMusic();
     }
 }
