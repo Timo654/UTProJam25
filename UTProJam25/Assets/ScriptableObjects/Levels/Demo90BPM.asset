@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f90a7bfcf09eda643917c748769e6f66, type: 3}
+  m_Name: Demo90BPM
+  m_EditorClassIdentifier: 
+  levelBGM:
+    Guid:
+      Data1: 1241477507
+      Data2: 1239666240
+      Data3: 1424133786
+      Data4: 233478042
+    Path: event:/Music/Demo90BPM
+  levelBPM: 90

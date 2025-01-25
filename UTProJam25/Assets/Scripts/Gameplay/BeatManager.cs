@@ -8,6 +8,11 @@ public class BeatManager : MonoBehaviour
     [SerializeField] private float _bpm;
     [SerializeField] private Intervals[] _intervals;
 
+
+    public void SetBPM(float bpm)
+    {
+        _bpm = bpm;
+    }
     private void Update()
     {
         if (AudioManager.Instance.GetMusicPosition() == 0) return; // not playing the song yet
