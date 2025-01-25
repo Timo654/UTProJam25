@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static event Action OnGameEnd;
     [SerializeField] private GameLoopSettings gameLoopSettings;
     [SerializeField] private SceneController sceneController;
     private float currentTime;
@@ -37,6 +38,7 @@ public class GameManager : MonoBehaviour
     {
         //Load AD for bank loot moneyz
         //then Load End game UI? or more adzzz?
+        OnGameEnd?.Invoke();
         sceneController.LoadMainMenu();
     }
 }
