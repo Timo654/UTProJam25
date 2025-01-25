@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f90a7bfcf09eda643917c748769e6f66, type: 3}
-  m_Name: Demo90BPM
+  m_Name: Song120BPM
   m_EditorClassIdentifier: 
   levelBGM:
     Guid:
@@ -19,5 +19,6 @@ MonoBehaviour:
       Data3: 2128472718
       Data4: -1784185058
     Path: event:/Music/MusicLogic
-  bgmStage: 2
-  levelBPM: 90
+  bgmStage: 3
+  songOffset: 300000
+  levelBPM: 120

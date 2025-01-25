@@ -8,7 +8,7 @@ public class BPMTest : MonoBehaviour
     {           
         var _beatManager = FindAnyObjectByType<BeatManager>();
         if (_beatManager != null)
-            _beatManager.SetBPM(levelData.levelBPM);
+            _beatManager.SetBPM(levelData.levelBPM, levelData.songOffset);
         else Debug.LogWarning("how is the beat manager gone ????????");
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);

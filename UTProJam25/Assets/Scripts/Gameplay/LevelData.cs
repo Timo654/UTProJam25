@@ -6,6 +6,7 @@ public class LevelData : ScriptableObject
 {
     public EventReference levelBGM;
     public BGMStage bgmStage;
+    public int songOffset; // offset in milliseconds, in FMOD
     public int levelBPM;
     // put any other level specific variables here
 }
