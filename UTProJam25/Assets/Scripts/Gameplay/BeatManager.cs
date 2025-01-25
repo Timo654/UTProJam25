@@ -7,11 +7,13 @@ public class BeatManager : MonoBehaviour
     // based on https://www.youtube.com/watch?v=gIjajeyjRfE
     [SerializeField] private float _bpm;
     [SerializeField] private Intervals[] _intervals;
+    private float _startOffset;
 
-
-    public void SetBPM(float bpm)
+    // startoffset is song start position in milliseconds
+    public void SetBPM(float bpm, int startOffset)
     {
         _bpm = bpm;
+        _startOffset = (startOffset * AudioManager.Instance.GetSampleRate() / 1000);
     }
     private void Update()
     {
@@ -19,7 +21,7 @@ public class BeatManager : MonoBehaviour
 
         foreach (var interval in _intervals)
         {
-            float sampledTime = (AudioManager.Instance.GetMusicPosSamples() / (AudioManager.Instance.GetSampleRate() * interval.GetBeatLength(_bpm)));
+            float sampledTime = ((_startOffset - AudioManager.Instance.GetMusicPosSamples()) / (AudioManager.Instance.GetSampleRate() * interval.GetBeatLength(_bpm)));
             interval.CheckForNewInterval(sampledTime);
         }
     }
