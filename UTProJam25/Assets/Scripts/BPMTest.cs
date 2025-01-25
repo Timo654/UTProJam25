@@ -13,7 +13,7 @@ public class BPMTest : MonoBehaviour
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
         // if (levelData.bgmStage != BGMStage.None)
-        AudioManager.Instance.SetMusicParameter("MusicSwitch", 0);
+        AudioManager.Instance.SetMusicParameter("MusicSwitch", 2.0f);
     }
 
     private void Start()
