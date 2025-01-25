@@ -7,7 +7,7 @@ public class Credits : MonoBehaviour
     {
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
-        AudioManager.Instance.SetMusicParameter("MusicSwitch", BGMStage.Credits.ToString());
+        AudioManager.Instance.SetMusicParameter("MusicSwitch", 1);
     }
 
     private void Start()
