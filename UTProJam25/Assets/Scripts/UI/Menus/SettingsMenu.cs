@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 public class SettingsMenu : MonoBehaviour
 {
@@ -10,9 +11,11 @@ public class SettingsMenu : MonoBehaviour
     private Toggle fullscreenToggle;
     [SerializeField] GameObject resolutionOption;
     [SerializeField] GameObject fullscreenOption;
+    [SerializeField] GameObject backButton;
 
     private void Start()
     {
+        EventSystem.current.SetSelectedGameObject(backButton);
         resolutionDropdown = resolutionOption.transform.GetChild(1).GetComponent<TMPro.TMP_Dropdown>();
         fullscreenToggle = fullscreenOption.transform.GetChild(1).GetComponent<Toggle>();
         if (BuildConstants.isWebGL || BuildConstants.isMobile)
