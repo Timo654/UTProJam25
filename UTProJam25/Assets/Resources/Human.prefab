@@ -900,7 +900,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: -1
   m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -910,7 +910,7 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 0
-  m_MaskInteraction: 0
+  m_MaskInteraction: 2
   m_SpriteSortPoint: 0
 --- !u!1 &6162926323966794438
 GameObject:
@@ -1226,6 +1226,7 @@ GameObject:
   - component: {fileID: 1070058962054439038}
   - component: {fileID: 7576470858576652645}
   - component: {fileID: 8374778082466887652}
+  - component: {fileID: 7033363021178863626}
   m_Layer: 0
   m_Name: Human
   m_TagString: Human
@@ -1265,6 +1266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBarLogic: {fileID: 8958998235356088213}
   humanTimer: {fileID: 8285020270287389310}
+  humanController: {fileID: 7033363021178863626}
 --- !u!50 &1070058962054439038
 Rigidbody2D:
   serializedVersion: 5
@@ -1351,6 +1353,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   humanSpriteRenderer: {fileID: 1490363636893825163}
+--- !u!114 &7033363021178863626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6644938931263132923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232717b3fdf775341867fee06f2b7e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7577999054852758476
 GameObject:
   m_ObjectHideFlags: 0
