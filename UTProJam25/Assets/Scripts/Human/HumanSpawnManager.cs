@@ -3,14 +3,22 @@ using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class HumanSpawnManager : MonoBehaviour
-{
-    [FormerlySerializedAs("enemyPrefab")] public GameObject humanPrefab; // The enemy prefab to spawn
+{ 
+    [SerializeField]
+    private GameObject humanPrefab; // The enemy prefab to spawn
     private BoxCollider2D spawnArea; // Reference to the spawn area
     public int numberOfEnemies = 5; // Number of enemies to spawn
     private float spawnCooldown = 2f;
     private readonly float spawnMaxCooldown = 2f;
     [SerializeField]
     private bool spawnUsingTimer;
+
+    private int baseHealth = 4;
+    private int healthRange = 1;
+    private int baseCooldown = 5;
+    private int cooldownRange = 1;
+    private float baseTimerIncreaseOnHit = 2f;
+    private float timerIncreaseOnHitRange = 1f;
 
     void Start()
     {
@@ -44,8 +52,12 @@ public class HumanSpawnManager : MonoBehaviour
 
     void SpawnEnemy()
     {
+        int playerHealth = baseHealth + Random.Range(-healthRange, healthRange+1);
+        int cooldown = baseCooldown + Random.Range(-cooldownRange, cooldownRange+1);
+        float timerIncreaseOnHit = baseTimerIncreaseOnHit + Random.Range(-timerIncreaseOnHitRange, timerIncreaseOnHitRange+1);
         Vector2 spawnPoint = GetRandomPointInArea();
-        Instantiate(humanPrefab, spawnPoint, Quaternion.identity);
+        GameObject newHumanPrefab = Instantiate(humanPrefab, spawnPoint, Quaternion.identity);
+        newHumanPrefab.GetComponent<HumanHealthSystem>().InitializeHumanStats(playerHealth, cooldown, timerIncreaseOnHit);
     }
 
     Vector2 GetRandomPointInArea()

@@ -86,6 +86,7 @@ MonoBehaviour:
   gameData:
     version: 2
     money: 0
+    highScore: 0
   runtimeData:
     previousSceneName: 
 --- !u!1 &6858655836324257970
@@ -134,11 +135,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <TestSound>k__BackingField:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -704548059
+      Data2: 1208494878
+      Data3: -363100011
+      Data4: 37591529
+    Path: event:/SFX/TestSound
   <WrongSound>k__BackingField:
     Guid:
       Data1: 0
@@ -167,13 +168,20 @@ MonoBehaviour:
       Data3: -496133742
       Data4: -1835145484
     Path: event:/UI/ButtonSelect
-  <BPMTest>k__BackingField:
+  <BPM120Test>k__BackingField:
     Guid:
       Data1: -1471142566
       Data2: 1268921823
       Data3: -1157629819
       Data4: -408156635
     Path: event:/Music/BPMTest
+  <BPM90Test>k__BackingField:
+    Guid:
+      Data1: 1241477507
+      Data2: 1239666240
+      Data3: 1424133786
+      Data4: 233478042
+    Path: event:/Music/Demo90BPM
 --- !u!1 &8747778835950529223
 GameObject:
   m_ObjectHideFlags: 0

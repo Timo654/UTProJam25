@@ -149,7 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d606fc5597a449419bad4c9fd6aeb91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _bpm: 120
+  _bpm: 90
   _intervals:
   - _subdivisions: 1
     _trigger:
