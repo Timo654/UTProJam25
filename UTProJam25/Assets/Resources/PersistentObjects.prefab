@@ -147,6 +147,34 @@ MonoBehaviour:
       Data3: 0
       Data4: 0
     Path: 
+  <KannelSound>k__BackingField:
+    Guid:
+      Data1: 1109775385
+      Data2: 1314043098
+      Data3: -1662725973
+      Data4: -594451286
+    Path: event:/SFX/Kannel
+  <ChoirSound>k__BackingField:
+    Guid:
+      Data1: 1158276008
+      Data2: 1212349052
+      Data3: 87688841
+      Data4: 1175361280
+    Path: event:/SFX/Choir
+  <BagpipeSound>k__BackingField:
+    Guid:
+      Data1: -779753788
+      Data2: 1099519305
+      Data3: -1715643215
+      Data4: -862857114
+    Path: event:/SFX/Bagpipe
+  <FluteSound>k__BackingField:
+    Guid:
+      Data1: 1042772407
+      Data2: 1220922405
+      Data3: -1007822720
+      Data4: 2021057323
+    Path: event:/SFX/Flute
   <ButtonClick>k__BackingField:
     Guid:
       Data1: -573841937
@@ -168,20 +196,13 @@ MonoBehaviour:
       Data3: -496133742
       Data4: -1835145484
     Path: event:/UI/ButtonSelect
-  <BPM120Test>k__BackingField:
+  <AllMusic>k__BackingField:
     Guid:
-      Data1: -1471142566
-      Data2: 1268921823
-      Data3: -1157629819
-      Data4: -408156635
-    Path: event:/Music/BPMTest
-  <BPM90Test>k__BackingField:
-    Guid:
-      Data1: 1241477507
-      Data2: 1239666240
-      Data3: 1424133786
-      Data4: 233478042
-    Path: event:/Music/Demo90BPM
+      Data1: -709487964
+      Data2: 1173257637
+      Data3: 2128472718
+      Data4: -1784185058
+    Path: event:/Music/MusicLogic
 --- !u!1 &8747778835950529223
 GameObject:
   m_ObjectHideFlags: 0

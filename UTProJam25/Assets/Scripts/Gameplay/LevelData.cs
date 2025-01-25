@@ -5,6 +5,7 @@ using UnityEngine;
 public class LevelData : ScriptableObject
 {
     public EventReference levelBGM;
+    public BGMStage bgmStage;
     public int levelBPM;
     // put any other level specific variables here
 }

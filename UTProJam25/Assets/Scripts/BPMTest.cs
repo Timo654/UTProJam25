@@ -10,7 +10,10 @@ public class BPMTest : MonoBehaviour
         if (_beatManager != null)
             _beatManager.SetBPM(levelData.levelBPM);
         else Debug.LogWarning("how is the beat manager gone ????????");
-        AudioManager.Instance.InitializeMusic(levelData.levelBGM);
+        if (!AudioManager.Instance.HasMusicInitialized())
+            AudioManager.Instance.InitializeMusic(levelData.levelBGM);
+        if (levelData.bgmStage != BGMStage.None)
+            AudioManager.Instance.SetMusicParameter("MusicSwitch", BGMStage.Music90.ToString());
     }
 
     private void Start()

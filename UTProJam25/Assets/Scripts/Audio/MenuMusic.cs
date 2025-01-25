@@ -1,9 +1,9 @@
 using UnityEngine;
 
-public class Credits : MonoBehaviour
+public class MenuMusic : MonoBehaviour
 {
-    [SerializeField] private SceneController sceneController;
-    private void Awake()
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Awake()
     {
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
@@ -13,9 +13,5 @@ public class Credits : MonoBehaviour
     private void Start()
     {
         AudioManager.Instance.StartMusic();
-    }
-    public void OnCreditsEnd()
-    {
-        sceneController.LoadMainMenu();
     }
 }

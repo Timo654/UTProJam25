@@ -151,6 +151,11 @@ public class AudioManager : MonoSingleton<AudioManager>
     {
         musicEventInstance.setParameterByName(parameter, value);
     }
+    public void SetMusicParameter(string name, string label)
+    {
+        musicEventInstance.setParameterByNameWithLabel(name, label);
+    }
+
     public void StartMusic()
     {
         if (!musicEventInstance.isValid())
@@ -161,6 +166,10 @@ public class AudioManager : MonoSingleton<AudioManager>
         musicEventInstance.start();
     }
 
+    public bool HasMusicInitialized()
+    {
+        return musicEventInstance.isValid();
+    }
     public int GetMusicPosition()
     {
         musicEventInstance.getTimelinePosition(out int position);

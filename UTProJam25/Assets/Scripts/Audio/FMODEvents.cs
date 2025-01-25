@@ -19,8 +19,6 @@ public class FMODEvents : MonoBehaviour
 
     [field: Header("Music")]
     [field: SerializeField] public EventReference AllMusic { get; private set; }
-    [field: SerializeField] public EventReference BPM120Test { get; private set; }
-    [field: SerializeField] public EventReference BPM90Test { get; private set; }
     public static FMODEvents Instance { get; private set; }
 
     private void Awake()
@@ -31,4 +29,14 @@ public class FMODEvents : MonoBehaviour
         }
         Instance = this;
     }
+}
+
+
+public enum BGMStage
+{
+    None,
+    MainMenu,
+    Credits,
+    Music90,
+    Music120
 }

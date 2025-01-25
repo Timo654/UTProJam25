@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelBGM:
     Guid:
-      Data1: 1241477507
-      Data2: 1239666240
-      Data3: 1424133786
-      Data4: 233478042
-    Path: event:/Music/Demo90BPM
+      Data1: -709487964
+      Data2: 1173257637
+      Data3: 2128472718
+      Data4: -1784185058
+    Path: event:/Music/MusicLogic
+  bgmStage: 3
   levelBPM: 90
