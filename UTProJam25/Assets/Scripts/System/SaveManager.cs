@@ -96,6 +96,7 @@ public class GameData
 {
     public int version = 2;
     public int money = 0;
+    public int highScore = 0;
 }
 
 [Serializable]
