@@ -6,6 +6,7 @@ TagManager:
   tags:
   - PlayerSpawnPoint
   - Human
+  - WaterCollider
   layers:
   - Default
   - TransparentFX
