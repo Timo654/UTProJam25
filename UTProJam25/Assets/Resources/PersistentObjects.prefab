@@ -168,13 +168,20 @@ MonoBehaviour:
       Data3: -496133742
       Data4: -1835145484
     Path: event:/UI/ButtonSelect
-  <BPMTest>k__BackingField:
+  <BPM120Test>k__BackingField:
     Guid:
       Data1: -1471142566
       Data2: 1268921823
       Data3: -1157629819
       Data4: -408156635
     Path: event:/Music/BPMTest
+  <BPM90Test>k__BackingField:
+    Guid:
+      Data1: 1241477507
+      Data2: 1239666240
+      Data3: 1424133786
+      Data4: 233478042
+    Path: event:/Music/Demo90BPM
 --- !u!1 &8747778835950529223
 GameObject:
   m_ObjectHideFlags: 0
