@@ -1,8 +1,9 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class HumanSpawnManager : MonoBehaviour
 {
-    public GameObject enemyPrefab; // The enemy prefab to spawn
+    [FormerlySerializedAs("enemyPrefab")] public GameObject humanPrefab; // The enemy prefab to spawn
     private BoxCollider2D spawnArea; // Reference to the spawn area
     public int numberOfEnemies = 5; // Number of enemies to spawn
 
@@ -17,7 +18,7 @@ public class HumanSpawnManager : MonoBehaviour
         for (int i = 0; i < numberOfEnemies; i++)
         {
             Vector2 spawnPoint = GetRandomPointInArea();
-            Instantiate(enemyPrefab, spawnPoint, Quaternion.identity);
+            Instantiate(humanPrefab, spawnPoint, Quaternion.identity);
         }
     }
 
