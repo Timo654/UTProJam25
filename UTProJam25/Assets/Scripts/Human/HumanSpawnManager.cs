@@ -1,5 +1,6 @@
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public class HumanSpawnManager : MonoBehaviour
@@ -12,6 +13,8 @@ public class HumanSpawnManager : MonoBehaviour
     private readonly float spawnMaxCooldown = 2f;
     [SerializeField]
     private bool spawnUsingTimer;
+
+    [SerializeField] private List<Sprite> playerSprites;
 
     private int baseHealth = 4;
     private int healthRange = 1;
@@ -56,8 +59,10 @@ public class HumanSpawnManager : MonoBehaviour
         int cooldown = baseCooldown + Random.Range(-cooldownRange, cooldownRange+1);
         float timerIncreaseOnHit = baseTimerIncreaseOnHit + Random.Range(-timerIncreaseOnHitRange, timerIncreaseOnHitRange+1);
         Vector2 spawnPoint = GetRandomPointInArea();
+        Sprite sprite = playerSprites[Random.Range(0, playerSprites.Count)];
         GameObject newHumanPrefab = Instantiate(humanPrefab, spawnPoint, Quaternion.identity);
         newHumanPrefab.GetComponent<HumanHealthSystem>().InitializeHumanStats(playerHealth, cooldown, timerIncreaseOnHit);
+        newHumanPrefab.GetComponent<HumanSpriteChanger>().UpdateSprite(sprite);
     }
 
     Vector2 GetRandomPointInArea()
