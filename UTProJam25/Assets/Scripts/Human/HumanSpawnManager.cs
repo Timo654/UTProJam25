@@ -1,10 +1,9 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class HumanSpawnManager : MonoBehaviour
-{ 
+{
     [SerializeField]
     private GameObject humanPrefab; // The enemy prefab to spawn
     private BoxCollider2D spawnArea; // Reference to the spawn area
@@ -22,6 +21,21 @@ public class HumanSpawnManager : MonoBehaviour
     private int cooldownRange = 1;
     private float baseTimerIncreaseOnHit = 2f;
     private float timerIncreaseOnHitRange = 1f;
+
+    private void OnEnable()
+    {
+        GameManager.OnGameEnd += StopSpawner;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnGameEnd -= StopSpawner;
+    }
+
+    private void StopSpawner()
+    {
+        spawnUsingTimer = false;
+    }
 
     void Start()
     {
@@ -55,9 +69,9 @@ public class HumanSpawnManager : MonoBehaviour
 
     void SpawnEnemy()
     {
-        int playerHealth = baseHealth + Random.Range(-healthRange, healthRange+1);
-        int cooldown = baseCooldown + Random.Range(-cooldownRange, cooldownRange+1);
-        float timerIncreaseOnHit = baseTimerIncreaseOnHit + Random.Range(-timerIncreaseOnHitRange, timerIncreaseOnHitRange+1);
+        int playerHealth = baseHealth + Random.Range(-healthRange, healthRange + 1);
+        int cooldown = baseCooldown + Random.Range(-cooldownRange, cooldownRange + 1);
+        float timerIncreaseOnHit = baseTimerIncreaseOnHit + Random.Range(-timerIncreaseOnHitRange, timerIncreaseOnHitRange + 1);
         Vector2 spawnPoint = GetRandomPointInArea();
         Sprite sprite = playerSprites[Random.Range(0, playerSprites.Count)];
         GameObject newHumanPrefab = Instantiate(humanPrefab, spawnPoint, Quaternion.identity);

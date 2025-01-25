@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -5,20 +6,23 @@ public class PlayerAim : MonoBehaviour
 {
 
     List<GameObject> gameobjectsInView = new();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
+    private bool gameActive = true;
 
     private void OnEnable()
     {
         PlayerAttack.AttackPlayer += HandleAttack;
+        GameManager.OnGameEnd += StopPlayer;
     }
 
     private void OnDisable()
     {
         PlayerAttack.AttackPlayer -= HandleAttack;
+        GameManager.OnGameEnd -= StopPlayer;
+    }
+
+    private void StopPlayer()
+    {
+        gameActive = false;
     }
 
     private void HandleAttack(bool onBeat)
@@ -50,6 +54,7 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameActive) return;
         var lookAtPos = Input.mousePosition;
         lookAtPos.z = transform.position.z - Camera.main.transform.position.z;
         lookAtPos = Camera.main.ScreenToWorldPoint(lookAtPos);
