@@ -48,15 +48,14 @@ public class AudioManager : MonoSingleton<AudioManager>
     private static void InitializeInstance(AudioManager instance)
     {
         Instance.eventInstances = new List<EventInstance>();
-         // TODO - uncomment when ready to impl sound
         Instance.masterBus = RuntimeManager.GetBus("bus:/");
         Instance.musicBus = RuntimeManager.GetBus("bus:/Music");
-        //Instance.sfxBus = RuntimeManager.GetBus("bus:/SFX");
-        //Instance.uiBus = RuntimeManager.GetBus("bus:/UI");
-        Instance.MasterVolume = SaveManager.Instance.systemData.MasterVolume / 100f;
-        Instance.SFXVolume = SaveManager.Instance.systemData.SFXVolume / 100f;
-        Instance.MusicVolume = SaveManager.Instance.systemData.MusicVolume / 100f;
-        Instance.UIVolume = SaveManager.Instance.systemData.UIVolume / 100f;
+        Instance.sfxBus = RuntimeManager.GetBus("bus:/SFX");
+        Instance.uiBus = RuntimeManager.GetBus("bus:/UI");
+        Instance.MasterVolume = SaveManager.Instance.systemData.MasterVolume;
+        Instance.SFXVolume = SaveManager.Instance.systemData.SFXVolume;
+        Instance.MusicVolume = SaveManager.Instance.systemData.MusicVolume;
+        Instance.UIVolume = SaveManager.Instance.systemData.UIVolume;
     }
 
     private void Awake()
@@ -97,20 +96,20 @@ public class AudioManager : MonoSingleton<AudioManager>
         {
             MusicVolume += 0.05f;
             MusicVolume = Math.Clamp(MusicVolume, 0f, 1f);
-            SaveManager.Instance.systemData.MusicVolume = MusicVolume * 100f;
+            SaveManager.Instance.systemData.MusicVolume = MusicVolume;
         }
 
         if (Input.GetKeyDown(KeyCode.Minus) || Input.GetKeyDown(KeyCode.KeypadMinus))
         {
             MusicVolume -= 0.05f;
             MusicVolume = Math.Clamp(MusicVolume, 0f, 1f);
-            SaveManager.Instance.systemData.MusicVolume = MusicVolume * 100f;
+            SaveManager.Instance.systemData.MusicVolume = MusicVolume;
         }
 
         if (Input.GetKeyDown(KeyCode.R))
         {
             MusicVolume = UnityEngine.Random.Range(0, 1f);
-            SaveManager.Instance.systemData.MusicVolume = MusicVolume * 100f;
+            SaveManager.Instance.systemData.MusicVolume = MusicVolume;
         }
     }
 

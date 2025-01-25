@@ -31,16 +31,16 @@ public class VolumeSlider : MonoBehaviour
         switch (volumeType)
         {
             case VolumeType.MUSIC:
-                volumeSlider.value = audioManager.MusicVolume * 100f;
+                volumeSlider.value = audioManager.MusicVolume;
                 break;
             case VolumeType.SFX:
-                volumeSlider.value = audioManager.SFXVolume * 100f;
+                volumeSlider.value = audioManager.SFXVolume;
                 break;
             case VolumeType.UI:
-                volumeSlider.value = audioManager.UIVolume * 100f;
+                volumeSlider.value = audioManager.UIVolume;
                 break;
             case VolumeType.MASTER:
-                volumeSlider.value = audioManager.MasterVolume * 100f;
+                volumeSlider.value = audioManager.MasterVolume;
                 break;
             default:
                 Debug.LogWarning("Volume Type not supported: " + volumeType);
@@ -59,21 +59,21 @@ public class VolumeSlider : MonoBehaviour
         {
             case VolumeType.MUSIC:
                 SaveManager.Instance.systemData.MusicVolume = volumeSlider.value;
-                audioManager.MusicVolume = volumeSlider.value / 100f;
+                audioManager.MusicVolume = volumeSlider.value;
                 break;
             case VolumeType.SFX:
                 SaveManager.Instance.systemData.SFXVolume = volumeSlider.value;
-                audioManager.SFXVolume = volumeSlider.value / 100f;
+                audioManager.SFXVolume = volumeSlider.value;
                 sfxTestAudio.start();
                 break;
             case VolumeType.UI:
                 SaveManager.Instance.systemData.UIVolume = volumeSlider.value;
-                audioManager.UIVolume = volumeSlider.value / 100f;
+                audioManager.UIVolume = volumeSlider.value;
                 uiTestAudio.start();
                 break;
             case VolumeType.MASTER:
                 SaveManager.Instance.systemData.MasterVolume = volumeSlider.value;
-                audioManager.MasterVolume = volumeSlider.value / 100f;
+                audioManager.MasterVolume = volumeSlider.value;
                 break;
             default:
                 Debug.LogWarning("Volume Type not supported: " + volumeType);
