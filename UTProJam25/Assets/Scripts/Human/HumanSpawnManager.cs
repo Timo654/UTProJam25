@@ -1,11 +1,16 @@
 using UnityEngine;
 using UnityEngine.Serialization;
+using Random = UnityEngine.Random;
 
 public class HumanSpawnManager : MonoBehaviour
 {
     [FormerlySerializedAs("enemyPrefab")] public GameObject humanPrefab; // The enemy prefab to spawn
     private BoxCollider2D spawnArea; // Reference to the spawn area
     public int numberOfEnemies = 5; // Number of enemies to spawn
+    private float spawnCooldown = 2f;
+    private readonly float spawnMaxCooldown = 2f;
+    [SerializeField]
+    private bool spawnUsingTimer;
 
     void Start()
     {
@@ -13,13 +18,34 @@ public class HumanSpawnManager : MonoBehaviour
         SpawnEnemies();
     }
 
+    private void Update()
+    {
+        if (spawnUsingTimer)
+        {
+            if (spawnCooldown <= 0)
+            {
+                SpawnEnemy();
+                spawnCooldown = spawnMaxCooldown;
+            }
+            else
+            {
+                spawnCooldown -= Time.deltaTime;
+            }
+        }
+    }
+
     void SpawnEnemies()
     {
         for (int i = 0; i < numberOfEnemies; i++)
         {
-            Vector2 spawnPoint = GetRandomPointInArea();
-            Instantiate(humanPrefab, spawnPoint, Quaternion.identity);
+            SpawnEnemy();
         }
+    }
+
+    void SpawnEnemy()
+    {
+        Vector2 spawnPoint = GetRandomPointInArea();
+        Instantiate(humanPrefab, spawnPoint, Quaternion.identity);
     }
 
     Vector2 GetRandomPointInArea()
