@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 88bbbce43b7e4534c91aacecc32a4365
+=======
 guid: c876ebe1802412240b57fb862bf74974
+>>>>>>> 4434a08da1b1bb3205e7469261ca603417644c17
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -97,6 +101,8 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< HEAD
+=======
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -110,6 +116,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+>>>>>>> 4434a08da1b1bb3205e7469261ca603417644c17
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -122,6 +129,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+=======
   - serializedVersion: 4
     buildTarget: WindowsStoreApps
     maxTextureSize: 2048
@@ -135,6 +144,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> 4434a08da1b1bb3205e7469261ca603417644c17
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -173,8 +183,12 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< HEAD
+    nameFileIdTable: {}
+=======
     nameFileIdTable:
       background_main-menu2_0: 5981451125383553000
+>>>>>>> 4434a08da1b1bb3205e7469261ca603417644c17
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
