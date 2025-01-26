@@ -1198,6 +1198,7 @@ MonoBehaviour:
   playerSprites:
   - {fileID: -8719598444004279246, guid: 8887933f069dc3d4aab6082e6ce81477, type: 3}
   - {fileID: 8060256793034967617, guid: c1982d904ac65064a91bc512e2bd8d94, type: 3}
+  - {fileID: -4153445565891269282, guid: 7e51664047aa26444bd6b06be262d631, type: 3}
 --- !u!1 &1745347734
 GameObject:
   m_ObjectHideFlags: 0
