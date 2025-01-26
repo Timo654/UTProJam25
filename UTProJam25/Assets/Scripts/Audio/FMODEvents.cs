@@ -16,6 +16,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference Flute3DSound { get; private set; }
 
     [field: SerializeField] public EventReference DrownSound { get; private set; }
+    [field: SerializeField] public EventReference StepSound { get; private set; }
     
 
     [field: Header("UI")]
