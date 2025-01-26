@@ -1,4 +1,5 @@
 using System;
+using JetBrains.Annotations;
 using UnityEngine;
 
 public class HumanHealthSystem : MonoBehaviour
@@ -16,12 +17,22 @@ public class HumanHealthSystem : MonoBehaviour
     public static event Action<Vector3> OnDrownPosition;
     public static event Action RanAway;
     bool isGameEnd = false;
+
+    private Animator animator;
+
+    private void Start()
+    {
+        animator = GetComponentInChildren<Animator>();
+    }
+
+
     public void InitializeHumanStats(int maxHealth, float cooldownTimer, float timerIncreaseOnHit, HumanType gender)
     {
         this.maxHealth = maxHealth;
         this.cooldownTimer = cooldownTimer;
         this.timerIncreaseOnHit = timerIncreaseOnHit;
         this.humanType = gender;
+        
 
         currentHealth = maxHealth;
         healthBarLogic.InitializeHealthBar(this.maxHealth, this.maxHealth);
@@ -54,7 +65,8 @@ public class HumanHealthSystem : MonoBehaviour
         {
             // TODO - move off screen instead
             RanAway?.Invoke();
-            Destroy(gameObject);
+            animator.SetBool("IsLeaving", true);
+            DestoryHuman();
         }
     }
 
@@ -80,6 +92,12 @@ public class HumanHealthSystem : MonoBehaviour
         //Add animation
         OnDrownPosition?.Invoke(transform.position);
         //If stopped animation then Destory.
+        animator.SetBool("IsDead", true);
+        DestoryHuman();
+    }
+
+    public void DestoryHuman()
+    {
         Destroy(gameObject);
     }
 }
