@@ -210,6 +210,13 @@ MonoBehaviour:
       Data3: -979299664
       Data4: -496022852
     Path: event:/SFX/Uppumine
+  <StepSound>k__BackingField:
+    Guid:
+      Data1: -1212130127
+      Data2: 1095754016
+      Data3: -852680015
+      Data4: 145995475
+    Path: event:/SFX/Steps
   <ButtonClick>k__BackingField:
     Guid:
       Data1: -573841937
