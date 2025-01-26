@@ -55,25 +55,26 @@ public class VolumeSlider : MonoBehaviour
             firstTime = false;
             return;
         }
+        float clampedValue = Mathf.Clamp(volumeSlider.value, 0f, 1f);
         switch (volumeType)
         {
             case VolumeType.MUSIC:
-                SaveManager.Instance.systemData.MusicVolume = volumeSlider.value;
-                audioManager.MusicVolume = volumeSlider.value;
+                SaveManager.Instance.systemData.MusicVolume = clampedValue;
+                audioManager.MusicVolume = clampedValue;
                 break;
             case VolumeType.SFX:
-                SaveManager.Instance.systemData.SFXVolume = volumeSlider.value;
-                audioManager.SFXVolume = volumeSlider.value;
+                SaveManager.Instance.systemData.SFXVolume = clampedValue;
+                audioManager.SFXVolume = clampedValue;
                 sfxTestAudio.start();
                 break;
             case VolumeType.UI:
-                SaveManager.Instance.systemData.UIVolume = volumeSlider.value;
-                audioManager.UIVolume = volumeSlider.value;
+                SaveManager.Instance.systemData.UIVolume = clampedValue;
+                audioManager.UIVolume = clampedValue;
                 uiTestAudio.start();
                 break;
             case VolumeType.MASTER:
-                SaveManager.Instance.systemData.MasterVolume = volumeSlider.value;
-                audioManager.MasterVolume = volumeSlider.value;
+                SaveManager.Instance.systemData.MasterVolume = clampedValue;
+                audioManager.MasterVolume = clampedValue;
                 break;
             default:
                 Debug.LogWarning("Volume Type not supported: " + volumeType);

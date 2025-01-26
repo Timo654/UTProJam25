@@ -52,10 +52,10 @@ public class AudioManager : MonoSingleton<AudioManager>
         Instance.musicBus = RuntimeManager.GetBus("bus:/Music");
         Instance.sfxBus = RuntimeManager.GetBus("bus:/SFX");
         Instance.uiBus = RuntimeManager.GetBus("bus:/UI");
-        Instance.MasterVolume = SaveManager.Instance.systemData.MasterVolume;
-        Instance.SFXVolume = SaveManager.Instance.systemData.SFXVolume;
-        Instance.MusicVolume = SaveManager.Instance.systemData.MusicVolume;
-        Instance.UIVolume = SaveManager.Instance.systemData.UIVolume;
+        Instance.MasterVolume = Mathf.Clamp(SaveManager.Instance.systemData.MasterVolume, 0f, 1f);
+        Instance.SFXVolume = Mathf.Clamp(SaveManager.Instance.systemData.SFXVolume, 0f, 1f);
+        Instance.MusicVolume = Mathf.Clamp(SaveManager.Instance.systemData.MusicVolume, 0f, 1f);
+        Instance.UIVolume = Mathf.Clamp(SaveManager.Instance.systemData.UIVolume, 0f, 1f);
     }
 
     private void Awake()

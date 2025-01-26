@@ -56,7 +56,7 @@ public class PlayerAim : MonoBehaviour
         {
             OnHitHuman?.Invoke(toDamage[0].gender);
         }
-        else // group
+        else if (toDamage.Count > 1) // group
         {
             OnHitHuman?.Invoke(HumanType.Group);
         }
