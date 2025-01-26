@@ -53,9 +53,10 @@ public class StatisticsHandler : MonoBehaviour
 
     private void OnGameEnd()
     {
-        bool highScore = statsData.score > SaveManager.Instance.gameData.highScore;
+        var saveManager = SaveManager.Instance;
+        bool highScore = statsData.score > saveManager.GetLevelSave(saveManager.runtimeData.currentLevel.levelID).score;
         statsData.isHighScore = highScore;
-        // TODO - do something if high score
-        SaveManager.Instance.gameData.highScore = statsData.score;
+        if (highScore)
+            saveManager.GetLevelSave(saveManager.runtimeData.currentLevel.levelID).score = statsData.score;
     }
 }

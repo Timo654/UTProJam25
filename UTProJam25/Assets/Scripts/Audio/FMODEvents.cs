@@ -34,9 +34,9 @@ public class FMODEvents : MonoBehaviour
 
 public enum BGMStage
 {
-    None,
-    MainMenu,
-    Credits,
-    Music90,
-    Music120
+    None = -1,
+    MainMenu = 0,
+    Credits = 1,
+    Music90 = 2,
+    Music120 = 3
 }

@@ -1,17 +1,15 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
 public class HumanSpawnManager : MonoBehaviour
-{ 
+{
     [SerializeField]
     private GameObject humanPrefab; // The enemy prefab to spawn
     private BoxCollider2D spawnArea; // Reference to the spawn area
     public int numberOfEnemies = 5; // Number of enemies to spawn
     private float spawnCooldown = 2f;
     private readonly float spawnMaxCooldown = 2f;
-    [SerializeField]
     private bool spawnUsingTimer;
 
     [SerializeField] private List<Sprite> playerSprites;
@@ -22,6 +20,28 @@ public class HumanSpawnManager : MonoBehaviour
     private int cooldownRange = 1;
     private float baseTimerIncreaseOnHit = 2f;
     private float timerIncreaseOnHitRange = 1f;
+
+    private void OnEnable()
+    {
+        GameManager.OnGameEnd += StopSpawner;
+        LevelLoader.OnGameplayLevelLoaded += StartSpawner;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.OnGameEnd -= StopSpawner;
+        LevelLoader.OnGameplayLevelLoaded -= StartSpawner;
+    }
+
+    private void StartSpawner(LevelData data)
+    {
+        spawnUsingTimer = true;
+    }
+
+    private void StopSpawner()
+    {
+        spawnUsingTimer = false;
+    }
 
     void Start()
     {
@@ -55,13 +75,13 @@ public class HumanSpawnManager : MonoBehaviour
 
     void SpawnEnemy()
     {
-        int playerHealth = baseHealth + Random.Range(-healthRange, healthRange+1);
-        int cooldown = baseCooldown + Random.Range(-cooldownRange, cooldownRange+1);
-        float timerIncreaseOnHit = baseTimerIncreaseOnHit + Random.Range(-timerIncreaseOnHitRange, timerIncreaseOnHitRange+1);
+        int playerHealth = baseHealth + Random.Range(-healthRange, healthRange + 1);
+        int cooldown = baseCooldown + Random.Range(-cooldownRange, cooldownRange + 1);
+        float timerIncreaseOnHit = baseTimerIncreaseOnHit + Random.Range(-timerIncreaseOnHitRange, timerIncreaseOnHitRange + 1);
         Vector2 spawnPoint = GetRandomPointInArea();
         Sprite sprite = playerSprites[Random.Range(0, playerSprites.Count)];
         GameObject newHumanPrefab = Instantiate(humanPrefab, spawnPoint, Quaternion.identity);
-        newHumanPrefab.GetComponent<HumanHealthSystem>().InitializeHumanStats(playerHealth, cooldown, timerIncreaseOnHit);
+        newHumanPrefab.GetComponent<HumanHealthSystem>().InitializeHumanStats(playerHealth, cooldown, timerIncreaseOnHit, sprite.name.Contains("naine") ? HumanType.Female : HumanType.Male);
         newHumanPrefab.GetComponent<HumanSpriteChanger>().UpdateSprite(sprite);
     }
 

@@ -1,24 +1,28 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-
+    public static event Action<HumanType> OnHitHuman;
     List<GameObject> gameobjectsInView = new();
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-
-    }
+    private bool gameActive = true;
 
     private void OnEnable()
     {
         PlayerAttack.AttackPlayer += HandleAttack;
+        GameManager.OnGameEnd += StopPlayer;
     }
 
     private void OnDisable()
     {
         PlayerAttack.AttackPlayer -= HandleAttack;
+        GameManager.OnGameEnd -= StopPlayer;
+    }
+
+    private void StopPlayer()
+    {
+        gameActive = false;
     }
 
     private void HandleAttack(bool onBeat)
@@ -41,6 +45,15 @@ public class PlayerAim : MonoBehaviour
             }
         }
 
+        if (toDamage.Count == 1) // single
+        {
+            OnHitHuman?.Invoke(toDamage[0].gender);
+        }
+        else // group
+        {
+            OnHitHuman?.Invoke(HumanType.Group);
+        }
+
         for (int i = 0; i < toDamage.Count; i++)
         {
             toDamage[i].TakeDamage();
@@ -50,6 +63,7 @@ public class PlayerAim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!gameActive) return;
         var lookAtPos = Input.mousePosition;
         lookAtPos.z = transform.position.z - Camera.main.transform.position.z;
         lookAtPos = Camera.main.ScreenToWorldPoint(lookAtPos);
@@ -67,4 +81,12 @@ public class PlayerAim : MonoBehaviour
         //Debug.Log($"removed {collision.gameObject.name}");
         gameobjectsInView.Remove(collision.gameObject);
     }
+}
+
+
+public enum HumanType
+{
+    Male,
+    Female,
+    Group
 }

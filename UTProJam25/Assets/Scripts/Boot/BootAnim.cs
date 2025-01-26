@@ -22,7 +22,7 @@ public class BootAnim : MonoBehaviour
     void Start()
     {
         imageRenderer = GetComponent<Image>();
-        //LevelChanger.Instance.FadeIn();
+        LevelLoader.Instance.FadeIn();
 		EnhancedTouchSupport.Enable();
         isReady = true;
 		InputSystem.onAnyButtonPress.CallOnce(_ => animOver = true);
@@ -34,8 +34,8 @@ public class BootAnim : MonoBehaviour
         if (isReady && animOver)
         {
             isReady = false; // no need to call it multiple times
-            //LevelChanger.Instance.FadeToLevel("MainMenu");
-			SceneManager.LoadScene("MainMenu");
+            LevelLoader.Instance.FadeToLevel("MainMenu");
+			//SceneManager.LoadScene("MainMenu");
         }
 
         if (Touch.activeTouches.Count > 0)

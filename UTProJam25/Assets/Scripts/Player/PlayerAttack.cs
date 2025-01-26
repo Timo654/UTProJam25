@@ -17,11 +17,19 @@ public class PlayerAttack : MonoBehaviour
     private void OnEnable()
     {
         attack.performed += OnAttack;
+        attack.Enable();
+        GameManager.OnGameEnd += StopPlayer;
     }
 
     private void OnDisable()
     {
         attack.performed -= OnAttack;
+        GameManager.OnGameEnd -= StopPlayer;
+    }
+
+    private void StopPlayer()
+    {
+        attack.Disable();
     }
 
     private void OnAttack(InputAction.CallbackContext context)

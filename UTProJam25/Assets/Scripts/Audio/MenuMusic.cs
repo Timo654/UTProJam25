@@ -7,11 +7,14 @@ public class MenuMusic : MonoBehaviour
     {
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
-        AudioManager.Instance.SetMusicParameter("MusicSwitch", BGMStage.Credits.ToString());
+        AudioManager.Instance.SetMusicParameter("MusicSwitch", (int)BGMStage.MainMenu);
     }
 
     private void Start()
     {
-        AudioManager.Instance.StartMusic();
+        // start the song if it's not playing already
+        if (AudioManager.Instance.GetMusicPosition() == 0)
+            AudioManager.Instance.StartMusic();
+        LevelLoader.Instance.FadeIn();
     }
 }

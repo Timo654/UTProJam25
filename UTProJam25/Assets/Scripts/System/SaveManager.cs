@@ -1,6 +1,9 @@
 using Newtonsoft.Json;
+using NUnit.Framework;
 using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq.Expressions;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -54,6 +57,20 @@ public class SaveManager : MonoSingleton<SaveManager>
         if (Instance.gameData != null) { SaveData(Instance.gameData, "data.json"); }
     }
 
+    public LevelSave GetLevelSave(int levelID)
+    {
+        LevelSave saveData;
+        if (gameData.levelSaves.ContainsKey(levelID))
+        {
+            saveData = gameData.levelSaves[levelID];
+        }
+        else
+        {
+            gameData.levelSaves[levelID] = saveData = new LevelSave { score = 0 };
+        }
+        return saveData;
+    }
+
     private static void SaveData<T>(T saveData, string fileName)
     {
         if (!typeof(T).IsSerializable)
@@ -78,8 +95,6 @@ public class SaveManager : MonoSingleton<SaveManager>
         }
         return data;
     }
-
-
 }
 
 [Serializable]
@@ -96,20 +111,19 @@ public class GameData
 {
     public int version = 2;
     public int money = 0;
-    public int highScore = 0;
+    public Dictionary<int, LevelSave> levelSaves = new(); // levelid - score
 }
 
 [Serializable]
 public class RuntimeData
 {
     public string previousSceneName;
+    public LevelData currentLevel;
 }
 
 [Serializable]
 public class LevelSave
 {
-    public bool unlocked;
     public int score;
-    public bool f_beatenWithAce; // just gonna use f_ prefix for flags
 }
 
