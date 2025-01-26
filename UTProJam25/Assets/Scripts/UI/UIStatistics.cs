@@ -15,7 +15,7 @@ public class UIStatistics : MonoBehaviour
         transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = $"Successful clicks: {statsData.successfulClicks}";
         transform.GetChild(3).GetComponent<TextMeshProUGUI>().text = $"Humans drowned: {statsData.peopleDrowned}";
         transform.GetChild(4).GetComponent<TextMeshProUGUI>().text = $"Humans escaped: {statsData.peopleEscaped}";
-        if (statsData.isHighScore) transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = $"congratulation you are get the high score";
-        else transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = $"you suck at this game noob";
+        if (statsData.isHighScore) transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = $"New High Score!";
+        else transform.GetChild(5).GetComponent<TextMeshProUGUI>().text = $"{statsData.previousRecord - statsData.score} points away from previous record.";
     }
 }

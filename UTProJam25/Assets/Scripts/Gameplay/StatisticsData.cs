@@ -9,4 +9,5 @@ public class StatisticsData : ScriptableObject
     public int peopleDrowned;
     public int peopleEscaped;
     public bool isHighScore;
+    public int previousRecord;
 }
