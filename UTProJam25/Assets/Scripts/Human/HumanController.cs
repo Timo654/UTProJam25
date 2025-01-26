@@ -7,11 +7,13 @@ public class HumanController : MonoBehaviour
     private BoxCollider2D waterCollider;
     public Vector3 startPosition = Vector3.zero;
     private float moveDuration = 0.2f; // Time it takes to complete the movement
+    private Animator animator;
 
     private bool isMoving = false; // Prevent multiple movements at the same time
 
     private void Start()
     {
+        animator = gameObject.GetComponentInChildren<Animator>();
         waterCollider = GameObject.FindWithTag("WaterCollider").GetComponent<BoxCollider2D>();
     }
 
@@ -19,7 +21,9 @@ public class HumanController : MonoBehaviour
     private IEnumerator SmoothMove(Vector3 startPosition, Vector3 targetPosition, float duration)
     {
         isMoving = true;
-
+        
+        animator.SetBool("IsWalking", true);
+        
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)
@@ -35,6 +39,7 @@ public class HumanController : MonoBehaviour
             yield return null; // Wait for the next frame
         }
 
+        animator.SetBool("IsWalking", false);
         // Ensure final position is exactly at the target
         transform.position = targetPosition;
 
