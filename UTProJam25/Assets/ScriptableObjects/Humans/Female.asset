@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd5ff9b197f119941af6ad7d580bd021, type: 3}
+  m_Name: Female
+  m_EditorClassIdentifier: 
+  gender: 1
+  sprites:
+  - {fileID: 8060256793034967617, guid: c1982d904ac65064a91bc512e2bd8d94, type: 3}
+  - {fileID: -6936233251661558126, guid: 2d04bf2f1f297de44855f93022805f5e, type: 3}

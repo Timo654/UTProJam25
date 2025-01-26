@@ -1,23 +1,21 @@
 using UnityEngine;
-using UnityEngine.Events;
 public class UIPULSE : MonoBehaviour
 {
-    UnityEvent pulseTrigger;
     public ParticleSystem particlePulse;
 
-    void Start()
+    private void OnEnable()
     {
-        if (pulseTrigger == null)
-        pulseTrigger = new UnityEvent();
-
-        pulseTrigger.AddListener(Pulse);
+        SendUIBPMEvent.OnBeat += Pulse;
     }
 
-
+    private void OnDisable()
+    {
+        SendUIBPMEvent.OnBeat -= Pulse;
+    }
 
     void Pulse()
     {
-        particlePulse.Play(); 
+        particlePulse.Play();
     }
 
 }

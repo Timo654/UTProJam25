@@ -24,8 +24,8 @@ public class UIBPMHandler : MonoBehaviour
 
     private void SetupBPM(LevelData data)
     {
-        var main = _particleSystem.main;
-        main.simulationSpeed = data.levelBPM / 60f;
+        //var main = _particleSystem.main;
+        //main.simulationSpeed = data.levelBPM / 60f;
         //Debug.Log($"UI BPM simulation speed is {main.simulationSpeed}");
     }
 }
