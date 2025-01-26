@@ -303,7 +303,7 @@
 	</object>
 	<object class="TransitionDestinationSound" id="{bb35bff0-3dfc-48cc-a02a-e3654ad6c5f8}">
 		<property name="start">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -484,20 +484,10 @@
 	</object>
 	<object class="TransitionSourceSound" id="{b88157b8-9811-445a-85e8-54e853ea8788}">
 		<property name="length">
-			<value>1.4000000000000001</value>
+			<value>0</value>
 		</property>
-		<relationship name="fadeOutCurve">
-			<destination>{d7ffb50a-abbf-42cf-98f4-e17220f376e3}</destination>
-		</relationship>
 	</object>
-	<object class="TransitionDestinationSound" id="{5b5bcc6d-01b4-4454-b07c-b0079375bf5e}">
-		<property name="length">
-			<value>2</value>
-		</property>
-		<relationship name="fadeInCurve">
-			<destination>{1dd9603e-2103-4e12-a4e9-a5763cbeb028}</destination>
-		</relationship>
-	</object>
+	<object class="TransitionDestinationSound" id="{5b5bcc6d-01b4-4454-b07c-b0079375bf5e}" />
 	<object class="TransitionSourceSound" id="{94abdae5-d0e4-483f-84ac-98f70cc26006}">
 		<property name="length">
 			<value>0.5</value>
@@ -642,7 +632,7 @@
 	</object>
 	<object class="TransitionDestinationSound" id="{f2161c64-3261-48c1-a5f3-e10a1b5b099b}">
 		<property name="start">
-			<value>2</value>
+			<value>1</value>
 		</property>
 		<property name="length">
 			<value>0</value>
@@ -1169,25 +1159,6 @@
 			<destination>{669e8169-22ab-40b4-abb0-cf73051d8fec}</destination>
 		</relationship>
 	</object>
-	<object class="TransitionSourceFadeOutCurve" id="{d7ffb50a-abbf-42cf-98f4-e17220f376e3}">
-		<relationship name="startPoint">
-			<destination>{b5ba74a3-e91e-490e-b69b-2eeb2f2fb2ad}</destination>
-		</relationship>
-		<relationship name="endPoint">
-			<destination>{f9566faa-ced2-4b5c-a435-c84aa856b017}</destination>
-		</relationship>
-		<relationship name="relatedModule">
-			<destination>{5b5bcc6d-01b4-4454-b07c-b0079375bf5e}</destination>
-		</relationship>
-	</object>
-	<object class="TransitionDestinationFadeInCurve" id="{1dd9603e-2103-4e12-a4e9-a5763cbeb028}">
-		<relationship name="startPoint">
-			<destination>{f5bc2c8e-6a28-4c9c-a796-f6009319b416}</destination>
-		</relationship>
-		<relationship name="endPoint">
-			<destination>{93723c3f-c15a-4dd2-a06b-84cfa11443b0}</destination>
-		</relationship>
-	</object>
 	<object class="TransitionSourceFadeOutCurve" id="{5283341f-8c74-4ee4-a07b-fa8447f54c51}">
 		<relationship name="startPoint">
 			<destination>{d37740fe-a221-49eb-b21b-50ea096d0f01}</destination>
@@ -1315,9 +1286,6 @@
 		</relationship>
 	</object>
 	<object class="TransitionTimeline" id="{ded1e141-666e-4229-9296-b6e3ffd64b6e}">
-		<property name="length">
-			<value>2</value>
-		</property>
 		<relationship name="modules">
 			<destination>{b88157b8-9811-445a-85e8-54e853ea8788}</destination>
 			<destination>{5b5bcc6d-01b4-4454-b07c-b0079375bf5e}</destination>
@@ -1782,44 +1750,6 @@
 	<object class="AutomationPoint" id="{669e8169-22ab-40b4-abb0-cf73051d8fec}">
 		<property name="position">
 			<value>1.3999999999999999</value>
-		</property>
-		<property name="value">
-			<value>1</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{b5ba74a3-e91e-490e-b69b-2eeb2f2fb2ad}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>1</value>
-		</property>
-		<property name="curveShape">
-			<value>-0.156172201</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{f9566faa-ced2-4b5c-a435-c84aa856b017}">
-		<property name="position">
-			<value>1.4000000000000001</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{f5bc2c8e-6a28-4c9c-a796-f6009319b416}">
-		<property name="position">
-			<value>0</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-		<property name="curveShape">
-			<value>-1.00000048</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{93723c3f-c15a-4dd2-a06b-84cfa11443b0}">
-		<property name="position">
-			<value>0.80000000000000004</value>
 		</property>
 		<property name="value">
 			<value>1</value>
