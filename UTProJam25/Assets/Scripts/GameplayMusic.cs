@@ -5,11 +5,29 @@ public class GameplayMusic : MonoBehaviour
     private void OnEnable()
     {
         LevelLoader.OnGameplayLevelLoaded += InitializeMusic;
+        PlayerAim.OnHitHuman += PlaySongSFX;
     }
 
     private void OnDisable()
     {
         LevelLoader.OnGameplayLevelLoaded -= InitializeMusic;
+        PlayerAim.OnHitHuman -= PlaySongSFX;
+    }
+
+    private void PlaySongSFX(HumanType type)
+    {
+        switch (type)
+        {
+            case HumanType.Male:
+                AudioManager.PlayOneShot(FMODEvents.Instance.KannelSound);
+                break;
+            case HumanType.Female:
+                AudioManager.PlayOneShot(FMODEvents.Instance.FluteSound);
+                break;
+            case HumanType.Group:
+                AudioManager.PlayOneShot(FMODEvents.Instance.ChoirSound);
+                break;
+        }
     }
 
     private void InitializeMusic(LevelData data)

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-
+    public static event Action<HumanType> OnHitHuman;
     List<GameObject> gameobjectsInView = new();
     private bool gameActive = true;
 
@@ -45,6 +45,15 @@ public class PlayerAim : MonoBehaviour
             }
         }
 
+        if (toDamage.Count == 1) // single
+        {
+            OnHitHuman?.Invoke(toDamage[0].gender);
+        }
+        else // group
+        {
+            OnHitHuman?.Invoke(HumanType.Group);
+        }
+
         for (int i = 0; i < toDamage.Count; i++)
         {
             toDamage[i].TakeDamage();
@@ -72,4 +81,12 @@ public class PlayerAim : MonoBehaviour
         //Debug.Log($"removed {collision.gameObject.name}");
         gameobjectsInView.Remove(collision.gameObject);
     }
+}
+
+
+public enum HumanType
+{
+    Male,
+    Female,
+    Group
 }

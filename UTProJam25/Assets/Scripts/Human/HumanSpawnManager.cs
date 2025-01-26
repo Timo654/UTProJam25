@@ -81,7 +81,7 @@ public class HumanSpawnManager : MonoBehaviour
         Vector2 spawnPoint = GetRandomPointInArea();
         Sprite sprite = playerSprites[Random.Range(0, playerSprites.Count)];
         GameObject newHumanPrefab = Instantiate(humanPrefab, spawnPoint, Quaternion.identity);
-        newHumanPrefab.GetComponent<HumanHealthSystem>().InitializeHumanStats(playerHealth, cooldown, timerIncreaseOnHit);
+        newHumanPrefab.GetComponent<HumanHealthSystem>().InitializeHumanStats(playerHealth, cooldown, timerIncreaseOnHit, sprite.name.Contains("naine") ? HumanType.Female : HumanType.Male);
         newHumanPrefab.GetComponent<HumanSpriteChanger>().UpdateSprite(sprite);
     }
 
