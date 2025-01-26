@@ -16,6 +16,7 @@ public class GameplayMusic : MonoBehaviour
 
     private void PlaySongSFX(HumanType type)
     {
+        Debug.Log("playing song sfx");
         switch (type)
         {
             case HumanType.Male:
