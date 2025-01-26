@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Utilities;
@@ -5,12 +6,13 @@ using UnityEngine.InputSystem.Utilities;
 public class Credits : MonoBehaviour
 {
     [SerializeField] private SceneController sceneController;
+    IDisposable listener;
     private void Awake()
     {
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
         AudioManager.Instance.SetMusicParameter("MusicSwitch", (int)BGMStage.Credits);
-        InputSystem.onAnyButtonPress.CallOnce(OnSkipCredits);
+        listener = InputSystem.onAnyButtonPress.CallOnce(OnSkipCredits);
     }
 
     private void OnSkipCredits(InputControl control)
@@ -27,6 +29,7 @@ public class Credits : MonoBehaviour
     }
     public void OnCreditsEnd()
     {
+        listener.Dispose();
         sceneController.LoadMainMenu();
     }
 }
