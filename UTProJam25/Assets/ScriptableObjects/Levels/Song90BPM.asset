@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f90a7bfcf09eda643917c748769e6f66, type: 3}
   m_Name: Song90BPM
   m_EditorClassIdentifier: 
+  levelID: 0
   levelBGM:
     Guid:
       Data1: -709487964
