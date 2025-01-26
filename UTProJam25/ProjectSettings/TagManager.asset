@@ -14,8 +14,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Water
+  - Human
   - 
   - 
   - 
@@ -44,10 +44,22 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: WaterFade
+    uniqueID: 4257933535
+    locked: 0
   - name: Indicator
     uniqueID: 740075549
+    locked: 0
+  - name: Human
+    uniqueID: 1539837731
+    locked: 0
+  - name: Background
+    uniqueID: 359715527
     locked: 0
   m_RenderingLayers:
   - Default
   - Indicator
   - Water
+  - WaterFade
+  - Human
+  - Background
