@@ -12,12 +12,19 @@ public class PlayerAim : MonoBehaviour
     {
         PlayerAttack.AttackPlayer += HandleAttack;
         GameManager.OnGameEnd += StopPlayer;
+        PauseListener.PauseUpdated += HandlePause;
     }
 
     private void OnDisable()
     {
         PlayerAttack.AttackPlayer -= HandleAttack;
         GameManager.OnGameEnd -= StopPlayer;
+        PauseListener.PauseUpdated -= HandlePause;
+    }
+
+    private void HandlePause(bool paused)
+    {
+        gameActive = !paused;
     }
 
     private void StopPlayer()
