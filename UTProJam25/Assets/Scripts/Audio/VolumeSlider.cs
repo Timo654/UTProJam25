@@ -26,7 +26,7 @@ public class VolumeSlider : MonoBehaviour
     {
         volumeSlider = GetComponent<Slider>();
         audioManager = AudioManager.Instance;
-        sfxTestAudio = audioManager.CreateInstance(FMODEvents.Instance.TestSound);
+        sfxTestAudio = audioManager.CreateInstance(FMODEvents.Instance.FluteSound);
         uiTestAudio = audioManager.CreateInstance(FMODEvents.Instance.ButtonClick);
         switch (volumeType)
         {
@@ -50,6 +50,7 @@ public class VolumeSlider : MonoBehaviour
 
     public void OnSliderValueChanged()
     {
+        PLAYBACK_STATE state;
         if (firstTime)
         {
             firstTime = false;
@@ -65,12 +66,16 @@ public class VolumeSlider : MonoBehaviour
             case VolumeType.SFX:
                 SaveManager.Instance.systemData.SFXVolume = clampedValue;
                 audioManager.SFXVolume = clampedValue;
-                sfxTestAudio.start();
+                sfxTestAudio.getPlaybackState(out state);
+                if (state != PLAYBACK_STATE.PLAYING)
+                    sfxTestAudio.start();
                 break;
             case VolumeType.UI:
                 SaveManager.Instance.systemData.UIVolume = clampedValue;
                 audioManager.UIVolume = clampedValue;
-                uiTestAudio.start();
+                uiTestAudio.getPlaybackState(out state);
+                if (state != PLAYBACK_STATE.PLAYING)
+                    uiTestAudio.start();
                 break;
             case VolumeType.MASTER:
                 SaveManager.Instance.systemData.MasterVolume = clampedValue;

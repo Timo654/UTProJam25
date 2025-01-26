@@ -203,6 +203,13 @@ MonoBehaviour:
       Data3: 666734013
       Data4: -434282253
     Path: event:/SFX/Flute3D
+  <DrownSound>k__BackingField:
+    Guid:
+      Data1: 1904961560
+      Data2: 1147616676
+      Data3: -979299664
+      Data4: -496022852
+    Path: event:/SFX/Uppumine
   <ButtonClick>k__BackingField:
     Guid:
       Data1: -573841937

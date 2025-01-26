@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
+using TouchPhase = UnityEngine.InputSystem.TouchPhase;
 public class GameplayInputHandler : MonoBehaviour
 {
 
@@ -65,5 +66,16 @@ public class GameplayInputHandler : MonoBehaviour
     {
         if (isPaused || isGameNotStarted) return; // no attacking while paused or endgame
         OnAttackInput?.Invoke();
+    }
+
+    private void Update()
+    {
+        if (BuildConstants.isMobile)
+        {
+            if (Touch.activeTouches.Count > 0)
+            {
+                if (Touch.activeTouches[0].phase == TouchPhase.Began) OnAttackInput?.Invoke();
+            }
+        }
     }
 }

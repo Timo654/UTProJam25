@@ -13,6 +13,7 @@ public class HumanHealthSystem : MonoBehaviour
     private float timerIncreaseOnHit = 0.5f;
     public HumanType humanType;
     public static event Action<int> AddScoreOnDeath;
+    public static event Action<Vector3> OnDrownPosition;
     public static event Action RanAway;
     bool isGameEnd = false;
     public void InitializeHumanStats(int maxHealth, float cooldownTimer, float timerIncreaseOnHit, HumanType gender)
@@ -77,7 +78,7 @@ public class HumanHealthSystem : MonoBehaviour
         //Add score to highscore
         AddScoreOnDeath?.Invoke(10); // TODO - adjust score value
         //Add animation
-
+        OnDrownPosition?.Invoke(transform.position);
         //If stopped animation then Destory.
         Destroy(gameObject);
     }

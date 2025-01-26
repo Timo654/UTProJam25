@@ -9,14 +9,25 @@ public class GameplayMusic : MonoBehaviour
     {
         LevelLoader.OnGameplayLevelLoaded += InitializeMusic;
         PlayerAim.OnHitHuman += PlaySongSFX;
+        HumanHealthSystem.OnDrownPosition += PlayDrownSFX;
     }
 
     private void OnDisable()
     {
         LevelLoader.OnGameplayLevelLoaded -= InitializeMusic;
         PlayerAim.OnHitHuman -= PlaySongSFX;
+        HumanHealthSystem.OnDrownPosition -= PlayDrownSFX;
     }
 
+    private void PlayDrownSFX(Vector3 position)
+    {
+        EventInstance audio;
+        audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.DrownSound);
+        //Debug.Log(position);
+        audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
+        audio.start();
+        audio.release();
+    }
     private void PlaySongSFX(HumanType type, Vector3 position)
     {
         EventInstance audio;
