@@ -24,10 +24,6 @@ public class GameplayMusic : MonoBehaviour
         {
             case HumanType.Male:
                 audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Kannel3DSound);
-                // AudioManager.PlayOneShot(FMODEvents.Instance.KannelSound);
-                // kannel.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-                //FMODUnity.RuntimeManager.AttachInstanceToGameObject(kannel, GetComponent<Transform>(), GetComponent<Rigidbody>());
-
                 break;
             case HumanType.Female:
                 audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Flute3DSound);
@@ -41,7 +37,6 @@ public class GameplayMusic : MonoBehaviour
 
         audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
         audio.start();
-        Debug.Log("Object position: " + position);
         audio.release();
     }
 

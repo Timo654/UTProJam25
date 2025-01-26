@@ -10,6 +10,7 @@ public class SceneController : ScriptableObject
     public static Action OnSceneLoad;
     public static Action<bool> OnPause; // unpaused paused
     public static Action<bool> OnSettings; // open close
+    public static Action<bool> OnTutorial; // open close
     private GameObject prevEvS;
     private GameObject prevEvSSettings;
     public void LoadGame(bool nextLevel = false)
@@ -87,6 +88,14 @@ public class SceneController : ScriptableObject
         SceneManager.LoadScene("UI", LoadSceneMode.Additive);
     }
 
+    public void LoadTutorial()
+    {
+        prevEvS = EventSystem.current.gameObject;
+        prevEvS.SetActive(false);
+        SceneManager.LoadScene("TutorialScreen", LoadSceneMode.Additive);
+        Time.timeScale = 0f;
+        OnTutorial?.Invoke(true);
+    }
     public void LoadStatistics()
     {
         prevEvS = EventSystem.current.gameObject;
@@ -99,6 +108,14 @@ public class SceneController : ScriptableObject
         SceneManager.UnloadSceneAsync("Settings");
         prevEvSSettings.SetActive(true);
         OnSettings?.Invoke(false);
+    }
+    public void UnloadTutorial()
+    {
+        EventSystem.current.gameObject.SetActive(false);
+        SceneManager.UnloadSceneAsync("TutorialScreen");
+        prevEvS.SetActive(true);
+        OnSettings?.Invoke(false);
+        OnTutorial?.Invoke(false);
     }
 
     public void UnloadPauseMenu()

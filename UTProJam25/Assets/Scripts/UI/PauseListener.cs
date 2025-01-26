@@ -7,11 +7,14 @@ public class PauseListener : MonoBehaviour
     [SerializeField] private SceneController sceneController;
     private bool isPaused;
     private bool isSettings;
+    private bool isTutorial;
+
     private void OnEnable()
     {
         GameplayInputHandler.OnPauseInput += OnPausePressed;
         SceneController.OnPause += Pause;
         SceneController.OnSettings += HandleSettings;
+        SceneController.OnTutorial += HandleTutorial;
     }
 
     private void OnDisable()
@@ -19,12 +22,16 @@ public class PauseListener : MonoBehaviour
         GameplayInputHandler.OnPauseInput -= OnPausePressed;
         SceneController.OnPause -= Pause;
         SceneController.OnSettings -= HandleSettings;
+        SceneController.OnTutorial -= HandleTutorial;
     }
 
-    private void HandleSettings(bool isTrue)
+    private void HandleSettings(bool isActive)
     {
-        Debug.Log("settings yay !");
-        isSettings = isTrue;
+        isSettings = isActive;
+    }
+    private void HandleTutorial(bool isActive)
+    {
+        isTutorial = isActive;
     }
 
     private void Pause(bool paused)
@@ -35,6 +42,7 @@ public class PauseListener : MonoBehaviour
 
     private void OnPausePressed()
     {
+        if (isTutorial) return;
         if (isSettings)
         {
             Debug.Log("sure is settings");

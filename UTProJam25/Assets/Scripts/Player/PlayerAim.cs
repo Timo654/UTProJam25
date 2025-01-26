@@ -6,13 +6,14 @@ public class PlayerAim : MonoBehaviour
 {
     public static event Action<HumanType, Vector3> OnHitHuman; // type and pos
     List<GameObject> gameobjectsInView = new();
-    private bool gameActive = true;
+    private bool gameActive = false;
 
     private void OnEnable()
     {
         PlayerAttack.AttackPlayer += HandleAttack;
         GameManager.OnGameEnd += StopPlayer;
         PauseListener.PauseUpdated += HandlePause;
+        GameManager.OnGameStart += StartPlayer;
     }
 
     private void OnDisable()
@@ -20,6 +21,12 @@ public class PlayerAim : MonoBehaviour
         PlayerAttack.AttackPlayer -= HandleAttack;
         GameManager.OnGameEnd -= StopPlayer;
         PauseListener.PauseUpdated -= HandlePause;
+        GameManager.OnGameStart -= StartPlayer;
+    }
+
+    private void StartPlayer()
+    {
+        gameActive = true;
     }
 
     private void HandlePause(bool paused)

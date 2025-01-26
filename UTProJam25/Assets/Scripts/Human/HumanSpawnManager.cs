@@ -24,16 +24,16 @@ public class HumanSpawnManager : MonoBehaviour
     private void OnEnable()
     {
         GameManager.OnGameEnd += StopSpawner;
-        LevelLoader.OnGameplayLevelLoaded += StartSpawner;
+        GameManager.OnGameStart += StartSpawner;
     }
 
     private void OnDisable()
     {
         GameManager.OnGameEnd -= StopSpawner;
-        LevelLoader.OnGameplayLevelLoaded -= StartSpawner;
+        GameManager.OnGameStart -= StartSpawner;
     }
 
-    private void StartSpawner(LevelData data)
+    private void StartSpawner()
     {
         spawnUsingTimer = true;
     }

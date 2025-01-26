@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
+    public static event Action OnGameStart;
     public static event Action OnGameEnd;
     [SerializeField] private GameLoopSettings gameLoopSettings;
     [SerializeField] private SceneController sceneController;
@@ -24,18 +25,37 @@ public class GameManager : MonoBehaviour
     private void OnEnable()
     {
         LevelLoader.OnGameplayLevelLoaded += SetupParams;
+        SceneController.OnTutorial += HandleTutorialEnd;
     }
     private void OnDisable()
     {
         LevelLoader.OnGameplayLevelLoaded -= SetupParams;
+        SceneController.OnTutorial -= HandleTutorialEnd;
+    }
+
+    private void HandleTutorialEnd(bool isActive)
+    {
+        if (!isActive)
+        {
+            gameActive = true;
+            Time.timeScale = 1.0f; // in case it gets set somewhere else, ensure we're always at 1.
+            OnGameStart?.Invoke();
+        }
     }
 
     private void SetupParams(LevelData data)
     {
         Debug.Log("loaded !");
         currentTime = data.time;
-        gameActive = true;
-        Time.timeScale = 1.0f; // in case it gets set somewhere else, ensure we're always at 1.
+
+        if (SaveManager.Instance.runtimeData.currentLevel.levelID == 0) // only use tutorial for lvl1
+            sceneController.LoadTutorial();
+        else
+        {
+            gameActive = true;
+            Time.timeScale = 1.0f; // in case it gets set somewhere else, ensure we're always at 1.
+            OnGameStart?.Invoke();
+        } 
     }
 
     private void Update()
