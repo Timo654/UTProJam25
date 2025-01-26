@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAim : MonoBehaviour
 {
@@ -78,10 +79,22 @@ public class PlayerAim : MonoBehaviour
     void Update()
     {
         if (!gameActive) return;
+        // Mouse aiming
         var lookAtPos = Input.mousePosition;
         lookAtPos.z = transform.position.z - Camera.main.transform.position.z;
         lookAtPos = Camera.main.ScreenToWorldPoint(lookAtPos);
         transform.up = lookAtPos - transform.position;
+
+        // Controller aiming
+        if (Gamepad.current != null)
+        {
+            var moveInput = Gamepad.current.leftStick.ReadValue();
+            if (moveInput != Vector2.zero)
+            {
+                Vector3 moveDirection = new Vector3(moveInput.x, moveInput.y, 0);
+                transform.up = moveDirection;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -24,4 +24,4 @@ MonoBehaviour:
   songOffset: 300000
   levelBPM: 120
   time: 64
-  mercyRange: 0.15
+  mercyRange: 0.25
