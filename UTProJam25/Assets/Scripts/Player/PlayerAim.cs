@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-
+    public static event Action<HumanType> OnHitHuman;
     List<GameObject> gameobjectsInView = new();
     private bool gameActive = true;
 
@@ -12,12 +12,19 @@ public class PlayerAim : MonoBehaviour
     {
         PlayerAttack.AttackPlayer += HandleAttack;
         GameManager.OnGameEnd += StopPlayer;
+        PauseListener.PauseUpdated += HandlePause;
     }
 
     private void OnDisable()
     {
         PlayerAttack.AttackPlayer -= HandleAttack;
         GameManager.OnGameEnd -= StopPlayer;
+        PauseListener.PauseUpdated -= HandlePause;
+    }
+
+    private void HandlePause(bool paused)
+    {
+        gameActive = !paused;
     }
 
     private void StopPlayer()
@@ -43,6 +50,15 @@ public class PlayerAim : MonoBehaviour
                     toDamage.Add(hhs);
                 }
             }
+        }
+
+        if (toDamage.Count == 1) // single
+        {
+            OnHitHuman?.Invoke(toDamage[0].gender);
+        }
+        else // group
+        {
+            OnHitHuman?.Invoke(HumanType.Group);
         }
 
         for (int i = 0; i < toDamage.Count; i++)
@@ -72,4 +88,12 @@ public class PlayerAim : MonoBehaviour
         //Debug.Log($"removed {collision.gameObject.name}");
         gameobjectsInView.Remove(collision.gameObject);
     }
+}
+
+
+public enum HumanType
+{
+    Male,
+    Female,
+    Group
 }

@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Utilities;
 
 public class Credits : MonoBehaviour
 {
@@ -8,6 +10,12 @@ public class Credits : MonoBehaviour
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
         AudioManager.Instance.SetMusicParameter("MusicSwitch", (int)BGMStage.Credits);
+        InputSystem.onAnyButtonPress.CallOnce(OnSkipCredits);
+    }
+
+    private void OnSkipCredits(InputControl control)
+    {
+        OnCreditsEnd();
     }
 
     private void Start()

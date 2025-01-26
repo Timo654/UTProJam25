@@ -11,14 +11,16 @@ public class HumanHealthSystem : MonoBehaviour
     private int currentHealth = 100;
     private float cooldownTimer = 5f;
     private float timerIncreaseOnHit = 0.5f;
+    public HumanType gender;
     public static event Action<int> AddScoreOnDeath;
     public static event Action RanAway;
     bool isGameEnd = false;
-    public void InitializeHumanStats(int maxHealth, float cooldownTimer, float timerIncreaseOnHit)
+    public void InitializeHumanStats(int maxHealth, float cooldownTimer, float timerIncreaseOnHit, HumanType gender)
     {
         this.maxHealth = maxHealth;
         this.cooldownTimer = cooldownTimer;
         this.timerIncreaseOnHit = timerIncreaseOnHit;
+        this.gender = gender;
 
         currentHealth = maxHealth;
         healthBarLogic.InitializeHealthBar(this.maxHealth, this.maxHealth);

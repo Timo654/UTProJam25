@@ -1,5 +1,4 @@
 using System;
-using UnityEditor.PackageManager;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -36,6 +35,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("loaded !");
         currentTime = data.time;
         gameActive = true;
+        Time.timeScale = 1.0f; // in case it gets set somewhere else, ensure we're always at 1.
     }
 
     private void Update()

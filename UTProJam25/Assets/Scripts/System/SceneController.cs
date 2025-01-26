@@ -8,21 +8,26 @@ using UnityEngine.SceneManagement;
 public class SceneController : ScriptableObject
 {
     public static Action OnSceneLoad;
+    public static Action<bool> OnPause; // unpaused paused
+    public static Action<bool> OnSettings; // open close
     private GameObject prevEvS;
+    private GameObject prevEvSSettings;
     public void LoadGame(bool nextLevel = false)
     {
         SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
         //SceneManager.LoadScene("Game");
         // not nice logic but it's almost 2 am i dont care
-        if (nextLevel && SaveManager.Instance.runtimeData.currentLevel.levelID == 1)
+        if (SaveManager.Instance.runtimeData.currentLevel == null)
+        {
+            SaveManager.Instance.runtimeData.currentLevel = LevelLoader.Instance.GetLevels()[0];
+        }
+        else if (nextLevel && SaveManager.Instance.runtimeData.currentLevel.levelID == 1)
         {
             LoadCredits();
             return;
         }
+        else if (nextLevel) SaveManager.Instance.runtimeData.currentLevel = LevelLoader.Instance.GetLevels()[1]; // next level mode, only lvl 0 can get to here
 
-        if (nextLevel) SaveManager.Instance.runtimeData.currentLevel = LevelLoader.Instance.GetLevels()[1];
-        else SaveManager.Instance.runtimeData.currentLevel = LevelLoader.Instance.GetLevels()[0];
-        
         LevelLoader.Instance.FadeToLevel("Game");
         //LoadUI();
         OnSceneLoad?.Invoke();
@@ -48,16 +53,33 @@ public class SceneController : ScriptableObject
     {
         if (additive)
         {
-            prevEvS = EventSystem.current.gameObject;
-            prevEvS.SetActive(false);
+            prevEvSSettings = EventSystem.current.gameObject;
+            prevEvSSettings.SetActive(false);
             SceneManager.LoadScene("Settings", LoadSceneMode.Additive);
+            OnSettings?.Invoke(true);
         }
         else
         {
             SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
             SceneManager.LoadScene("Settings");
         }
-        Time.timeScale = 0f;
+    }
+
+    public void LoadPauseMenu(bool additive)
+    {
+        if (additive)
+        {
+            prevEvS = EventSystem.current.gameObject;
+            prevEvS.SetActive(false);
+            SceneManager.LoadScene("PauseMenu", LoadSceneMode.Additive);
+            Time.timeScale = 0f;
+            OnPause?.Invoke(true);
+        }
+        else
+        {
+            SaveManager.Instance.runtimeData.previousSceneName = SceneManager.GetActiveScene().name;
+            SceneManager.LoadScene("PauseMenu");
+        }
     }
 
     public void LoadUI()
@@ -75,8 +97,17 @@ public class SceneController : ScriptableObject
     {
         EventSystem.current.gameObject.SetActive(false);
         SceneManager.UnloadSceneAsync("Settings");
+        prevEvSSettings.SetActive(true);
+        OnSettings?.Invoke(false);
+    }
+
+    public void UnloadPauseMenu()
+    {
+        EventSystem.current.gameObject.SetActive(false);
+        SceneManager.UnloadSceneAsync("PauseMenu");
         prevEvS.SetActive(true);
         Time.timeScale = 1.0f;
+        OnPause?.Invoke(false);
     }
 
     public void ExitGame()
