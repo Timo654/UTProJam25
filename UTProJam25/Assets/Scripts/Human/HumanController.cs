@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class HumanController : MonoBehaviour
 {
+    public static event Action<Vector3> OnWalking;
     private BoxCollider2D waterCollider;
     public Vector3 startPosition = Vector3.zero;
     private float moveDuration = 0.2f; // Time it takes to complete the movement
@@ -23,7 +24,7 @@ public class HumanController : MonoBehaviour
         isMoving = true;
         
         animator.SetBool("IsWalking", true);
-        
+        OnWalking?.Invoke(transform.position);
         float elapsedTime = 0f;
 
         while (elapsedTime < duration)

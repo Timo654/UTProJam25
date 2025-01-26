@@ -10,6 +10,7 @@ public class GameplayMusic : MonoBehaviour
         LevelLoader.OnGameplayLevelLoaded += InitializeMusic;
         PlayerAim.OnHitHuman += PlaySongSFX;
         HumanHealthSystem.OnDrownPosition += PlayDrownSFX;
+        HumanController.OnWalking += PlayFootsteps;
     }
 
     private void OnDisable()
@@ -17,8 +18,19 @@ public class GameplayMusic : MonoBehaviour
         LevelLoader.OnGameplayLevelLoaded -= InitializeMusic;
         PlayerAim.OnHitHuman -= PlaySongSFX;
         HumanHealthSystem.OnDrownPosition -= PlayDrownSFX;
+        HumanController.OnWalking -= PlayFootsteps;
     }
 
+
+    private void PlayFootsteps(Vector3 position)
+    {
+        EventInstance audio;
+        audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.StepSound);
+        //Debug.Log(position);
+        audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
+        audio.start();
+        audio.release();
+    }
     private void PlayDrownSFX(Vector3 position)
     {
         EventInstance audio;
