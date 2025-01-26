@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAim : MonoBehaviour
 {
-    public static event Action<HumanType> OnHitHuman;
+    public static event Action<HumanType, Vector3> OnHitHuman; // type and pos
     List<GameObject> gameobjectsInView = new();
     private bool gameActive = true;
 
@@ -54,11 +54,11 @@ public class PlayerAim : MonoBehaviour
 
         if (toDamage.Count == 1) // single
         {
-            OnHitHuman?.Invoke(toDamage[0].gender);
+            OnHitHuman?.Invoke(toDamage[0].humanType, toDamage[0].transform.position);
         }
         else if (toDamage.Count > 1) // group
         {
-            OnHitHuman?.Invoke(HumanType.Group);
+            OnHitHuman?.Invoke(HumanType.Group, toDamage[0].transform.position);
         }
 
         for (int i = 0; i < toDamage.Count; i++)

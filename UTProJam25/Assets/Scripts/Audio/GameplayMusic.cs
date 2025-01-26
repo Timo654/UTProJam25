@@ -17,26 +17,32 @@ public class GameplayMusic : MonoBehaviour
         PlayerAim.OnHitHuman -= PlaySongSFX;
     }
 
-    private void PlaySongSFX(HumanType type)
+    private void PlaySongSFX(HumanType type, Vector3 position)
     {
+        EventInstance audio;
         switch (type)
         {
             case HumanType.Male:
-                kannel = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Kannel3DSound);
+                audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Kannel3DSound);
                 // AudioManager.PlayOneShot(FMODEvents.Instance.KannelSound);
                 // kannel.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
-                FMODUnity.RuntimeManager.AttachInstanceToGameObject(kannel, GetComponent<Transform>(), GetComponent<Rigidbody>());
-                kannel.start();
-                Debug.Log("Object position: " + transform.position);
+                //FMODUnity.RuntimeManager.AttachInstanceToGameObject(kannel, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
                 break;
             case HumanType.Female:
-                AudioManager.PlayOneShot(FMODEvents.Instance.FluteSound);
+                audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.FluteSound);
                 break;
             case HumanType.Group:
-                AudioManager.PlayOneShot(FMODEvents.Instance.ChoirSound);
+                audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.ChoirSound);
                 break;
+            default:
+                return;
         }
+
+        audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
+        audio.start();
+        Debug.Log("Object position: " + position);
+        audio.release();
     }
 
     private void InitializeMusic(LevelData data)

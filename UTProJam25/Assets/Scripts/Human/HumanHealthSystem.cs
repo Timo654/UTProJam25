@@ -11,7 +11,7 @@ public class HumanHealthSystem : MonoBehaviour
     private int currentHealth = 100;
     private float cooldownTimer = 5f;
     private float timerIncreaseOnHit = 0.5f;
-    public HumanType gender;
+    public HumanType humanType;
     public static event Action<int> AddScoreOnDeath;
     public static event Action RanAway;
     bool isGameEnd = false;
@@ -20,7 +20,7 @@ public class HumanHealthSystem : MonoBehaviour
         this.maxHealth = maxHealth;
         this.cooldownTimer = cooldownTimer;
         this.timerIncreaseOnHit = timerIncreaseOnHit;
-        this.gender = gender;
+        this.humanType = gender;
 
         currentHealth = maxHealth;
         healthBarLogic.InitializeHealthBar(this.maxHealth, this.maxHealth);
