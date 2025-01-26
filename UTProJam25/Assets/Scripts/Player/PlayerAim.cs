@@ -54,12 +54,10 @@ public class PlayerAim : MonoBehaviour
 
         if (toDamage.Count == 1) // single
         {
-            Debug.Log("one human hit");
             OnHitHuman?.Invoke(toDamage[0].gender);
         }
-        else // group
+        else if (toDamage.Count > 1) // group
         {
-            Debug.Log($"{toDamage.Count} humans hit");
             OnHitHuman?.Invoke(HumanType.Group);
         }
 

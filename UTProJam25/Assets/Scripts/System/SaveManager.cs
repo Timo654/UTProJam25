@@ -18,7 +18,7 @@ public class SaveManager : MonoSingleton<SaveManager>
     private void Awake()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        mPersistentDataPath = "idbfs/EleBall"; 
+        mPersistentDataPath = "idbfs/UTProJam25"; 
 #else
         mPersistentDataPath = Application.persistentDataPath;
 #endif

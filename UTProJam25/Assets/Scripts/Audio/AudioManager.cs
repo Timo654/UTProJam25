@@ -56,7 +56,6 @@ public class AudioManager : MonoSingleton<AudioManager>
         Instance.SFXVolume = Mathf.Clamp(SaveManager.Instance.systemData.SFXVolume, 0f, 1f);
         Instance.MusicVolume = Mathf.Clamp(SaveManager.Instance.systemData.MusicVolume, 0f, 1f);
         Instance.UIVolume = Mathf.Clamp(SaveManager.Instance.systemData.UIVolume, 0f, 1f);
-        Debug.Log($"Audio levels: Mas {Instance.MasterVolume}, SFX {Instance.SFXVolume}, Mus {Instance.MusicVolume}, UI {Instance.UIVolume}");
     }
 
     private void Awake()
