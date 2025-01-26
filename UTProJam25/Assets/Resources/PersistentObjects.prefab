@@ -168,6 +168,13 @@ MonoBehaviour:
       Data3: 87688841
       Data4: 1175361280
     Path: event:/SFX/Choir
+  <Choir3DSound>k__BackingField:
+    Guid:
+      Data1: 1366173748
+      Data2: 1321412396
+      Data3: -1952261728
+      Data4: 599507879
+    Path: event:/SFX/Choir3D
   <BagpipeSound>k__BackingField:
     Guid:
       Data1: -779753788
@@ -175,6 +182,13 @@ MonoBehaviour:
       Data3: -1715643215
       Data4: -862857114
     Path: event:/SFX/Bagpipe
+  <Bagpipe3DSound>k__BackingField:
+    Guid:
+      Data1: -1776503435
+      Data2: 1288889374
+      Data3: 1089440401
+      Data4: -846367232
+    Path: event:/SFX/Bagpipe3D
   <FluteSound>k__BackingField:
     Guid:
       Data1: 1042772407
@@ -182,6 +196,13 @@ MonoBehaviour:
       Data3: -1007822720
       Data4: 2021057323
     Path: event:/SFX/Flute
+  <Flute3DSound>k__BackingField:
+    Guid:
+      Data1: 1405189099
+      Data2: 1167940460
+      Data3: 666734013
+      Data4: -434282253
+    Path: event:/SFX/Flute3D
   <ButtonClick>k__BackingField:
     Guid:
       Data1: -573841937

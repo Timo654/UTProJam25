@@ -30,10 +30,10 @@ public class GameplayMusic : MonoBehaviour
 
                 break;
             case HumanType.Female:
-                audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.FluteSound);
+                audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Flute3DSound);
                 break;
             case HumanType.Group:
-                audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.ChoirSound);
+                audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Choir3DSound);
                 break;
             default:
                 return;
