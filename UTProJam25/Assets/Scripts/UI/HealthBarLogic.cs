@@ -1,22 +1,30 @@
-using TMPro;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class HealthBarLogic : MonoBehaviour
 {
-    public Slider healthSlider;
-    public TMP_Text healthText;
+    [SerializeField] private GameObject hpHeart;
+    private Transform healthParent;
 
+    private void Awake()
+    {
+        healthParent = transform.GetChild(0);
+    }
     public void InitializeHealthBar(int currentHealth, int maxHealth)
     {
-        healthSlider.maxValue = maxHealth;
-        healthSlider.value = currentHealth;
-        UpdateHealth(maxHealth, maxHealth);
+        for (int i = 0; i < currentHealth; i++)
+        {
+            Instantiate(hpHeart, healthParent);
+        }
     }
-    
+
     public void UpdateHealth(int currentHealth, int maxHealth)
     {
-        healthText.text = currentHealth + "/" + maxHealth;
-        healthSlider.value = currentHealth;
-    } 
+        if (healthParent.childCount > currentHealth) // kill some children
+        {
+            for (int i = 1; i < healthParent.childCount - currentHealth + 1; i++)
+            {
+                Destroy(healthParent.GetChild(healthParent.childCount - i).gameObject);
+            }
+        }
+    }
 }

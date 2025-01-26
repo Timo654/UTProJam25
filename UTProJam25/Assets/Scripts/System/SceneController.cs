@@ -24,6 +24,7 @@ public class SceneController : ScriptableObject
         }
         else if (nextLevel && SaveManager.Instance.runtimeData.currentLevel.levelID == 1)
         {
+            SaveManager.Instance.runtimeData.currentLevel = null;
             LoadCredits();
             return;
         }
