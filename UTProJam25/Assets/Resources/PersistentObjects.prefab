@@ -86,9 +86,9 @@ MonoBehaviour:
   gameData:
     version: 2
     money: 0
-    highScore: 0
   runtimeData:
     previousSceneName: 
+    currentLevel: {fileID: 0}
 --- !u!1 &6858655836324257970
 GameObject:
   m_ObjectHideFlags: 0
@@ -154,6 +154,13 @@ MonoBehaviour:
       Data3: -1662725973
       Data4: -594451286
     Path: event:/SFX/Kannel
+  <Kannel3DSound>k__BackingField:
+    Guid:
+      Data1: -1200502221
+      Data2: 1129705701
+      Data3: 591871363
+      Data4: -351033222
+    Path: event:/SFX/Kannel 3D
   <ChoirSound>k__BackingField:
     Guid:
       Data1: 1158276008

@@ -7,6 +7,7 @@ public class FMODEvents : MonoBehaviour
     [field: SerializeField] public EventReference TestSound { get; private set; }
     [field: SerializeField] public EventReference WrongSound { get; private set; }
     [field: SerializeField] public EventReference KannelSound { get; private set; }
+    [field: SerializeField] public EventReference Kannel3DSound { get; private set; }
     [field: SerializeField] public EventReference ChoirSound { get; private set; }
     [field: SerializeField] public EventReference BagpipeSound { get; private set; }
     [field: SerializeField] public EventReference FluteSound { get; private set; }

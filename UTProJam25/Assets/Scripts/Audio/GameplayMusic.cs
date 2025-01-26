@@ -1,7 +1,10 @@
 using UnityEngine;
+using FMOD.Studio;
 
 public class GameplayMusic : MonoBehaviour
-{
+{   
+    private EventInstance kannel;
+
     private void OnEnable()
     {
         LevelLoader.OnGameplayLevelLoaded += InitializeMusic;
@@ -19,7 +22,13 @@ public class GameplayMusic : MonoBehaviour
         switch (type)
         {
             case HumanType.Male:
-                AudioManager.PlayOneShot(FMODEvents.Instance.KannelSound);
+                kannel = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Kannel3DSound);
+                // AudioManager.PlayOneShot(FMODEvents.Instance.KannelSound);
+                // kannel.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(gameObject.transform));
+                FMODUnity.RuntimeManager.AttachInstanceToGameObject(kannel, GetComponent<Transform>(), GetComponent<Rigidbody>());
+                kannel.start();
+                Debug.Log("Object position: " + transform.position);
+
                 break;
             case HumanType.Female:
                 AudioManager.PlayOneShot(FMODEvents.Instance.FluteSound);

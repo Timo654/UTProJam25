@@ -341,9 +341,6 @@
 		<property name="timelockedOffset">
 			<value>38.400000000000006</value>
 		</property>
-		<relationship name="fadeInCurve">
-			<destination>{3058bc67-dd7d-4b17-859e-52a7ca5c4bd2}</destination>
-		</relationship>
 		<relationship name="fadeOutCurve">
 			<destination>{996892e9-0e2e-42d2-8f46-d62f1645f936}</destination>
 		</relationship>
@@ -947,14 +944,6 @@
 			<destination>{b91d2974-0642-4894-9f25-80b204f2829c}</destination>
 		</relationship>
 	</object>
-	<object class="FadeCurve" id="{3058bc67-dd7d-4b17-859e-52a7ca5c4bd2}">
-		<relationship name="startPoint">
-			<destination>{d4a8a02c-8ee4-40d3-b27a-92bce66c9c27}</destination>
-		</relationship>
-		<relationship name="endPoint">
-			<destination>{c9786afc-ae77-442c-a599-445474ada1a4}</destination>
-		</relationship>
-	</object>
 	<object class="FadeCurve" id="{996892e9-0e2e-42d2-8f46-d62f1645f936}">
 		<relationship name="startPoint">
 			<destination>{dad9bf6c-343b-4c4e-8d88-02d34a3178eb}</destination>
@@ -1368,25 +1357,6 @@
 		</property>
 		<property name="value">
 			<value>0</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{d4a8a02c-8ee4-40d3-b27a-92bce66c9c27}">
-		<property name="position">
-			<value>38.400000000000006</value>
-		</property>
-		<property name="value">
-			<value>0</value>
-		</property>
-		<property name="curveShape">
-			<value>-1.00000048</value>
-		</property>
-	</object>
-	<object class="AutomationPoint" id="{c9786afc-ae77-442c-a599-445474ada1a4}">
-		<property name="position">
-			<value>38.450000000000003</value>
-		</property>
-		<property name="value">
-			<value>1</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{dad9bf6c-343b-4c4e-8d88-02d34a3178eb}">
