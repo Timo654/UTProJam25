@@ -5,6 +5,11 @@ public class GameplayMusic : MonoBehaviour
 {   
     private EventInstance kannel;
 
+    public AK.Wwise.Event KannelPlay;
+    public AK.Wwise.Event FlutePlay;
+    public AK.Wwise.Event ChoirPlay;
+    public AK.Wwise.Event StepSound;
+
     private void OnEnable()
     {
         LevelLoader.OnGameplayLevelLoaded += InitializeMusic;
@@ -25,11 +30,16 @@ public class GameplayMusic : MonoBehaviour
     private void PlayFootsteps(Vector3 position)
     {
         EventInstance audio;
+
+        AkSoundEngine.SetObjectPosition(gameObject, position.x, position.y, position.z);
+
         audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.StepSound);
         //Debug.Log(position);
         audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
         audio.start();
         audio.release();
+
+        StepSound.Post(gameObject);
     }
     private void PlayDrownSFX(Vector3 position)
     {
@@ -43,16 +53,20 @@ public class GameplayMusic : MonoBehaviour
     private void PlaySongSFX(HumanType type, Vector3 position)
     {
         EventInstance audio;
+        AkSoundEngine.SetObjectPosition(gameObject, position.x, position.y, position.z);
         switch (type)
         {
             case HumanType.Male:
                 audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Kannel3DSound);
+                KannelPlay.Post(gameObject);
                 break;
             case HumanType.Female:
                 audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Flute3DSound);
+                FlutePlay.Post(gameObject);
                 break;
             case HumanType.Group:
                 audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Choir3DSound);
+                ChoirPlay.Post(gameObject);
                 break;
             default:
                 return;

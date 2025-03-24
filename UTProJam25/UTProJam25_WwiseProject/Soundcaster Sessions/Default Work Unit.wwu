@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{A935450A-6119-480D-A4F3-D6F842F12DAB}" SchemaVersion="123">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{A935450A-6119-480D-A4F3-D6F842F12DAB}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="TryoutSoundcaster" ID="{547B34D8-83D6-4D0F-B693-66BFAFA364F5}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Choir" ID="{CDD70DA7-CDA4-4D9D-B219-61B420EBE4E7}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Flute" ID="{4CE843F1-9A4E-4B31-B270-AD869A111A10}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Steps" ID="{13697492-B6A9-406B-9C24-3D354DB65EDF}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="MainTheme120" ID="{BC31B245-A461-4A9D-8188-F5B2C793F44F}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+							<Position X="2" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="MainTheme90" ID="{36A82338-E74F-41FF-9523-F0CAC3465F41}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+							<Position X="2" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Back" ID="{71D92FA2-CB63-4757-B4A7-1EE79E8D0786}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+							<Position X="3" Y="0"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Credits" ID="{9926EFDA-6D23-410E-8A77-16641CE82915}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Credits" ID="{F4B9D1A4-4757-4AFF-8EAD-280F41802168}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

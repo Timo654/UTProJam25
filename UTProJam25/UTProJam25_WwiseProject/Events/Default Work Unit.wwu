@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" PersistMode="Standalone">
+			<ChildrenList>
+				<Folder Name="UI" ID="{D97BD4CE-D004-4252-81DE-96D79A311F2F}" ShortID="1056123004">
+					<ChildrenList>
+						<Event Name="ui_button_click" ID="{3C447970-41B4-43C3-BE55-3E6E54EF7852}">
+							<ChildrenList>
+								<Action Name="" ID="{95812CDA-2120-4CBF-B1B2-2B1444247D22}" ShortID="140519663">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="uiClick2" ID="{45703469-1671-4C91-A858-A6432D383177}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ui_button_toggle" ID="{FBFC779B-A6F2-47A7-9F1D-908BFD1D1DA4}">
+							<ChildrenList>
+								<Action Name="" ID="{256C71B5-7735-46BF-A9CF-0FC1543E1E0B}" ShortID="189909636">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="StepsWood2" ID="{F774B292-D3A3-4B8D-B135-4A3D4797C255}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="ui_button_back" ID="{8468438C-34D6-4215-9520-AE9E543F765B}">
+							<ChildrenList>
+								<Action Name="" ID="{23F915AD-8ECE-45FF-9C04-3A1956AED953}" ShortID="536000601">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Back" ID="{71D92FA2-CB63-4757-B4A7-1EE79E8D0786}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+				<Folder Name="Music" ID="{41256A2C-330E-426B-9FF6-B03DA2A01FF6}" ShortID="454302606"/>
+				<Folder Name="SFX" ID="{210D055B-569D-4A57-964E-528B72C920F6}" ShortID="319075096">
+					<ChildrenList>
+						<Event Name="Play_Choir" ID="{AB0F6BE9-E09B-4040-AB0F-CFCEECC8F02B}">
+							<ChildrenList>
+								<Action Name="" ID="{8C5E0FBD-B635-4113-B17A-B60C49647176}" ShortID="975315011">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Choir" ID="{CDD70DA7-CDA4-4D9D-B219-61B420EBE4E7}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Flute" ID="{49F022CE-23B7-4238-A6BF-F3999881F6B5}">
+							<ChildrenList>
+								<Action Name="" ID="{3DBF803F-3330-4D7D-B91A-85F54F6597F9}" ShortID="361177281">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Flute" ID="{4CE843F1-9A4E-4B31-B270-AD869A111A10}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Kantele" ID="{BC25856C-021D-4646-B932-01946B860BF6}">
+							<ChildrenList>
+								<Action Name="" ID="{AC1F0861-8157-4AC6-A8C7-74862D837EE2}" ShortID="679314566">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Kantele" ID="{0632A7E9-7719-426D-B16F-02E88A71AC96}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Steps" ID="{E2138307-A807-42F7-8F7D-5B10EDF695D2}">
+							<ChildrenList>
+								<Action Name="" ID="{64DE05DD-3827-4B29-8184-586D18A2471A}" ShortID="54590665">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Steps" ID="{13697492-B6A9-406B-9C24-3D354DB65EDF}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>

@@ -1,0 +1,444 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Linux",
+  "BasePlatform": "Linux",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "3161908922",
+    "Type": "User",
+    "GUID": "{F20014F0-2222-4FE9-99CB-8778210CE151}",
+    "Language": "SFX",
+    "Hash": "{9AA521BE-D00F-C17B-C60C-AFB2C9610CB2}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
+    "ShortName": "Main",
+    "Path": "Main.bnk",
+    "Media": [
+     {
+      "Id": "17649855",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flute3.wav",
+      "CachePath": "18/{181F8902-57E8-627B-8395-E4CA1208ADBA}.wem"
+     },
+     {
+      "Id": "34400902",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Choir6.wav",
+      "CachePath": "81/{810B4B64-77FB-0A37-5521-9F998AF7C60A}.wem"
+     },
+     {
+      "Id": "76204901",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Choir2.wav",
+      "CachePath": "25/{2569DC82-D231-8316-D0D3-1CFA264FD5B7}.wem"
+     },
+     {
+      "Id": "96999174",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kannel6.wav",
+      "CachePath": "39/{39827CF3-CD1F-66D6-9BDF-89ED89ED4FC7}.wem"
+     },
+     {
+      "Id": "137988086",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "StepsWood2.wav",
+      "CachePath": "0E/{0EA70A8F-AA01-284C-49A2-002718754828}.wem"
+     },
+     {
+      "Id": "204158595",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kannel1.wav",
+      "CachePath": "D4/{D4812ED0-3E4B-2935-1374-11F124CDE729}.wem"
+     },
+     {
+      "Id": "218538953",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kannel7.wav",
+      "CachePath": "9F/{9F7F5D81-7C07-7F1D-BBEE-8CEB2700A1A2}.wem"
+     },
+     {
+      "Id": "219919484",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Choir1.wav",
+      "CachePath": "75/{75F998B3-2D62-4958-4C2D-95C5D0FF23D7}.wem"
+     },
+     {
+      "Id": "259388982",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Choir7.wav",
+      "CachePath": "FB/{FBC8D350-0EC5-383D-AD57-3788462A6833}.wem"
+     },
+     {
+      "Id": "341737008",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Choir3.wav",
+      "CachePath": "50/{5013E6DC-AA63-4817-362C-252311E1C077}.wem"
+     },
+     {
+      "Id": "545067133",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kannel3.wav",
+      "CachePath": "88/{887632A0-24F6-51A5-89F3-2F3263040906}.wem"
+     },
+     {
+      "Id": "556278682",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kannel4.wav",
+      "CachePath": "25/{253FA5CF-558B-C7AE-827F-EAF0C45C68E9}.wem"
+     },
+     {
+      "Id": "645359761",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "StepsGrass2.wav",
+      "CachePath": "A4/{A44F899F-8C74-07D9-927E-1DA760EC3F25}.wem"
+     },
+     {
+      "Id": "700737164",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kannel2.wav",
+      "CachePath": "51/{510C1DE6-227C-9C9E-4C5E-F0A4050DA9C9}.wem"
+     },
+     {
+      "Id": "768389031",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "StepsGrass1.wav",
+      "CachePath": "37/{37D05C91-8153-E94A-4B1D-23BBC1DDB496}.wem"
+     },
+     {
+      "Id": "774238205",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flute2.wav",
+      "CachePath": "E4/{E44A35B6-4311-05F4-A62E-763BE13C46C7}.wem"
+     },
+     {
+      "Id": "777183766",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Choir5.wav",
+      "CachePath": "52/{522F6F5D-4E0C-BF1D-278B-FC4506B5C9D5}.wem"
+     },
+     {
+      "Id": "786654353",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flute1.wav",
+      "CachePath": "D3/{D37AD6F3-4BBC-B5DD-9960-E8FA2EEA17F9}.wem"
+     },
+     {
+      "Id": "791818358",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Kannel5.wav",
+      "CachePath": "7F/{7F696A24-A05C-2E13-4718-254951ABE705}.wem"
+     },
+     {
+      "Id": "830727629",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "uiClick2.wav",
+      "CachePath": "94/{9417E5A7-F3FA-DF5D-7034-8F0C6E5EBA4E}.wem"
+     },
+     {
+      "Id": "835636550",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flute7.wav",
+      "CachePath": "0B/{0BF5A0F3-57D9-1B8A-5EB2-CBFEA509B6E7}.wem"
+     },
+     {
+      "Id": "869684734",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flute6.wav",
+      "CachePath": "4F/{4F42F2E5-5D47-89A2-D2C4-EFDD08141AF9}.wem"
+     },
+     {
+      "Id": "886410553",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flute5.wav",
+      "CachePath": "92/{9298E242-7841-3B04-78B9-D1B4B1F0BAC4}.wem"
+     },
+     {
+      "Id": "922925472",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Flute4.wav",
+      "CachePath": "4C/{4CFA6ED1-74FD-1A90-6268-4B857157FDAB}.wem"
+     },
+     {
+      "Id": "964400011",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Choir4.wav",
+      "CachePath": "77/{777FAC26-CD45-2977-010C-AFE4F13EEF1D}.wem"
+     },
+     {
+      "Id": "1068469846",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Back.wav",
+      "CachePath": "CF/{CF2BC049-1B04-D369-1C47-20B4B7A8B2DF}.wem"
+     }
+    ],
+    "Plugins": {
+     "ShareSets": [
+      {
+       "Id": "1588715066",
+       "Name": "Echoes_Linear",
+       "ObjectPath": "\\Effects\\Factory Effects\\Delay\\Echoes_Linear",
+       "GUID": "{D20F3717-EBA2-4E3A-84F8-C8BD431563FB}",
+       "LibName": "Wwise Delay",
+       "LibId": "6946819"
+      },
+      {
+       "Id": "2995775460",
+       "Name": "Room_Small",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Rooms\\Room_Small",
+       "GUID": "{577F1466-A63B-47F7-98BD-C56E433F8B5D}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
+      {
+       "Id": "3164629247",
+       "Name": "Holy",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Cathedrals\\Holy",
+       "GUID": "{CC7B8638-C670-4AD5-B3FB-331EA81037F6}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      }
+     ]
+    },
+    "Events": [
+     {
+      "Id": "3639753543",
+      "Name": "Play_Choir",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Choir",
+      "GUID": "{AB0F6BE9-E09B-4040-AB0F-CFCEECC8F02B}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "34400902"
+       },
+       {
+        "Id": "76204901"
+       },
+       {
+        "Id": "219919484"
+       },
+       {
+        "Id": "259388982"
+       },
+       {
+        "Id": "341737008"
+       },
+       {
+        "Id": "777183766"
+       },
+       {
+        "Id": "964400011"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3164629247"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1653871456",
+      "Name": "Play_Flute",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Flute",
+      "GUID": "{49F022CE-23B7-4238-A6BF-F3999881F6B5}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "17649855"
+       },
+       {
+        "Id": "774238205"
+       },
+       {
+        "Id": "786654353"
+       },
+       {
+        "Id": "835636550"
+       },
+       {
+        "Id": "869684734"
+       },
+       {
+        "Id": "886410553"
+       },
+       {
+        "Id": "922925472"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "3164629247"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "1365080748",
+      "Name": "Play_Kantele",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Kantele",
+      "GUID": "{BC25856C-021D-4646-B932-01946B860BF6}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "2",
+      "DurationMax": "2",
+      "MediaRefs": [
+       {
+        "Id": "96999174"
+       },
+       {
+        "Id": "204158595"
+       },
+       {
+        "Id": "218538953"
+       },
+       {
+        "Id": "545067133"
+       },
+       {
+        "Id": "556278682"
+       },
+       {
+        "Id": "700737164"
+       },
+       {
+        "Id": "791818358"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "1588715066"
+        },
+        {
+         "Id": "2995775460"
+        }
+       ]
+      }
+     },
+     {
+      "Id": "2600469463",
+      "Name": "Play_Steps",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Steps",
+      "GUID": "{E2138307-A807-42F7-8F7D-5B10EDF695D2}",
+      "MaxAttenuation": "100",
+      "DurationType": "OneShot",
+      "DurationMin": "0.3852963",
+      "DurationMax": "0.4854429",
+      "MediaRefs": [
+       {
+        "Id": "645359761"
+       },
+       {
+        "Id": "768389031"
+       }
+      ]
+     },
+     {
+      "Id": "1598004116",
+      "Name": "ui_button_back",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\ui_button_back",
+      "GUID": "{8468438C-34D6-4215-9520-AE9E543F765B}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.1339229",
+      "DurationMax": "0.1339229",
+      "MediaRefs": [
+       {
+        "Id": "1068469846"
+       }
+      ]
+     },
+     {
+      "Id": "1664509575",
+      "Name": "ui_button_click",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\ui_button_click",
+      "GUID": "{3C447970-41B4-43C3-BE55-3E6E54EF7852}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.68750566",
+      "DurationMax": "0.68750566",
+      "MediaRefs": [
+       {
+        "Id": "830727629"
+       }
+      ]
+     },
+     {
+      "Id": "57270221",
+      "Name": "ui_button_toggle",
+      "ObjectPath": "\\Events\\Default Work Unit\\UI\\ui_button_toggle",
+      "GUID": "{FBFC779B-A6F2-47A7-9F1D-908BFD1D1DA4}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.43750566",
+      "DurationMax": "0.43750566",
+      "MediaRefs": [
+       {
+        "Id": "137988086"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{A092B470-D643-F802-AA75-34ECF6DD0378}"
+ }
+}

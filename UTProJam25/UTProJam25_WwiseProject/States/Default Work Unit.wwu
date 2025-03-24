@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{97536393-A6F4-4B5A-B777-49C85E4B24CA}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{97536393-A6F4-4B5A-B777-49C85E4B24CA}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="SceneSwitch" ID="{C86E9975-5705-437E-BFA7-184F71EE53CC}">
+					<ChildrenList>
+						<State Name="None" ID="{6D19743E-D467-424D-B3E3-27238AC44D6E}"/>
+						<State Name="Credits" ID="{9926EFDA-6D23-410E-8A77-16641CE82915}"/>
+						<State Name="Menu" ID="{F6AA6F68-4EFA-4E4A-9769-2E5E54BE269B}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

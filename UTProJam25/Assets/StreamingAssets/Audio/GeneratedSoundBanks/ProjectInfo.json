@@ -1,0 +1,50 @@
+{
+ "ProjectInfo": {
+  "Project": {
+   "Name": "UTProJam25_WwiseProject",
+   "GUID": "{15056973-E1A2-4BA9-B064-0D803F1CAF09}",
+   "Generator": "2024.1.3.8749"
+  },
+  "CacheRoot": "../../../../UTProJam25_WwiseProject/.cache",
+  "Platforms": [
+   {
+    "Name": "Linux",
+    "GUID": "{E56CCECE-258C-4AE8-AD22-9BA0EAE4AD15}",
+    "BasePlatform": "Linux",
+    "BasePlatformGUID": "{BD0BDF13-3125-454F-8BFD-319537169F81}",
+    "Path": "../../../../UTProJam25_WwiseProject/GeneratedSoundBanks/Linux"
+   },
+   {
+    "Name": "Mac",
+    "GUID": "{1A14CE20-6B65-4B05-8922-8C9868BF1DCE}",
+    "BasePlatform": "Mac",
+    "BasePlatformGUID": "{9C6217D5-DD11-4795-87C1-6CE02853C540}",
+    "Path": "../../../../UTProJam25_WwiseProject/GeneratedSoundBanks/Mac"
+   },
+   {
+    "Name": "Web",
+    "GUID": "{12E99126-BEDF-43D3-BB7E-837AA79DB695}",
+    "BasePlatform": "Web",
+    "BasePlatformGUID": "{639AD233-23F2-4C0F-9127-79F44C15E1DA}",
+    "Path": "../../../../UTProJam25_WwiseProject/GeneratedSoundBanks/Web"
+   },
+   {
+    "Name": "Windows",
+    "GUID": "{650B27D0-C339-43E3-9C66-CDB5C17A7F5D}",
+    "BasePlatform": "Windows",
+    "BasePlatformGUID": "{6E0CB257-C6C8-4C5C-8366-2740DFC441EB}",
+    "Path": "../../../../UTProJam25_WwiseProject/GeneratedSoundBanks/Windows"
+   }
+  ],
+  "Languages": [
+   {
+    "Name": "English(US)",
+    "Id": "684519430",
+    "GUID": "{552E89B6-9FB6-44BC-86C3-6DB901EDF24E}",
+    "Default": "true",
+    "UseAsStandIn": "true"
+   }
+  ],
+  "FileHash": "{6D6D1351-132F-157D-2D9F-1C419DA86BB0}"
+ }
+}

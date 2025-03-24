@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{14EACB21-397A-4173-BDB3-0A3ABA4E4654}" SchemaVersion="123">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{14EACB21-397A-4173-BDB3-0A3ABA4E4654}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Main" ID="{F20014F0-2222-4FE9-99CB-8778210CE151}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Play_Choir" ID="{AB0F6BE9-E09B-4040-AB0F-CFCEECC8F02B}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_button_back" ID="{8468438C-34D6-4215-9520-AE9E543F765B}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Flute" ID="{49F022CE-23B7-4238-A6BF-F3999881F6B5}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Steps" ID="{E2138307-A807-42F7-8F7D-5B10EDF695D2}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_button_click" ID="{3C447970-41B4-43C3-BE55-3E6E54EF7852}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Kantele" ID="{BC25856C-021D-4646-B932-01946B860BF6}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ui_button_toggle" ID="{FBFC779B-A6F2-47A7-9F1D-908BFD1D1DA4}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

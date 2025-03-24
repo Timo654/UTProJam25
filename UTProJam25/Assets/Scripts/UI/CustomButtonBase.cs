@@ -1,9 +1,15 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.UI;
 
 public abstract class CustomButtonBase : MonoBehaviour, ISelectHandler, IDeselectHandler, IPointerDownHandler, IPointerUpHandler, IPointerEnterHandler
 {
+    public AK.Wwise.Event Button_UI_Click;
+    public AK.Wwise.Event Button_UI_Back;
+    public AK.Wwise.Event Button_UI_Hover;
+
     public ButtonType type;
     public bool disableSelectAudio;
     private bool pointerDown = false;
@@ -36,8 +42,8 @@ public abstract class CustomButtonBase : MonoBehaviour, ISelectHandler, IDeselec
             return;
         }
         if (!isFirstBase) return;
-        if (value) AudioManager.PlayOneShot(FMODEvents.Instance.ButtonClick);
-        else AudioManager.PlayOneShot(FMODEvents.Instance.ButtonBack);
+        if (value) Button_UI_Click.Post(gameObject);
+        else Button_UI_Back.Post(gameObject);
     }
 
     private void ClickSound()
@@ -47,10 +53,10 @@ public abstract class CustomButtonBase : MonoBehaviour, ISelectHandler, IDeselec
         switch (type)
         {
             case ButtonType.Normal:
-                AudioManager.PlayOneShot(FMODEvents.Instance.ButtonClick);
+                Button_UI_Click.Post(gameObject);
                 break;
             case ButtonType.Back:
-                AudioManager.PlayOneShot(FMODEvents.Instance.ButtonBack);
+                Button_UI_Back.Post(gameObject);
                 break;
         }
     }
@@ -94,7 +100,8 @@ public abstract class CustomButtonBase : MonoBehaviour, ISelectHandler, IDeselec
         Normal();
         if (!isFirstBase) return;
         if (!currentItem.interactable || disableSelectAudio || muteAudio) return;
-        AudioManager.PlayOneShot(FMODEvents.Instance.ButtonSelect);
+        Button_UI_Hover.Post(gameObject);
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
