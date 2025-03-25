@@ -739,7 +739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isDefaultListener: 1
   bOverrideScalingFactor: 0
-  scalingFactor: -1
+  scalingFactor: 0
   listenerId: 0
 --- !u!114 &387615259
 MonoBehaviour:
@@ -1864,6 +1864,38 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: b8016cbface3c8d409ea7fae6f44bfe6, type: 2}
+  DrowningSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 8e88836736cab134db2a21f186740e08, type: 2}
+  GameMusicPlaylistEvent:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: b761f7829bc200a49af7db59d2401671, type: 2}
+  CreditsSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  MenuSwitch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Gameplay1Switch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
+  Gameplay2Switch:
+    idInternal: 0
+    valueGuidInternal: 
+    groupIdInternal: 0
+    groupGuidInternal: 
+    WwiseObjectReference: {fileID: 0}
 --- !u!114 &2079010150
 MonoBehaviour:
   m_ObjectHideFlags: 0

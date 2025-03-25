@@ -265,6 +265,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1158777e65d88649a3f7d05338561fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Button_UI_Click:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bab1b4e62b2586942856fb40e0358c9f, type: 2}
+  Button_UI_Back:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bab1b4e62b2586942856fb40e0358c9f, type: 2}
+  Button_UI_Hover:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 39031494f7358d343978646bb5639f24, type: 2}
   type: 0
   disableSelectAudio: 0
   scaleBy: 0.1
@@ -878,6 +890,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 302497366}
   m_CullTransparentMesh: 1
+--- !u!1 &372170268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 372170270}
+  - component: {fileID: 372170269}
+  m_Layer: 0
+  m_Name: WwiseGlobal
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &372170269
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372170268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1488908325ef0b943b77378747921da2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  InitializationSettings: {fileID: 11400000, guid: 527ffb7a3c6102746a946294d8ca0c29, type: 2}
+  basePath: 
+  language: 
+  defaultPoolSize: 0
+  lowerPoolSize: 0
+  streamingPoolSize: 0
+  memoryCutoffThreshold: 0
+  monitorPoolSize: 0
+  monitorQueuePoolSize: 0
+  callbackManagerBufferSize: 0
+  spatialAudioPoolSize: 0
+  maxSoundPropagationDepth: 0
+  engineLogging: 0
+--- !u!4 &372170270
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 372170268}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &503065001
 GameObject:
   m_ObjectHideFlags: 0
@@ -1422,6 +1491,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1158777e65d88649a3f7d05338561fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Button_UI_Click:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: bab1b4e62b2586942856fb40e0358c9f, type: 2}
+  Button_UI_Back:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 965cdd8ad36860744bb51ced927b9d02, type: 2}
+  Button_UI_Hover:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 39031494f7358d343978646bb5639f24, type: 2}
   type: 0
   disableSelectAudio: 0
   scaleBy: 0.1
@@ -2276,3 +2357,4 @@ SceneRoots:
   - {fileID: 503065004}
   - {fileID: 726154074}
   - {fileID: 1542604781}
+  - {fileID: 372170270}

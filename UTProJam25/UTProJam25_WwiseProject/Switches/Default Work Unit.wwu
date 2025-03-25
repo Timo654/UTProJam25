@@ -1,15 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6DFB0594-65FE-4F28-B332-BA55000CF143}" SchemaVersion="123">
 	<Switches>
-		<WorkUnit Name="Default Work Unit" ID="{6DFB0594-65FE-4F28-B332-BA55000CF143}" PersistMode="Standalone">
-			<ChildrenList>
-				<SwitchGroup Name="GameplayMusic" ID="{0F636327-5AEE-4CEF-B932-0D2E4D86DC1A}">
-					<ChildrenList>
-						<Switch Name="Menu" ID="{764E21E7-0D5B-4A22-8623-8EE472169DA6}"/>
-						<Switch Name="Credits" ID="{F4B9D1A4-4757-4AFF-8EAD-280F41802168}"/>
-					</ChildrenList>
-				</SwitchGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{6DFB0594-65FE-4F28-B332-BA55000CF143}" PersistMode="Standalone"/>
 	</Switches>
 </WwiseDocument>

@@ -9,6 +9,12 @@ public class GameplayMusic : MonoBehaviour
     public AK.Wwise.Event FlutePlay;
     public AK.Wwise.Event ChoirPlay;
     public AK.Wwise.Event StepSound;
+    public AK.Wwise.Event DrowningSound;
+
+    public AK.Wwise.State CreditsState;
+    public AK.Wwise.State MenuState;
+    public AK.Wwise.State Gameplay1State;
+    public AK.Wwise.State Gameplay2State;
 
     private void OnEnable()
     {
@@ -29,20 +35,44 @@ public class GameplayMusic : MonoBehaviour
 
     private void PlayFootsteps(Vector3 position)
     {
+        //W w i s e
+        GameObject tempSoundObject = new GameObject("TempFootstepSound");
+        tempSoundObject.transform.position = position;
+
+        // Add Wwise component so it can emit sound
+        var akObject = tempSoundObject.AddComponent<AkGameObj>();
+
+        // AkSoundEngine.SetObjectPosition(gameObject, position.x, position.y, position.z);
+        // Post the sound event
+        StepSound.Post(tempSoundObject);
+
+        // Destroy the temp GameObject after sound plays
+        Destroy(tempSoundObject, 1f);
+
+
         EventInstance audio;
-
-        AkSoundEngine.SetObjectPosition(gameObject, position.x, position.y, position.z);
-
         audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.StepSound);
         //Debug.Log(position);
         audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
         audio.start();
         audio.release();
-
-        StepSound.Post(gameObject);
     }
     private void PlayDrownSFX(Vector3 position)
-    {
+    {   
+        //W w i s e
+        GameObject tempSoundObject = new GameObject("TempDrowningSound");
+        tempSoundObject.transform.position = position;
+
+        // Add Wwise component so it can emit sound
+        var akObject = tempSoundObject.AddComponent<AkGameObj>();
+
+        // AkSoundEngine.SetObjectPosition(gameObject, position.x, position.y, position.z);
+        // Post the sound event
+        DrowningSound.Post(tempSoundObject);
+
+        // Destroy the temp GameObject after sound plays
+        Destroy(tempSoundObject, 1f);
+
         EventInstance audio;
         audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.DrownSound);
         //Debug.Log(position);
@@ -53,24 +83,34 @@ public class GameplayMusic : MonoBehaviour
     private void PlaySongSFX(HumanType type, Vector3 position)
     {
         EventInstance audio;
-        AkSoundEngine.SetObjectPosition(gameObject, position.x, position.y, position.z);
+
+
+        //W w i s e
+        GameObject tempSoundObject = new GameObject("TempSongSound");
+        tempSoundObject.transform.position = position;
+
+        var akObject = tempSoundObject.AddComponent<AkGameObj>();
+
+        // AkSoundEngine.SetObjectPosition(gameObject, position.x, position.y, position.z);
         switch (type)
         {
             case HumanType.Male:
                 audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Kannel3DSound);
-                KannelPlay.Post(gameObject);
+                KannelPlay.Post(tempSoundObject);
                 break;
             case HumanType.Female:
                 audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Flute3DSound);
-                FlutePlay.Post(gameObject);
+                FlutePlay.Post(tempSoundObject);
                 break;
             case HumanType.Group:
                 audio = AudioManager.Instance.CreateInstance(FMODEvents.Instance.Choir3DSound);
-                ChoirPlay.Post(gameObject);
+                ChoirPlay.Post(tempSoundObject);
                 break;
             default:
                 return;
         }
+
+        Destroy(tempSoundObject, 2f);
 
         audio.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(position));
         audio.start();
@@ -79,6 +119,7 @@ public class GameplayMusic : MonoBehaviour
 
     private void InitializeMusic(LevelData data)
     {
+    
         var _beatManager = FindAnyObjectByType<BeatManager>();
         if (_beatManager != null)
             _beatManager.SetBPM(data.levelBPM, data.songOffset, data.mercyRange);
@@ -90,9 +131,10 @@ public class GameplayMusic : MonoBehaviour
     }
 
     private void Start()
-    {
+    {   
         // start the song if it's not playing already
         if (AudioManager.Instance.GetMusicPosition() == 0)
             AudioManager.Instance.StartMusic();
+            
     }
 }

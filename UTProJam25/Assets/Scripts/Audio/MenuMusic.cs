@@ -1,7 +1,11 @@
 using UnityEngine;
 
 public class MenuMusic : MonoBehaviour
-{
+{   
+    public AK.Wwise.Event GameMusicPlaylist;
+    public AK.Wwise.State CreditsState;
+
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
@@ -15,6 +19,11 @@ public class MenuMusic : MonoBehaviour
         // start the song if it's not playing already
         if (AudioManager.Instance.GetMusicPosition() == 0)
             AudioManager.Instance.StartMusic();
+
+        GameMusicPlaylist.Post(gameObject);
+        CreditsState.SetValue();
+
+
         LevelLoader.Instance.FadeIn();
     }
 }

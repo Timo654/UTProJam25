@@ -18,25 +18,32 @@
 							<Position X="1" Y="0"/>
 						</Module>
 						<Module>
-							<ObjectRef Name="MainTheme120" ID="{BC31B245-A461-4A9D-8188-F5B2C793F44F}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
-							<Position X="2" Y="0"/>
-						</Module>
-						<Module>
-							<ObjectRef Name="MainTheme90" ID="{36A82338-E74F-41FF-9523-F0CAC3465F41}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
-							<Position X="2" Y="1"/>
-						</Module>
-						<Module>
 							<ObjectRef Name="Back" ID="{71D92FA2-CB63-4757-B4A7-1EE79E8D0786}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
 							<Position X="3" Y="0"/>
 						</Module>
 					</ModuleList>
-					<RTPCValueList ShowAll="true"/>
+					<RTPCValueList ShowAll="true">
+						<RTPCValue>
+							<GameParameterRef Name="SFX_volume" ID="{455BB03C-6F58-400E-94DD-7BC65F9F8E8E}"/>
+							<Value>0.5</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="UI_volume" ID="{B2C787D8-196D-4337-9C80-AE6269352B81}"/>
+							<Value>0.5</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Music_volume" ID="{127539C5-32C7-43FD-AE9D-23FB04C4F7D2}"/>
+							<Value>0.5</Value>
+						</RTPCValue>
+						<RTPCValue>
+							<GameParameterRef Name="Master_volume" ID="{F745A209-44A9-49D2-AF26-E27BC5E20AC7}"/>
+							<Value>0.5</Value>
+						</RTPCValue>
+					</RTPCValueList>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Credits" ID="{9926EFDA-6D23-410E-8A77-16641CE82915}"/>
+						<CurrentStateRef Name="BPM90" ID="{0F0C4E9B-8F97-402B-A8CC-857F8B95E3C4}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Credits" ID="{F4B9D1A4-4757-4AFF-8EAD-280F41802168}"/>
-					</CurrentSwitchList>
+					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

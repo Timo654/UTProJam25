@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 1595754e89448a47ba6ab5de8ed401dd
     GuidInternal: 
-    m_lastTime: -8584589593835933622
+    m_lastTime: -8584586871319825475
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -117,7 +117,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 21cbea147a397341bdb30a3aba4e4654
     GuidInternal: 
-    m_lastTime: -8584589135625638912
+    m_lastTime: -8584586882148682105
     List:
     - name: Main
       guid: f01400f22222e94f99cb8778210ce151
@@ -145,7 +145,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 48115eb8ad405141a71be9e132ef6602
     GuidInternal: 
-    m_lastTime: -8584589135625519220
+    m_lastTime: -8584586893589047372
     List:
     - name: Music
       guid: 2c6a25410e336b429ff6b03da2a01ff6
@@ -184,6 +184,26 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 2
       minDuration: 2
+    - name: Play_Credits
+      guid: 76b872b27c060747ae1cb50b919d3669
+      id: 2970769112
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 48115eb8ad405141a71be9e132ef6602
+      - ElementName: Music
+        ObjectType: 4
+        guid: 2c6a25410e336b429ff6b03da2a01ff6
+      - ElementName: Play_Credits
+        ObjectType: 3
+        guid: 76b872b27c060747ae1cb50b919d3669
+      Path: Events\Default Work Unit\Music\Play_Credits
+      maxAttenuation: 0
+      maxDuration: 38.39139
+      minDuration: 38.39139
     - name: Play_Flute
       guid: ce22f049b7233842a6bff3999881f6b5
       id: 1653871456
@@ -224,6 +244,86 @@ MonoBehaviour:
       maxAttenuation: 100
       maxDuration: 2
       minDuration: 2
+    - name: Play_MainTheme120
+      guid: 39b18ec50e493148974f3e32b799ca3b
+      id: 3198674595
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 48115eb8ad405141a71be9e132ef6602
+      - ElementName: Music
+        ObjectType: 4
+        guid: 2c6a25410e336b429ff6b03da2a01ff6
+      - ElementName: Play_MainTheme120
+        ObjectType: 3
+        guid: 39b18ec50e493148974f3e32b799ca3b
+      Path: Events\Default Work Unit\Music\Play_MainTheme120
+      maxAttenuation: 0
+      maxDuration: 68
+      minDuration: 68
+    - name: Play_MainTheme90
+      guid: b1dd63c7d6d927459f7a5f06d2e4db27
+      id: 24884219
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 48115eb8ad405141a71be9e132ef6602
+      - ElementName: Music
+        ObjectType: 4
+        guid: 2c6a25410e336b429ff6b03da2a01ff6
+      - ElementName: Play_MainTheme90
+        ObjectType: 3
+        guid: b1dd63c7d6d927459f7a5f06d2e4db27
+      Path: Events\Default Work Unit\Music\Play_MainTheme90
+      maxAttenuation: 0
+      maxDuration: 49.435123
+      minDuration: 49.435123
+    - name: Play_MenuTheme
+      guid: 8ce5788d87db13428e52b6cf1749183d
+      id: 3757523130
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 48115eb8ad405141a71be9e132ef6602
+      - ElementName: Music
+        ObjectType: 4
+        guid: 2c6a25410e336b429ff6b03da2a01ff6
+      - ElementName: Play_MenuTheme
+        ObjectType: 3
+        guid: 8ce5788d87db13428e52b6cf1749183d
+      Path: Events\Default Work Unit\Music\Play_MenuTheme
+      maxAttenuation: 0
+      maxDuration: 81.59497
+      minDuration: 81.59497
+    - name: Play_MusicSwitcher
+      guid: 973bc0efce70394398f6bc3847f63717
+      id: 1517090470
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 48115eb8ad405141a71be9e132ef6602
+      - ElementName: Music
+        ObjectType: 4
+        guid: 2c6a25410e336b429ff6b03da2a01ff6
+      - ElementName: Play_MusicSwitcher
+        ObjectType: 3
+        guid: 973bc0efce70394398f6bc3847f63717
+      Path: Events\Default Work Unit\Music\Play_MusicSwitcher
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
     - name: Play_Steps
       guid: 078313e207a8f7428f7d5b10edf695d2
       id: 2600469463
@@ -242,8 +342,28 @@ MonoBehaviour:
         guid: 078313e207a8f7428f7d5b10edf695d2
       Path: Events\Default Work Unit\SFX\Play_Steps
       maxAttenuation: 100
-      maxDuration: 0.4854429
-      minDuration: 0.3852963
+      maxDuration: 0.40977913
+      minDuration: 0.2718251
+    - name: Play_Uppumine
+      guid: 2200a3a00932144daf1ed1b691a1608c
+      id: 147070357
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 48115eb8ad405141a71be9e132ef6602
+      - ElementName: SFX
+        ObjectType: 4
+        guid: 5b050d219d56574a964e528b72c920f6
+      - ElementName: Play_Uppumine
+        ObjectType: 3
+        guid: 2200a3a00932144daf1ed1b691a1608c
+      Path: Events\Default Work Unit\SFX\Play_Uppumine
+      maxAttenuation: 0
+      maxDuration: 1.1196696
+      minDuration: 0.95522094
     - name: SFX
       guid: 5b050d219d56574a964e528b72c920f6
       id: 393239870
@@ -350,8 +470,64 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: f502813e07883b498497d371691f3b9f
     GuidInternal: 
-    m_lastTime: -8584591718076459992
-    List: []
+    m_lastTime: -8584586871319593993
+    List:
+    - name: Master_volume
+      guid: 09a245f7a944d249af26e27bc5e20ac7
+      id: 4179668880
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f502813e07883b498497d371691f3b9f
+      - ElementName: Master_volume
+        ObjectType: 13
+        guid: 09a245f7a944d249af26e27bc5e20ac7
+      Path: Game Parameters\Default Work Unit\Master_volume
+    - name: Music_volume
+      guid: c5397512c732fd43ae9d23fb04c4f7d2
+      id: 1006694123
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f502813e07883b498497d371691f3b9f
+      - ElementName: Music_volume
+        ObjectType: 13
+        guid: c5397512c732fd43ae9d23fb04c4f7d2
+      Path: Game Parameters\Default Work Unit\Music_volume
+    - name: SFX_volume
+      guid: 3cb05b45586f0e4094dd7bc65f9f8e8e
+      id: 1564184899
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f502813e07883b498497d371691f3b9f
+      - ElementName: SFX_volume
+        ObjectType: 13
+        guid: 3cb05b45586f0e4094dd7bc65f9f8e8e
+      Path: Game Parameters\Default Work Unit\SFX_volume
+    - name: UI_volume
+      guid: d887c7b26d1937439c80ae6269352b81
+      id: 1719345792
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: f502813e07883b498497d371691f3b9f
+      - ElementName: UI_volume
+        ObjectType: 13
+        guid: d887c7b26d1937439c80ae6269352b81
+      Path: Game Parameters\Default Work Unit\UI_volume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -364,8 +540,106 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 93635397f4a65a4bb77749c85e4b24ca
     GuidInternal: 
-    m_lastTime: -8584591718076310351
-    List: []
+    m_lastTime: -8584586956917167394
+    List:
+    - name: MusicSwitcher
+      guid: 6e5dfd43b4557a499c8352ddbf7d76d7
+      id: 3582447343
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 93635397f4a65a4bb77749c85e4b24ca
+      - ElementName: MusicSwitcher
+        ObjectType: 9
+        guid: 6e5dfd43b4557a499c8352ddbf7d76d7
+      Path: States\Default Work Unit\MusicSwitcher
+      values:
+      - name: BPM120
+        guid: ad407488276f5e40a09328d60fc6c0af
+        id: 2503094331
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 93635397f4a65a4bb77749c85e4b24ca
+        - ElementName: MusicSwitcher
+          ObjectType: 9
+          guid: 6e5dfd43b4557a499c8352ddbf7d76d7
+        - ElementName: BPM120
+          ObjectType: 8
+          guid: ad407488276f5e40a09328d60fc6c0af
+      - name: BPM90
+        guid: 9b4e0c0f978f2b40a8cc857f8b95e3c4
+        id: 802813491
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 93635397f4a65a4bb77749c85e4b24ca
+        - ElementName: MusicSwitcher
+          ObjectType: 9
+          guid: 6e5dfd43b4557a499c8352ddbf7d76d7
+        - ElementName: BPM90
+          ObjectType: 8
+          guid: 9b4e0c0f978f2b40a8cc857f8b95e3c4
+      - name: Credits
+        guid: b3f7462dfb5f044eb32011d2398a7202
+        id: 2201105581
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 93635397f4a65a4bb77749c85e4b24ca
+        - ElementName: MusicSwitcher
+          ObjectType: 9
+          guid: 6e5dfd43b4557a499c8352ddbf7d76d7
+        - ElementName: Credits
+          ObjectType: 8
+          guid: b3f7462dfb5f044eb32011d2398a7202
+      - name: Menu
+        guid: 5bd8a9245703f148962b80366bf41e68
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 93635397f4a65a4bb77749c85e4b24ca
+        - ElementName: MusicSwitcher
+          ObjectType: 9
+          guid: 6e5dfd43b4557a499c8352ddbf7d76d7
+        - ElementName: Menu
+          ObjectType: 8
+          guid: 5bd8a9245703f148962b80366bf41e68
+      - name: None
+        guid: 89bea9e64e4ad043afc68dda6bfb11c9
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 93635397f4a65a4bb77749c85e4b24ca
+        - ElementName: MusicSwitcher
+          ObjectType: 9
+          guid: 6e5dfd43b4557a499c8352ddbf7d76d7
+        - ElementName: None
+          ObjectType: 8
+          guid: 89bea9e64e4ad043afc68dda6bfb11c9
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -378,7 +652,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9405fb6dfe65284fb332ba55000cf143
     GuidInternal: 
-    m_lastTime: -8584591718074989433
+    m_lastTime: -8584586956917267260
     List: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
@@ -395,7 +669,7 @@ MonoBehaviour:
     m_lastTime: -8584591718077312772
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 01000000050000000600000007000000090000000c0000000d0000000e000000120000001d000000
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e00000010000000120000001d000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

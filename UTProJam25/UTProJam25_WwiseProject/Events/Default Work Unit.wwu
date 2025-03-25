@@ -40,7 +40,65 @@
 						</Event>
 					</ChildrenList>
 				</Folder>
-				<Folder Name="Music" ID="{41256A2C-330E-426B-9FF6-B03DA2A01FF6}" ShortID="454302606"/>
+				<Folder Name="Music" ID="{41256A2C-330E-426B-9FF6-B03DA2A01FF6}" ShortID="454302606">
+					<ChildrenList>
+						<Event Name="Play_MusicSwitcher" ID="{EFC03B97-70CE-4339-98F6-BC3847F63717}">
+							<ChildrenList>
+								<Action Name="" ID="{E2CCCFD8-C80B-422C-ACEF-D063C39BE012}" ShortID="1026867533">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MusicSwitcher" ID="{C9F265CC-3728-4A7F-92EF-13E1F73F6318}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Credits" ID="{B272B876-067C-4707-AE1C-B50B919D3669}">
+							<ChildrenList>
+								<Action Name="" ID="{6FC5DEDE-CC94-47D4-B9B6-30595AAD7625}" ShortID="509481048">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Credits" ID="{8E1BA345-1FE0-4A02-9A26-87B1FDCA73BF}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MainTheme90" ID="{C763DDB1-D9D6-4527-9F7A-5F06D2E4DB27}">
+							<ChildrenList>
+								<Action Name="" ID="{2BD22979-CB2F-41BA-9A98-1DD7AF5DB3AB}" ShortID="201762312">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainTheme90" ID="{D2B20A56-6F39-43AD-8936-9AF81C9589CD}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MainTheme120" ID="{C58EB139-490E-4831-974F-3E32B799CA3B}">
+							<ChildrenList>
+								<Action Name="" ID="{93142120-7B8A-4CD2-8CC0-DD0694A9D73A}" ShortID="491916566">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MainTheme120" ID="{A829881A-C17C-457B-99E3-D1BAC083F278}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_MenuTheme" ID="{8D78E58C-DB87-4213-8E52-B6CF1749183D}">
+							<ChildrenList>
+								<Action Name="" ID="{2CBFD78A-21AD-4823-A9EA-5E07F57EFE60}" ShortID="936751947">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MenuTheme" ID="{58176EC1-5EE6-4BBF-96B2-83839BD14550}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+					</ChildrenList>
+				</Folder>
 				<Folder Name="SFX" ID="{210D055B-569D-4A57-964E-528B72C920F6}" ShortID="319075096">
 					<ChildrenList>
 						<Event Name="Play_Choir" ID="{AB0F6BE9-E09B-4040-AB0F-CFCEECC8F02B}">
@@ -82,6 +140,17 @@
 									<ReferenceList>
 										<Reference Name="Target">
 											<ObjectRef Name="Steps" ID="{13697492-B6A9-406B-9C24-3D354DB65EDF}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
+						<Event Name="Play_Uppumine" ID="{A0A30022-3209-4D14-AF1E-D1B691A1608C}">
+							<ChildrenList>
+								<Action Name="" ID="{32BE4D33-2009-462D-A7DC-C3AF3E06BD43}" ShortID="1035125866">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="Uppumine" ID="{FBD29C7F-3A07-4866-8C5F-CE25A0F4E519}" WorkUnitID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}"/>
 										</Reference>
 									</ReferenceList>
 								</Action>

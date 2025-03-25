@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{F20014F0-2222-4FE9-99CB-8778210CE151}",
     "Language": "SFX",
-    "Hash": "{9AA521BE-D00F-C17B-C60C-AFB2C9610CB2}",
+    "Hash": "{E27480CF-C742-D675-7CE7-0FE0A93817AE}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -88,12 +88,28 @@
       "CachePath": "FB/{FBC8D350-0EC5-383D-AD57-3788462A6833}.wem"
      },
      {
+      "Id": "308110081",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS.wav",
+      "CachePath": "91/{91DC04E4-0C74-749A-9AED-BAF50F28BE53}.wem"
+     },
+     {
       "Id": "341737008",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "Choir3.wav",
       "CachePath": "50/{5013E6DC-AA63-4817-362C-252311E1C077}.wem"
+     },
+     {
+      "Id": "372400937",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MainTheme120.wav",
+      "CachePath": "42/{420084D0-E94E-0D8A-3D28-C568D33C3B09}.wem"
      },
      {
       "Id": "545067133",
@@ -112,12 +128,20 @@
       "CachePath": "25/{253FA5CF-558B-C7AE-827F-EAF0C45C68E9}.wem"
      },
      {
+      "Id": "568067752",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS.wav",
+      "CachePath": "7C/{7CC71A59-C1A2-3378-3FED-003D529C9E18}.wem"
+     },
+     {
       "Id": "645359761",
       "Language": "SFX",
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "StepsGrass2.wav",
-      "CachePath": "A4/{A44F899F-8C74-07D9-927E-1DA760EC3F25}.wem"
+      "CachePath": "F7/{F749B1E0-D255-4FEE-C375-0648779A8D9D}.wem"
      },
      {
       "Id": "700737164",
@@ -133,7 +157,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "StepsGrass1.wav",
-      "CachePath": "37/{37D05C91-8153-E94A-4B1D-23BBC1DDB496}.wem"
+      "CachePath": "BC/{BCC627B9-A4E7-E85E-64C0-ABFE91782786}.wem"
      },
      {
       "Id": "774238205",
@@ -200,6 +224,22 @@
       "CachePath": "92/{9298E242-7841-3B04-78B9-D1B4B1F0BAC4}.wem"
      },
      {
+      "Id": "895545840",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MainTheme90.wav",
+      "CachePath": "D6/{D66A93BD-5917-42F4-B6BC-DDFD549D2F29}.wem"
+     },
+     {
+      "Id": "917821314",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MenuThemeAndCredits.wav",
+      "CachePath": "6F/{6F5BA468-2F55-D601-F8E7-FD20EA5BB8D4}.wem"
+     },
+     {
       "Id": "922925472",
       "Language": "SFX",
       "Streaming": "false",
@@ -226,6 +266,14 @@
     ],
     "Plugins": {
      "ShareSets": [
+      {
+       "Id": "48620415",
+       "Name": "Have_U_Ever_Been_Outside",
+       "ObjectPath": "\\Effects\\Factory Effects\\RoomVerb\\Exteriors\\Have_U_Ever_Been_Outside",
+       "GUID": "{FE29AE8D-FD86-4652-A95D-68D32F5760EC}",
+       "LibName": "Wwise RoomVerb",
+       "LibId": "7733251"
+      },
       {
        "Id": "1588715066",
        "Name": "Echoes_Linear",
@@ -292,6 +340,20 @@
         }
        ]
       }
+     },
+     {
+      "Id": "2970769112",
+      "Name": "Play_Credits",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_Credits",
+      "GUID": "{B272B876-067C-4707-AE1C-B50B919D3669}",
+      "DurationType": "OneShot",
+      "DurationMin": "38.39139",
+      "DurationMax": "38.39139",
+      "MediaRefs": [
+       {
+        "Id": "917821314"
+       }
+      ]
      },
      {
       "Id": "1653871456",
@@ -377,14 +439,74 @@
       }
      },
      {
+      "Id": "3198674595",
+      "Name": "Play_MainTheme120",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_MainTheme120",
+      "GUID": "{C58EB139-490E-4831-974F-3E32B799CA3B}",
+      "DurationType": "OneShot",
+      "DurationMin": "68",
+      "DurationMax": "68",
+      "MediaRefs": [
+       {
+        "Id": "372400937"
+       }
+      ]
+     },
+     {
+      "Id": "24884219",
+      "Name": "Play_MainTheme90",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_MainTheme90",
+      "GUID": "{C763DDB1-D9D6-4527-9F7A-5F06D2E4DB27}",
+      "DurationType": "OneShot",
+      "DurationMin": "49.435123",
+      "DurationMax": "49.435123",
+      "MediaRefs": [
+       {
+        "Id": "895545840"
+       }
+      ]
+     },
+     {
+      "Id": "3757523130",
+      "Name": "Play_MenuTheme",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_MenuTheme",
+      "GUID": "{8D78E58C-DB87-4213-8E52-B6CF1749183D}",
+      "DurationType": "OneShot",
+      "DurationMin": "81.59497",
+      "DurationMax": "81.59497",
+      "MediaRefs": [
+       {
+        "Id": "917821314"
+       }
+      ]
+     },
+     {
+      "Id": "1517090470",
+      "Name": "Play_MusicSwitcher",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Play_MusicSwitcher",
+      "GUID": "{EFC03B97-70CE-4339-98F6-BC3847F63717}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "372400937"
+       },
+       {
+        "Id": "895545840"
+       },
+       {
+        "Id": "917821314"
+       }
+      ]
+     },
+     {
       "Id": "2600469463",
       "Name": "Play_Steps",
       "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Steps",
       "GUID": "{E2138307-A807-42F7-8F7D-5B10EDF695D2}",
       "MaxAttenuation": "100",
       "DurationType": "OneShot",
-      "DurationMin": "0.3852963",
-      "DurationMax": "0.4854429",
+      "DurationMin": "0.2718251",
+      "DurationMax": "0.40977913",
       "MediaRefs": [
        {
         "Id": "645359761"
@@ -393,6 +515,30 @@
         "Id": "768389031"
        }
       ]
+     },
+     {
+      "Id": "147070357",
+      "Name": "Play_Uppumine",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX\\Play_Uppumine",
+      "GUID": "{A0A30022-3209-4D14-AF1E-D1B691A1608C}",
+      "DurationType": "OneShot",
+      "DurationMin": "0.95522094",
+      "DurationMax": "1.1196696",
+      "MediaRefs": [
+       {
+        "Id": "308110081"
+       },
+       {
+        "Id": "568067752"
+       }
+      ],
+      "PluginRefs": {
+       "ShareSets": [
+        {
+         "Id": "48620415"
+        }
+       ]
+      }
      },
      {
       "Id": "1598004116",
@@ -436,9 +582,101 @@
        }
       ]
      }
+    ],
+    "Busses": [
+     {
+      "Id": "393239870",
+      "Name": "SFX",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\SFX",
+      "GUID": "{A936463D-8BF9-4BA6-8D28-E47767CA9A28}"
+     },
+     {
+      "Id": "1551306167",
+      "Name": "UI",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\UI",
+      "GUID": "{AA01C67C-1362-4744-851F-334FF5F6FA33}"
+     },
+     {
+      "Id": "3803692087",
+      "Name": "Master Audio Bus",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus",
+      "GUID": "{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}"
+     },
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music",
+      "GUID": "{7D9484E2-BA95-4B1C-907F-B128B3A772FD}"
+     }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1006694123",
+      "Name": "Music_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Music_volume",
+      "GUID": "{127539C5-32C7-43FD-AE9D-23FB04C4F7D2}"
+     },
+     {
+      "Id": "1564184899",
+      "Name": "SFX_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\SFX_volume",
+      "GUID": "{455BB03C-6F58-400E-94DD-7BC65F9F8E8E}"
+     },
+     {
+      "Id": "1719345792",
+      "Name": "UI_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\UI_volume",
+      "GUID": "{B2C787D8-196D-4337-9C80-AE6269352B81}"
+     },
+     {
+      "Id": "4179668880",
+      "Name": "Master_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Master_volume",
+      "GUID": "{F745A209-44A9-49D2-AF26-E27BC5E20AC7}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3582447343",
+      "Name": "MusicSwitcher",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher",
+      "GUID": "{43FD5D6E-55B4-497A-9C83-52DDBF7D76D7}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\None",
+        "GUID": "{E6A9BE89-4A4E-43D0-AFC6-8DDA6BFB11C9}"
+       },
+       {
+        "Id": "802813491",
+        "Name": "BPM90",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\BPM90",
+        "GUID": "{0F0C4E9B-8F97-402B-A8CC-857F8B95E3C4}"
+       },
+       {
+        "Id": "2201105581",
+        "Name": "Credits",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\Credits",
+        "GUID": "{2D46F7B3-5FFB-4E04-B320-11D2398A7202}"
+       },
+       {
+        "Id": "2503094331",
+        "Name": "BPM120",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\BPM120",
+        "GUID": "{887440AD-6F27-405E-A093-28D60FC6C0AF}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\Menu",
+        "GUID": "{24A9D85B-0357-48F1-962B-80366BF41E68}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{7CDD22A5-DAE4-F2C5-CCD5-F539274CB5A8}"
+  "FileHash": "{2697DA17-8B4A-B8E9-26A9-70DB5C56872C}"
  }
 }

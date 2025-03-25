@@ -1,13 +1,42 @@
 Event	ID	Name			Wwise Object Path	Notes
+	24884219	Play_MainTheme90			\Default Work Unit\Music\Play_MainTheme90	
 	57270221	ui_button_toggle			\Default Work Unit\UI\ui_button_toggle	
+	147070357	Play_Uppumine			\Default Work Unit\SFX\Play_Uppumine	
 	1365080748	Play_Kantele			\Default Work Unit\SFX\Play_Kantele	
+	1517090470	Play_MusicSwitcher			\Default Work Unit\Music\Play_MusicSwitcher	
 	1598004116	ui_button_back			\Default Work Unit\UI\ui_button_back	
 	1653871456	Play_Flute			\Default Work Unit\SFX\Play_Flute	
 	1664509575	ui_button_click			\Default Work Unit\UI\ui_button_click	
 	2600469463	Play_Steps			\Default Work Unit\SFX\Play_Steps	
+	2970769112	Play_Credits			\Default Work Unit\Music\Play_Credits	
+	3198674595	Play_MainTheme120			\Default Work Unit\Music\Play_MainTheme120	
 	3639753543	Play_Choir			\Default Work Unit\SFX\Play_Choir	
+	3757523130	Play_MenuTheme			\Default Work Unit\Music\Play_MenuTheme	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	3582447343	MusicSwitcher			\Default Work Unit\MusicSwitcher	
+
+State	ID	Name	State Group			Notes
+	748895195	None	MusicSwitcher			
+	802813491	BPM90	MusicSwitcher			
+	2201105581	Credits	MusicSwitcher			
+	2503094331	BPM120	MusicSwitcher			
+	2607556080	Menu	MusicSwitcher			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	1006694123	Music_volume			\Default Work Unit\Music_volume	
+	1564184899	SFX_volume			\Default Work Unit\SFX_volume	
+	1719345792	UI_volume			\Default Work Unit\UI_volume	
+	4179668880	Master_volume			\Default Work Unit\Master_volume	
+
+Audio Bus	ID	Name			Wwise Object Path	Notes
+	393239870	SFX			\Default Work Unit\Master Audio Bus\SFX	
+	1551306167	UI			\Default Work Unit\Master Audio Bus\UI	
+	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
+	3991942870	Music			\Default Work Unit\Master Audio Bus\Music	
 
 Effect plug-ins	ID	Name	Type				Notes
+	48620415	Have_U_Ever_Been_Outside	Wwise RoomVerb			
 	1588715066	Echoes_Linear	Wwise Delay			
 	2995775460	Room_Small	Wwise RoomVerb			
 	3164629247	Holy	Wwise RoomVerb			
@@ -22,12 +51,15 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	218538953	Kannel7	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\9F\{9F7F5D81-7C07-7F1D-BBEE-8CEB2700A1A2}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Kantele\Kannel7		352896
 	219919484	Choir1	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\75\{75F998B3-2D62-4958-4C2D-95C5D0FF23D7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Choir\Choir1		352896
 	259388982	Choir7	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\FB\{FBC8D350-0EC5-383D-AD57-3788462A6833}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Choir\Choir7		352896
+	308110081	WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\91\{91DC04E4-0C74-749A-9AED-BAF50F28BE53}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Uppumine\WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS		203008
 	341737008	Choir3	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\50\{5013E6DC-AA63-4817-362C-252311E1C077}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Choir\Choir3		352896
+	372400937	MainTheme120	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\42\{420084D0-E94E-0D8A-3D28-C568D33C3B09}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MusicSwitcher\MainTheme120\MainTheme120		11995296
 	545067133	Kannel3	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\88\{887632A0-24F6-51A5-89F3-2F3263040906}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Kantele\Kannel3		352896
 	556278682	Kannel4	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\25\{253FA5CF-558B-C7AE-827F-EAF0C45C68E9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Kantele\Kannel4		352896
-	645359761	StepsGrass2	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\A4\{A44F899F-8C74-07D9-927E-1DA760EC3F25}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Steps\StepsGrass2		77272
+	568067752	WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\7C\{7CC71A59-C1A2-3378-3FED-003D529C9E18}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Uppumine\WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS		166356
+	645359761	StepsGrass2	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\F7\{F749B1E0-D255-4FEE-C375-0648779A8D9D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Steps\StepsGrass2		54544
 	700737164	Kannel2	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\51\{510C1DE6-227C-9C9E-4C5E-F0A4050DA9C9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Kantele\Kannel2		352896
-	768389031	StepsGrass1	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\37\{37D05C91-8153-E94A-4B1D-23BBC1DDB496}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Steps\StepsGrass1		77272
+	768389031	StepsGrass1	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\BC\{BCC627B9-A4E7-E85E-64C0-ABFE91782786}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Steps\StepsGrass1		65244
 	774238205	Flute2	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\E4\{E44A35B6-4311-05F4-A62E-763BE13C46C7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute2		176496
 	777183766	Choir5	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\52\{522F6F5D-4E0C-BF1D-278B-FC4506B5C9D5}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Choir\Choir5		352896
 	786654353	Flute1	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\D3\{D37AD6F3-4BBC-B5DD-9960-E8FA2EEA17F9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute1		176496
@@ -36,6 +68,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	835636550	Flute7	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\0B\{0BF5A0F3-57D9-1B8A-5EB2-CBFEA509B6E7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute7		176496
 	869684734	Flute6	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\4F\{4F42F2E5-5D47-89A2-D2C4-EFDD08141AF9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute6		176496
 	886410553	Flute5	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\92\{9298E242-7841-3B04-78B9-D1B4B1F0BAC4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute5		176496
+	895545840	MainTheme90	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\D6\{D66A93BD-5917-42F4-B6BC-DDFD549D2F29}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MusicSwitcher\MainTheme90\MainTheme90		8702496
+	917821314	MenuThemeAndCredits	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\6F\{6F5BA468-2F55-D601-F8E7-FD20EA5BB8D4}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MusicSwitcher\Credits\MenuThemeAndCredits		21168092
 	922925472	Flute4	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\4C\{4CFA6ED1-74FD-1A90-6268-4B857157FDAB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute4		176496
 	964400011	Choir4	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\77\{777FAC26-CD45-2977-010C-AFE4F13EEF1D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Choir\Choir4		352896
 	1068469846	Back	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\CF\{CF2BC049-1B04-D369-1C47-20B4B7A8B2DF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Back		23768

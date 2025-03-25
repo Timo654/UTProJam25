@@ -6,12 +6,22 @@
 				<SoundBank Name="Main" ID="{F20014F0-2222-4FE9-99CB-8778210CE151}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Play_Choir" ID="{AB0F6BE9-E09B-4040-AB0F-CFCEECC8F02B}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ui_button_back" ID="{8468438C-34D6-4215-9520-AE9E543F765B}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Flute" ID="{49F022CE-23B7-4238-A6BF-F3999881F6B5}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Steps" ID="{E2138307-A807-42F7-8F7D-5B10EDF695D2}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MainTheme90" ID="{D2B20A56-6F39-43AD-8936-9AF81C9589CD}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ui_button_click" ID="{3C447970-41B4-43C3-BE55-3E6E54EF7852}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MainTheme120" ID="{A829881A-C17C-457B-99E3-D1BAC083F278}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Kantele" ID="{BC25856C-021D-4646-B932-01946B860BF6}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="UI" ID="{AA01C67C-1362-4744-851F-334FF5F6FA33}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ui_button_toggle" ID="{FBFC779B-A6F2-47A7-9F1D-908BFD1D1DA4}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Credits" ID="{8E1BA345-1FE0-4A02-9A26-87B1FDCA73BF}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MusicSwitcher" ID="{C9F265CC-3728-4A7F-92EF-13E1F73F6318}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{7D9484E2-BA95-4B1C-907F-B128B3A772FD}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX" ID="{A936463D-8BF9-4BA6-8D28-E47767CA9A28}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="MenuTheme" ID="{58176EC1-5EE6-4BBF-96B2-83839BD14550}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Play_Uppumine" ID="{A0A30022-3209-4D14-AF1E-D1B691A1608C}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

@@ -3,85 +3,6 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{D7607B57-B460-4FBF-8F9C-76ECFA4A1877}" PersistMode="Standalone">
 			<ChildrenList>
-				<Folder Name="Music" ID="{C9E33EE7-9914-4326-A840-CB968A300C5B}" ShortID="698187804">
-					<ChildrenList>
-						<Sound Name="MainTheme90" ID="{36A82338-E74F-41FF-9523-F0CAC3465F41}" ShortID="533532718">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E8B006C2-9CDC-423F-AC79-82575B10A8C9}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Music" ID="{7D9484E2-BA95-4B1C-907F-B128B3A772FD}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="MainTheme90" ID="{32B1D2D7-F228-467D-8734-7EF308C3E885}">
-									<PropertyList>
-										<Property Name="LoopEnd" Type="Real64" Value="42.6132475168277"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>MainTheme90.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="895545840"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="MainTheme90" ID="{32B1D2D7-F228-467D-8734-7EF308C3E885}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="MainTheme120" ID="{BC31B245-A461-4A9D-8188-F5B2C793F44F}" ShortID="118199158">
-							<PropertyList>
-								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
-								<Property Name="IsStreamingEnabled" Type="bool">
-									<ValueList>
-										<Value>True</Value>
-									</ValueList>
-								</Property>
-								<Property Name="Volume" Type="Real64">
-									<ValueList>
-										<Value>-4</Value>
-									</ValueList>
-								</Property>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E8B006C2-9CDC-423F-AC79-82575B10A8C9}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Music" ID="{7D9484E2-BA95-4B1C-907F-B128B3A772FD}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="MainTheme120" ID="{241680E6-946A-4BCB-9BE7-6ECE06CD75D8}">
-									<PropertyList>
-										<Property Name="CrossfadeDuration" Type="Real64" Value="11156.25"/>
-										<Property Name="CrossfadeShape" Type="int16" Value="4"/>
-										<Property Name="LoopEnd" Type="Real64" Value="63.9316239316239"/>
-										<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
-									</PropertyList>
-									<Language>SFX</Language>
-									<AudioFile>MainTheme120.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="372400937"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="MainTheme120" ID="{241680E6-946A-4BCB-9BE7-6ECE06CD75D8}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-					</ChildrenList>
-				</Folder>
 				<Folder Name="SFX" ID="{7E5A1395-E764-4768-B293-A4F6FD397049}" ShortID="40612838">
 					<ChildrenList>
 						<RandomSequenceContainer Name="Bagpipe" ID="{45F79170-0CD7-4816-BA81-45C43EFC8E55}" ShortID="836708427">
@@ -836,6 +757,11 @@
 						<RandomSequenceContainer Name="Steps" ID="{13697492-B6A9-406B-9C24-3D354DB65EDF}" ShortID="446008984">
 							<PropertyList>
 								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>2</Value>
+									</ValueList>
+								</Property>
 								<Property Name="Pitch" Type="int32">
 									<ValueList>
 										<Value>20</Value>
@@ -851,6 +777,11 @@
 											</Modifier>
 										</ModifierInfo>
 									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
 								</Property>
 								<Property Name="Volume" Type="Real64">
 									<ModifierList>
@@ -889,6 +820,11 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="StepsGrass1" ID="{2F196D30-0D50-4581-A9E9-2937B01851AA}">
+											<PropertyList>
+												<Property Name="LoopBegin" Type="Real64" Value="0.0681920228579476"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.0681920228579476"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>StepsGrass1.wav</AudioFile>
 											<MediaIDList>
@@ -911,6 +847,10 @@
 									</ReferenceList>
 									<ChildrenList>
 										<AudioFileSource Name="StepsGrass2" ID="{14240DB2-D657-41C4-B819-9EE0212B44DA}">
+											<PropertyList>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimBegin" Type="Real64" Value="0.128847032663175"/>
+											</PropertyList>
 											<Language>SFX</Language>
 											<AudioFile>StepsGrass2.wav</AudioFile>
 											<MediaIDList>
@@ -924,50 +864,126 @@
 								</Sound>
 							</ChildrenList>
 						</RandomSequenceContainer>
-						<Sound Name="WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS" ID="{8D68F02C-208A-400C-96CC-24FEA4C64845}" ShortID="758400132">
+						<BlendContainer Name="Uppumine" ID="{FBD29C7F-3A07-4866-8C5F-CE25A0F4E519}" ShortID="956680119">
+							<PropertyList>
+								<Property Name="3DSpatialization" Type="int16" Value="2"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>14</Value>
+									</ValueList>
+								</Property>
+								<Property Name="MaxSoundPerInstance" Type="int16">
+									<ValueList>
+										<Value>1</Value>
+									</ValueList>
+								</Property>
+								<Property Name="OutputBusVolume" Type="Real64">
+									<ValueList>
+										<Value>3</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>50</Value>
+									</ValueList>
+									<ModifierList>
+										<ModifierInfo>
+											<Modifier Name="" ID="{701D7697-1080-45CD-85E5-7881E34EF9AC}">
+												<PropertyList>
+													<Property Name="Enabled" Type="bool" Value="True"/>
+													<Property Name="Max" Type="Real64" Value="125"/>
+													<Property Name="Min" Type="Real64" Value="-150"/>
+												</PropertyList>
+											</Modifier>
+										</ModifierInfo>
+									</ModifierList>
+								</Property>
+								<Property Name="UseMaxSoundPerInstance" Type="bool">
+									<ValueList>
+										<Value>True</Value>
+									</ValueList>
+								</Property>
+							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Conversion">
 									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E8B006C2-9CDC-423F-AC79-82575B10A8C9}"/>
 								</Reference>
 								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}"/>
+									<ObjectRef Name="SFX" ID="{A936463D-8BF9-4BA6-8D28-E47767CA9A28}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}"/>
 								</Reference>
 							</ReferenceList>
 							<ChildrenList>
-								<AudioFileSource Name="WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS" ID="{DE4B0EAF-99C8-4E9A-874F-290D56DF55A1}">
-									<Language>SFX</Language>
-									<AudioFile>WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="568067752"/>
-									</MediaIDList>
-								</AudioFileSource>
+								<Sound Name="WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS" ID="{8D68F02C-208A-400C-96CC-24FEA4C64845}" ShortID="758400132">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E8B006C2-9CDC-423F-AC79-82575B10A8C9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS" ID="{DE4B0EAF-99C8-4E9A-874F-290D56DF55A1}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="0.865936937060323"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="0.865936937060323"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="568067752"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS" ID="{DE4B0EAF-99C8-4E9A-874F-290D56DF55A1}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
+								<Sound Name="WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS" ID="{C09A110E-04E6-4400-8BAB-D1AEBB9F1A9E}" ShortID="534618439">
+									<ReferenceList>
+										<Reference Name="Conversion">
+											<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E8B006C2-9CDC-423F-AC79-82575B10A8C9}"/>
+										</Reference>
+										<Reference Name="OutputBus">
+											<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}"/>
+										</Reference>
+									</ReferenceList>
+									<ChildrenList>
+										<AudioFileSource Name="WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS" ID="{E7D74CB1-446B-4C68-93FE-6C394D071260}">
+											<PropertyList>
+												<Property Name="FadeOutDuration" Type="Real64" Value="1.05682730761334"/>
+												<Property Name="OverrideWavLoop" Type="bool" Value="True"/>
+												<Property Name="TrimEnd" Type="Real64" Value="1.05682730761334"/>
+											</PropertyList>
+											<Language>SFX</Language>
+											<AudioFile>WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS.wav</AudioFile>
+											<MediaIDList>
+												<MediaID ID="308110081"/>
+											</MediaIDList>
+										</AudioFileSource>
+									</ChildrenList>
+									<ActiveSourceList>
+										<ActiveSource Name="WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS" ID="{E7D74CB1-446B-4C68-93FE-6C394D071260}" Platform="Linked"/>
+									</ActiveSourceList>
+								</Sound>
 							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="WATRFlow_Steady Water Flow Under Rocks 03_SLK_WATERSOUNDS" ID="{DE4B0EAF-99C8-4E9A-874F-290D56DF55A1}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
-						<Sound Name="WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS" ID="{C09A110E-04E6-4400-8BAB-D1AEBB9F1A9E}" ShortID="534618439">
-							<ReferenceList>
-								<Reference Name="Conversion">
-									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{E8B006C2-9CDC-423F-AC79-82575B10A8C9}"/>
-								</Reference>
-								<Reference Name="OutputBus">
-									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{4E759515-4489-478A-BA6A-B5DE8ED401DD}"/>
-								</Reference>
-							</ReferenceList>
-							<ChildrenList>
-								<AudioFileSource Name="WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS" ID="{E7D74CB1-446B-4C68-93FE-6C394D071260}">
-									<Language>SFX</Language>
-									<AudioFile>WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS.wav</AudioFile>
-									<MediaIDList>
-										<MediaID ID="308110081"/>
-									</MediaIDList>
-								</AudioFileSource>
-							</ChildrenList>
-							<ActiveSourceList>
-								<ActiveSource Name="WATRFlow_Steady Water Flow Under Rocks 06_SLK_WATERSOUNDS" ID="{E7D74CB1-446B-4C68-93FE-6C394D071260}" Platform="Linked"/>
-							</ActiveSourceList>
-						</Sound>
+							<ObjectLists>
+								<ObjectList Name="Effects">
+									<Reference>
+										<Local>
+											<EffectSlot Name="" ID="{93F58C79-EF38-4752-B3C3-E8CE294FA2BD}" ShortID="491225830">
+												<ReferenceList>
+													<Reference Name="Effect" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+														<ObjectRef Name="Have_U_Ever_Been_Outside" ID="{FE29AE8D-FD86-4652-A95D-68D32F5760EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+													</Reference>
+												</ReferenceList>
+											</EffectSlot>
+										</Local>
+									</Reference>
+								</ObjectList>
+							</ObjectLists>
+						</BlendContainer>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="UI" ID="{EC559F81-7C5A-43BA-AD0E-CDFB079C5702}" ShortID="725124560">

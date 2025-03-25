@@ -3,11 +3,16 @@
 	<States>
 		<WorkUnit Name="Default Work Unit" ID="{97536393-A6F4-4B5A-B777-49C85E4B24CA}" PersistMode="Standalone">
 			<ChildrenList>
-				<StateGroup Name="SceneSwitch" ID="{C86E9975-5705-437E-BFA7-184F71EE53CC}">
+				<StateGroup Name="MusicSwitcher" ID="{43FD5D6E-55B4-497A-9C83-52DDBF7D76D7}">
+					<PropertyList>
+						<Property Name="DefaultTransitionTime" Type="Real64" Value="0.5"/>
+					</PropertyList>
 					<ChildrenList>
-						<State Name="None" ID="{6D19743E-D467-424D-B3E3-27238AC44D6E}"/>
-						<State Name="Credits" ID="{9926EFDA-6D23-410E-8A77-16641CE82915}"/>
-						<State Name="Menu" ID="{F6AA6F68-4EFA-4E4A-9769-2E5E54BE269B}"/>
+						<State Name="None" ID="{E6A9BE89-4A4E-43D0-AFC6-8DDA6BFB11C9}"/>
+						<State Name="Menu" ID="{24A9D85B-0357-48F1-962B-80366BF41E68}"/>
+						<State Name="Credits" ID="{2D46F7B3-5FFB-4E04-B320-11D2398A7202}"/>
+						<State Name="BPM90" ID="{0F0C4E9B-8F97-402B-A8CC-857F8B95E3C4}"/>
+						<State Name="BPM120" ID="{887440AD-6F27-405E-A093-28D60FC6C0AF}"/>
 					</ChildrenList>
 				</StateGroup>
 			</ChildrenList>

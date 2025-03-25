@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{701ECBBD-9C7B-4030-8CDB-749EE5D1C7B9}",
     "Language": "SFX",
-    "Hash": "{24080B76-8E5A-C058-3CCA-03BC6B4A46AF}",
+    "Hash": "{20831367-1A2F-3CDE-64CD-C80721A4A65C}",
     "ObjectPath": "Init",
     "ShortName": "Init",
     "Path": "Init.bnk",
@@ -59,9 +59,75 @@
       "ObjectPath": "\\Master-Mixer Hierarchy\\Default Work Unit\\Master Audio Bus\\Music",
       "GUID": "{7D9484E2-BA95-4B1C-907F-B128B3A772FD}"
      }
+    ],
+    "GameParameters": [
+     {
+      "Id": "1006694123",
+      "Name": "Music_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Music_volume",
+      "GUID": "{127539C5-32C7-43FD-AE9D-23FB04C4F7D2}"
+     },
+     {
+      "Id": "1564184899",
+      "Name": "SFX_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\SFX_volume",
+      "GUID": "{455BB03C-6F58-400E-94DD-7BC65F9F8E8E}"
+     },
+     {
+      "Id": "1719345792",
+      "Name": "UI_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\UI_volume",
+      "GUID": "{B2C787D8-196D-4337-9C80-AE6269352B81}"
+     },
+     {
+      "Id": "4179668880",
+      "Name": "Master_volume",
+      "ObjectPath": "\\Game Parameters\\Default Work Unit\\Master_volume",
+      "GUID": "{F745A209-44A9-49D2-AF26-E27BC5E20AC7}"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "3582447343",
+      "Name": "MusicSwitcher",
+      "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher",
+      "GUID": "{43FD5D6E-55B4-497A-9C83-52DDBF7D76D7}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\None",
+        "GUID": "{E6A9BE89-4A4E-43D0-AFC6-8DDA6BFB11C9}"
+       },
+       {
+        "Id": "802813491",
+        "Name": "BPM90",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\BPM90",
+        "GUID": "{0F0C4E9B-8F97-402B-A8CC-857F8B95E3C4}"
+       },
+       {
+        "Id": "2201105581",
+        "Name": "Credits",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\Credits",
+        "GUID": "{2D46F7B3-5FFB-4E04-B320-11D2398A7202}"
+       },
+       {
+        "Id": "2503094331",
+        "Name": "BPM120",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\BPM120",
+        "GUID": "{887440AD-6F27-405E-A093-28D60FC6C0AF}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\States\\Default Work Unit\\MusicSwitcher\\Menu",
+        "GUID": "{24A9D85B-0357-48F1-962B-80366BF41E68}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{BA94A07C-CA61-8AD4-2B2D-47E213FB7CF1}"
+  "FileHash": "{5F103592-BAD7-E8D6-671A-179375F82670}"
  }
 }
