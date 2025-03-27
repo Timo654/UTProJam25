@@ -1708,6 +1708,10 @@ PrefabInstance:
       propertyPath: Button_UI_Click.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: bab1b4e62b2586942856fb40e0358c9f, type: 2}
+    - target: {fileID: 5213930333462841701, guid: 8e98781c0e18610c394c3004ebbda780, type: 3}
+      propertyPath: Button_UI_Hover.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 39031494f7358d343978646bb5639f24, type: 2}
     - target: {fileID: 5448613943960300040, guid: 8e98781c0e18610c394c3004ebbda780, type: 3}
       propertyPath: m_text
       value: Resolution

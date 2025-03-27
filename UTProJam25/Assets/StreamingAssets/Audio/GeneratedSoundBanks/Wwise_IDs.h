@@ -13,6 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID MUSIC = 3991942870U;
         static const AkUniqueID PLAY_CHOIR = 3639753543U;
         static const AkUniqueID PLAY_CREDITS = 2970769112U;
         static const AkUniqueID PLAY_FLUTE = 1653871456U;
@@ -45,6 +46,23 @@ namespace AK
         } // namespace MUSICSWITCHER
 
     } // namespace STATES
+
+    namespace SWITCHES
+    {
+        namespace MUSICSWITCHING
+        {
+            static const AkUniqueID GROUP = 397194002U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID BPM90 = 802813491U;
+                static const AkUniqueID BPM120 = 2503094331U;
+                static const AkUniqueID CREDITS = 2201105581U;
+                static const AkUniqueID MENU = 2607556080U;
+            } // namespace SWITCH
+        } // namespace MUSICSWITCHING
+
+    } // namespace SWITCHES
 
     namespace GAME_PARAMETERS
     {

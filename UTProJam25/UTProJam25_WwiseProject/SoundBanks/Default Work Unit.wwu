@@ -10,6 +10,7 @@
 						<ObjectRef Name="ui_button_back" ID="{8468438C-34D6-4215-9520-AE9E543F765B}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Flute" ID="{49F022CE-23B7-4238-A6BF-F3999881F6B5}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Play_Steps" ID="{E2138307-A807-42F7-8F7D-5B10EDF695D2}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Music" ID="{397C06BF-5A51-431D-BA29-D83F1D12F079}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MainTheme90" ID="{D2B20A56-6F39-43AD-8936-9AF81C9589CD}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ui_button_click" ID="{3C447970-41B4-43C3-BE55-3E6E54EF7852}" WorkUnitID="{B85E1148-40AD-4151-A71B-E9E132EF6602}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="MainTheme120" ID="{A829881A-C17C-457B-99E3-D1BAC083F278}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}" Origin="Manual" Filter="7"/>

@@ -5,7 +5,7 @@ public class WwiseVolumeInitializer : MonoBehaviour
     private void Start()
     {
         InitializeVolume("Master_volume", "MASTER");
-        InitializeVolume("Muisc_volume", "MUSIC");
+        InitializeVolume("Music_volume", "MUSIC");
         InitializeVolume("SFX_volume", "SFX");
         InitializeVolume("UI_volume", "UI");
     }

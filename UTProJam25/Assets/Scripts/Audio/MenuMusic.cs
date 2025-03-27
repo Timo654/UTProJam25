@@ -2,13 +2,15 @@ using UnityEngine;
 
 public class MenuMusic : MonoBehaviour
 {   
-    public AK.Wwise.Event GameMusicPlaylist;
-    public AK.Wwise.State CreditsState;
+    public AK.Wwise.Event MenuStart;
+    [SerializeField]
+    private AK.Wwise.Switch MenuStartSwitch;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
+        //fmod
         if (!AudioManager.Instance.HasMusicInitialized())
             AudioManager.Instance.InitializeMusic(FMODEvents.Instance.AllMusic);
         AudioManager.Instance.SetMusicParameter("MusicSwitch", (int)BGMStage.MainMenu);
@@ -17,12 +19,13 @@ public class MenuMusic : MonoBehaviour
     private void Start()
     {
         // start the song if it's not playing already
+        //fmod
         if (AudioManager.Instance.GetMusicPosition() == 0)
             AudioManager.Instance.StartMusic();
 
-        GameMusicPlaylist.Post(gameObject);
-        CreditsState.SetValue();
-
+        //wwise
+        MenuStart.Post(gameObject);
+        MenuStartSwitch.SetValue(this.gameObject);
 
         LevelLoader.Instance.FadeIn();
     }

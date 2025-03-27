@@ -12,6 +12,16 @@ Event	ID	Name			Wwise Object Path	Notes
 	3198674595	Play_MainTheme120			\Default Work Unit\Music\Play_MainTheme120	
 	3639753543	Play_Choir			\Default Work Unit\SFX\Play_Choir	
 	3757523130	Play_MenuTheme			\Default Work Unit\Music\Play_MenuTheme	
+	3991942870	Music			\Default Work Unit\Music\Music	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	397194002	MusicSwitching			\Default Work Unit\MusicSwitching	
+
+Switch	ID	Name	Switch Group			Notes
+	802813491	BPM90	MusicSwitching			
+	2201105581	Credits	MusicSwitching			
+	2503094331	BPM120	MusicSwitching			
+	2607556080	Menu	MusicSwitching			
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3582447343	MusicSwitcher			\Default Work Unit\MusicSwitcher	
@@ -68,8 +78,8 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	835636550	Flute7	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\0B\{0BF5A0F3-57D9-1B8A-5EB2-CBFEA509B6E7}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute7		176496
 	869684734	Flute6	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\4F\{4F42F2E5-5D47-89A2-D2C4-EFDD08141AF9}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute6		176496
 	886410553	Flute5	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\92\{9298E242-7841-3B04-78B9-D1B4B1F0BAC4}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute5		176496
-	895545840	MainTheme90	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\D6\{D66A93BD-5917-42F4-B6BC-DDFD549D2F29}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MusicSwitcher\MainTheme90\MainTheme90		8702496
-	917821314	MenuThemeAndCredits	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\6F\{6F5BA468-2F55-D601-F8E7-FD20EA5BB8D4}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MusicSwitcher\Credits\MenuThemeAndCredits		21168092
+	895545840	MainTheme90	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\D6\{D66A93BD-5917-42F4-B6BC-DDFD549D2F29}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MusicSwitch\MainTheme90\MainTheme90\MainTheme90		8702496
+	917821314	MenuThemeAndCredits	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\6F\{6F5BA468-2F55-D601-F8E7-FD20EA5BB8D4}.wem		\Interactive Music Hierarchy\Default Work Unit\Music\MusicSwitch\MenuTheme\MenuTheme\MenuThemeAndCredits		21168092
 	922925472	Flute4	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\4C\{4CFA6ED1-74FD-1A90-6268-4B857157FDAB}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Flute\Flute4		176496
 	964400011	Choir4	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\77\{777FAC26-CD45-2977-010C-AFE4F13EEF1D}.wem		\Actor-Mixer Hierarchy\Default Work Unit\SFX\Choir\Choir4		352896
 	1068469846	Back	C:\Users\Tim\Desktop\Gaming Jams\UTProJam25\UTProJam25\UTProJam25_WwiseProject\.cache\CF\{CF2BC049-1B04-D369-1C47-20B4B7A8B2DF}.wem		\Actor-Mixer Hierarchy\Default Work Unit\UI\Back		23768

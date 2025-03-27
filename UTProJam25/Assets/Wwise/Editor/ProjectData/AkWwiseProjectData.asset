@@ -117,7 +117,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: 21cbea147a397341bdb30a3aba4e4654
     GuidInternal: 
-    m_lastTime: -8584586882148682105
+    m_lastTime: -8584585683664343243
     List:
     - name: Main
       guid: f01400f22222e94f99cb8778210ce151
@@ -145,7 +145,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: 48115eb8ad405141a71be9e132ef6602
     GuidInternal: 
-    m_lastTime: -8584586893589047372
+    m_lastTime: -8584585691227645198
     List:
     - name: Music
       guid: 2c6a25410e336b429ff6b03da2a01ff6
@@ -161,6 +161,26 @@ MonoBehaviour:
         ObjectType: 4
         guid: 2c6a25410e336b429ff6b03da2a01ff6
       Path: Events\Default Work Unit\Music
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: Music
+      guid: bf067c39515a1d43ba29d83f1d12f079
+      id: 3991942870
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 48115eb8ad405141a71be9e132ef6602
+      - ElementName: Music
+        ObjectType: 4
+        guid: 2c6a25410e336b429ff6b03da2a01ff6
+      - ElementName: Music
+        ObjectType: 3
+        guid: bf067c39515a1d43ba29d83f1d12f079
+      Path: Events\Default Work Unit\Music\Music
       maxAttenuation: 0
       maxDuration: -1
       minDuration: -1
@@ -652,8 +672,90 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 9405fb6dfe65284fb332ba55000cf143
     GuidInternal: 
-    m_lastTime: -8584586956917267260
-    List: []
+    m_lastTime: -8584585729095733373
+    List:
+    - name: MusicSwitching
+      guid: a773ed5efda9db41b5d1da35896b8752
+      id: 397194002
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 9405fb6dfe65284fb332ba55000cf143
+      - ElementName: MusicSwitching
+        ObjectType: 11
+        guid: a773ed5efda9db41b5d1da35896b8752
+      Path: Switches\Default Work Unit\MusicSwitching
+      values:
+      - name: BPM120
+        guid: bbdb51f38d62e44194f6cbc6a82ca4ff
+        id: 2503094331
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 9405fb6dfe65284fb332ba55000cf143
+        - ElementName: MusicSwitching
+          ObjectType: 11
+          guid: a773ed5efda9db41b5d1da35896b8752
+        - ElementName: BPM120
+          ObjectType: 10
+          guid: bbdb51f38d62e44194f6cbc6a82ca4ff
+      - name: BPM90
+        guid: 30b08704babd164a8db7110859539156
+        id: 802813491
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 9405fb6dfe65284fb332ba55000cf143
+        - ElementName: MusicSwitching
+          ObjectType: 11
+          guid: a773ed5efda9db41b5d1da35896b8752
+        - ElementName: BPM90
+          ObjectType: 10
+          guid: 30b08704babd164a8db7110859539156
+      - name: Credits
+        guid: 42ee438943f200448df1326bc3692254
+        id: 2201105581
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 9405fb6dfe65284fb332ba55000cf143
+        - ElementName: MusicSwitching
+          ObjectType: 11
+          guid: a773ed5efda9db41b5d1da35896b8752
+        - ElementName: Credits
+          ObjectType: 10
+          guid: 42ee438943f200448df1326bc3692254
+      - name: Menu
+        guid: 0c369757406eaf45a31db0184c8513ac
+        id: 2607556080
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 9405fb6dfe65284fb332ba55000cf143
+        - ElementName: MusicSwitching
+          ObjectType: 11
+          guid: a773ed5efda9db41b5d1da35896b8752
+        - ElementName: Menu
+          ObjectType: 10
+          guid: 0c369757406eaf45a31db0184c8513ac
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers\Default Work Unit.wwu
     PathAndIcons:
@@ -669,7 +771,7 @@ MonoBehaviour:
     m_lastTime: -8584591718077312772
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e00000010000000120000001d000000
+  ExpandedWaapiItemIds: 0100000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000001000000011000000120000001600000017000000180000001d0000002b0000002c0000002d000000950000009600000097000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

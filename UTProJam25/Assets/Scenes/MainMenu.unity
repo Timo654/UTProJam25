@@ -987,16 +987,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b60fe9f34017afa429315fa007c5483e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameMusicPlaylist:
+  MenuStart:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: b761f7829bc200a49af7db59d2401671, type: 2}
-  CreditsState:
+    WwiseObjectReference: {fileID: 11400000, guid: 6065ea500e5a0804b8371b71d5ab5679, type: 2}
+  MenuStartSwitch:
     idInternal: 0
     valueGuidInternal: 
     groupIdInternal: 0
     groupGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: 4d240cf0c0d39a24b86cc1066ed500f2, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: a9779d5034a9d5b44a4fadee114dca8a, type: 2}
 --- !u!4 &2003978832
 Transform:
   m_ObjectHideFlags: 0

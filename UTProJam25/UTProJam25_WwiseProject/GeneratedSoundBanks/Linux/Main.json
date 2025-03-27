@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{F20014F0-2222-4FE9-99CB-8778210CE151}",
     "Language": "SFX",
-    "Hash": "{E27480CF-C742-D675-7CE7-0FE0A93817AE}",
+    "Hash": "{B239A9F4-BEDE-59E5-444D-4333CB6CEEFA}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\Main",
     "ShortName": "Main",
     "Path": "Main.bnk",
@@ -301,6 +301,67 @@
      ]
     },
     "Events": [
+     {
+      "Id": "3991942870",
+      "Name": "Music",
+      "ObjectPath": "\\Events\\Default Work Unit\\Music\\Music",
+      "GUID": "{397C06BF-5A51-431D-BA29-D83F1D12F079}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "397194002",
+         "Id": "2201105581",
+         "GUID": "{8943EE42-F243-4400-8DF1-326BC3692254}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "917821314"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "397194002",
+         "Id": "802813491",
+         "GUID": "{0487B030-BDBA-4A16-8DB7-110859539156}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "895545840"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "397194002",
+         "Id": "2503094331",
+         "GUID": "{F351DBBB-628D-41E4-94F6-CBC6A82CA4FF}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "372400937"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "397194002",
+         "Id": "2607556080",
+         "GUID": "{5797360C-6E40-45AF-A31D-B0184C8513AC}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "917821314"
+         }
+        ]
+       }
+      ]
+     },
      {
       "Id": "3639753543",
       "Name": "Play_Choir",
@@ -674,9 +735,43 @@
        }
       ]
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "397194002",
+      "Name": "MusicSwitching",
+      "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching",
+      "GUID": "{5EED73A7-A9FD-41DB-B5D1-DA35896B8752}",
+      "Switches": [
+       {
+        "Id": "802813491",
+        "Name": "BPM90",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching\\BPM90",
+        "GUID": "{0487B030-BDBA-4A16-8DB7-110859539156}"
+       },
+       {
+        "Id": "2201105581",
+        "Name": "Credits",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching\\Credits",
+        "GUID": "{8943EE42-F243-4400-8DF1-326BC3692254}"
+       },
+       {
+        "Id": "2503094331",
+        "Name": "BPM120",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching\\BPM120",
+        "GUID": "{F351DBBB-628D-41E4-94F6-CBC6A82CA4FF}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching\\Menu",
+        "GUID": "{5797360C-6E40-45AF-A31D-B0184C8513AC}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{0D0C67E7-2A25-1B17-A5DF-BFE456836F92}"
+  "FileHash": "{B1356403-9CC8-13F3-669C-AF63D718D784}"
  }
 }

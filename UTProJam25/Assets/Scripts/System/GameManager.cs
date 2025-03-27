@@ -13,6 +13,13 @@ public class GameManager : MonoBehaviour
     public static event Action<int> OnGameTimeChanged;
     private bool gameActive = false;
 
+
+    public AK.Wwise.Event MenuStart;
+    [SerializeField]
+    private AK.Wwise.Switch Main90Switch;
+    private AK.Wwise.Switch Main120Switch;
+    private AK.Wwise.Switch Credits;
+
     private void Awake()
     {
         sceneController.LoadUI();

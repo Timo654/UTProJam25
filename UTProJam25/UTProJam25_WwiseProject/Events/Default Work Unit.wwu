@@ -97,6 +97,17 @@
 								</Action>
 							</ChildrenList>
 						</Event>
+						<Event Name="Music" ID="{397C06BF-5A51-431D-BA29-D83F1D12F079}">
+							<ChildrenList>
+								<Action Name="" ID="{7427AE98-7315-409A-A9E2-24526714D383}" ShortID="486625036">
+									<ReferenceList>
+										<Reference Name="Target">
+											<ObjectRef Name="MusicSwitch" ID="{C9774CC2-4BC8-4EF6-AD75-1403584AAB53}" WorkUnitID="{C788B0E5-C077-495D-86E9-0D65AB294AE9}"/>
+										</Reference>
+									</ReferenceList>
+								</Action>
+							</ChildrenList>
+						</Event>
 					</ChildrenList>
 				</Folder>
 				<Folder Name="SFX" ID="{210D055B-569D-4A57-964E-528B72C920F6}" ShortID="319075096">

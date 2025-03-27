@@ -43,7 +43,9 @@
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="BPM90" ID="{0F0C4E9B-8F97-402B-A8CC-857F8B95E3C4}"/>
 					</CurrentStateList>
-					<CurrentSwitchList ShowAll="true"/>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="BPM90" ID="{0487B030-BDBA-4A16-8DB7-110859539156}"/>
+					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>
 		</WorkUnit>

@@ -11,11 +11,6 @@ public class GameplayMusic : MonoBehaviour
     public AK.Wwise.Event StepSound;
     public AK.Wwise.Event DrowningSound;
 
-    public AK.Wwise.State CreditsState;
-    public AK.Wwise.State MenuState;
-    public AK.Wwise.State Gameplay1State;
-    public AK.Wwise.State Gameplay2State;
-
     private void OnEnable()
     {
         LevelLoader.OnGameplayLevelLoaded += InitializeMusic;

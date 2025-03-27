@@ -125,9 +125,43 @@
        }
       ]
      }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "397194002",
+      "Name": "MusicSwitching",
+      "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching",
+      "GUID": "{5EED73A7-A9FD-41DB-B5D1-DA35896B8752}",
+      "Switches": [
+       {
+        "Id": "802813491",
+        "Name": "BPM90",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching\\BPM90",
+        "GUID": "{0487B030-BDBA-4A16-8DB7-110859539156}"
+       },
+       {
+        "Id": "2201105581",
+        "Name": "Credits",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching\\Credits",
+        "GUID": "{8943EE42-F243-4400-8DF1-326BC3692254}"
+       },
+       {
+        "Id": "2503094331",
+        "Name": "BPM120",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching\\BPM120",
+        "GUID": "{F351DBBB-628D-41E4-94F6-CBC6A82CA4FF}"
+       },
+       {
+        "Id": "2607556080",
+        "Name": "Menu",
+        "ObjectPath": "\\Switches\\Default Work Unit\\MusicSwitching\\Menu",
+        "GUID": "{5797360C-6E40-45AF-A31D-B0184C8513AC}"
+       }
+      ]
+     }
     ]
    }
   ],
-  "FileHash": "{A1B4BDFE-D7DF-46FF-6383-4A2844107C27}"
+  "FileHash": "{E81E0E3F-4FD4-596A-A9A4-645A29A4B4E6}"
  }
 }
